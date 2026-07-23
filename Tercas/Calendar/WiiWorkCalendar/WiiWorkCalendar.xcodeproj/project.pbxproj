@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D15510B2283863D80015E5D1 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15510B0283863D80015E5D1 /* CalendarHeader.swift */; };
+		D1962BB8283FDE61009F85BE /* CalendarDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1962BB6283FDE61009F85BE /* CalendarDateCell.swift */; };
+		D1A9AA9028083C7600CCD2C0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A9AA8E28083C7600CCD2C0 /* CalendarView.swift */; };
+		D1B68BB02811D99D00D7A235 /* CalendarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B68BAE2811D99D00D7A235 /* CalendarRow.swift */; };
+		D1D87C4A291835EC000A519C /* CalendarPoolSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87C49291835EC000A519C /* CalendarPoolSectionFooter.swift */; };
+		D1DA0A862CBEEE9B00B79F27 /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DA0A852CBEEE3200B79F27 /* WiiKit.framework */; };
+		D1DA0A872CBEEE9B00B79F27 /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1DA0A852CBEEE3200B79F27 /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1EF34A428032FF60092648A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF34A228032FF60092648A /* Header.swift */; };
+		D1FBC72D2800964F0062D8A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBC72C2800964F0062D8A4 /* ContentView.swift */; };
+		D1FBC7362800965B0062D8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28A40EB268B803F00E24A5F /* Assets.xcassets */; };
+		D1FBC7372800965E0062D8A4 /* WiiWorkCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A40E7268B803E00E24A5F /* WiiWorkCalendarApp.swift */; };
+		D1FBC738280096800062D8A4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3F36A2800845900136808 /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1DA0A842CBEEE3200B79F27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1DA0A7F2CBEEE3200B79F27 /* WiiKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1962D02284255ED009F85BE;
+			remoteInfo = WiiKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1DA0A882CBEEE9B00B79F27 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1DA0A872CBEEE9B00B79F27 /* WiiKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D15510B0283863D80015E5D1 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		D1962BB6283FDE61009F85BE /* CalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCell.swift; sourceTree = "<group>"; };
+		D1A9AA8E28083C7600CCD2C0 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D1B68BAE2811D99D00D7A235 /* CalendarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRow.swift; sourceTree = "<group>"; };
+		D1C15FCD280079C8007E905B /* MacCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacCalendar.entitlements; sourceTree = "<group>"; };
+		D1D87C49291835EC000A519C /* CalendarPoolSectionFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPoolSectionFooter.swift; sourceTree = "<group>"; };
+		D1DA0A2A2CBEEDE400B79F27 /* WiiWorkCalendarPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WiiWorkCalendarPad-Info.plist"; sourceTree = "<group>"; };
+		D1DA0A2B2CBEEE3200B79F27 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		D1DA0A2C2CBEEE3200B79F27 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		D1DA0A2D2CBEEE3200B79F27 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D1DA0A2E2CBEEE3200B79F27 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D1DA0A2F2CBEEE3200B79F27 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		D1DA0A302CBEEE3200B79F27 /* DateIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalExtension.swift; sourceTree = "<group>"; };
+		D1DA0A312CBEEE3200B79F27 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D1DA0A322CBEEE3200B79F27 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		D1DA0A342CBEEE3200B79F27 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		D1DA0A352CBEEE3200B79F27 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		D1DA0A362CBEEE3200B79F27 /* EntEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEvent.swift; sourceTree = "<group>"; };
+		D1DA0A372CBEEE3200B79F27 /* EntEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEventModel.swift; sourceTree = "<group>"; };
+		D1DA0A382CBEEE3200B79F27 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		D1DA0A392CBEEE3200B79F27 /* HolidayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayModel.swift; sourceTree = "<group>"; };
+		D1DA0A3A2CBEEE3200B79F27 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		D1DA0A3B2CBEEE3200B79F27 /* PeriodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodModel.swift; sourceTree = "<group>"; };
+		D1DA0A3D2CBEEE3200B79F27 /* InternshipCadence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadence.swift; sourceTree = "<group>"; };
+		D1DA0A3E2CBEEE3200B79F27 /* InternshipCadenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceModel.swift; sourceTree = "<group>"; };
+		D1DA0A402CBEEE3200B79F27 /* InternshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipType.swift; sourceTree = "<group>"; };
+		D1DA0A412CBEEE3200B79F27 /* InternshipTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipTypeModel.swift; sourceTree = "<group>"; };
+		D1DA0A432CBEEE3200B79F27 /* Internship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internship.swift; sourceTree = "<group>"; };
+		D1DA0A442CBEEE3200B79F27 /* InternshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipModel.swift; sourceTree = "<group>"; };
+		D1DA0A462CBEEE3200B79F27 /* Morder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morder.swift; sourceTree = "<group>"; };
+		D1DA0A472CBEEE3200B79F27 /* MorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderModel.swift; sourceTree = "<group>"; };
+		D1DA0A492CBEEE3200B79F27 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D1DA0A4A2CBEEE3200B79F27 /* PersonFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFilters.swift; sourceTree = "<group>"; };
+		D1DA0A4B2CBEEE3200B79F27 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		D1DA0A4C2CBEEE3200B79F27 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		D1DA0A4D2CBEEE3200B79F27 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		D1DA0A4F2CBEEE3200B79F27 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		D1DA0A502CBEEE3200B79F27 /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
+		D1DA0A512CBEEE3200B79F27 /* SectorPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPool.swift; sourceTree = "<group>"; };
+		D1DA0A522CBEEE3200B79F27 /* SectorPoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolModel.swift; sourceTree = "<group>"; };
+		D1DA0A552CBEEE3200B79F27 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		D1DA0A572CBEEE3200B79F27 /* PgConnectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgConnectionSettings.swift; sourceTree = "<group>"; };
+		D1DA0A592CBEEE3200B79F27 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		D1DA0A5A2CBEEE3200B79F27 /* ActivityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPicker.swift; sourceTree = "<group>"; };
+		D1DA0A5B2CBEEE3200B79F27 /* ActivitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySearchView.swift; sourceTree = "<group>"; };
+		D1DA0A5C2CBEEE3200B79F27 /* PeriodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCard.swift; sourceTree = "<group>"; };
+		D1DA0A5E2CBEEE3200B79F27 /* InternshipCadenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceCard.swift; sourceTree = "<group>"; };
+		D1DA0A5F2CBEEE3200B79F27 /* InternshipCadenceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceEditView.swift; sourceTree = "<group>"; };
+		D1DA0A612CBEEE3200B79F27 /* InternshipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCard.swift; sourceTree = "<group>"; };
+		D1DA0A622CBEEE3200B79F27 /* InternshipEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipEditView.swift; sourceTree = "<group>"; };
+		D1DA0A642CBEEE3200B79F27 /* MorderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderCard.swift; sourceTree = "<group>"; };
+		D1DA0A652CBEEE3200B79F27 /* MorderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderSearchView.swift; sourceTree = "<group>"; };
+		D1DA0A672CBEEE3200B79F27 /* PositionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCard.swift; sourceTree = "<group>"; };
+		D1DA0A682CBEEE3200B79F27 /* PositionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPicker.swift; sourceTree = "<group>"; };
+		D1DA0A692CBEEE3200B79F27 /* PositionsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayPicker.swift; sourceTree = "<group>"; };
+		D1DA0A6A2CBEEE3200B79F27 /* PositionsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayView.swift; sourceTree = "<group>"; };
+		D1DA0A6C2CBEEE3200B79F27 /* ShiftCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCard.swift; sourceTree = "<group>"; };
+		D1DA0A6E2CBEEE3200B79F27 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		D1DA0A6F2CBEEE3200B79F27 /* PersonEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
+		D1DA0A702CBEEE3200B79F27 /* PersonFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFiltersView.swift; sourceTree = "<group>"; };
+		D1DA0A712CBEEE3200B79F27 /* PersonSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchView.swift; sourceTree = "<group>"; };
+		D1DA0A732CBEEE3200B79F27 /* SectorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorCard.swift; sourceTree = "<group>"; };
+		D1DA0A742CBEEE3200B79F27 /* SectorPoolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolPicker.swift; sourceTree = "<group>"; };
+		D1DA0A752CBEEE3200B79F27 /* SectorsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayPicker.swift; sourceTree = "<group>"; };
+		D1DA0A762CBEEE3200B79F27 /* SectorsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayView.swift; sourceTree = "<group>"; };
+		D1DA0A772CBEEE3200B79F27 /* SectorsPoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolCard.swift; sourceTree = "<group>"; };
+		D1DA0A782CBEEE3200B79F27 /* SectorsPoolSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolSearchView.swift; sourceTree = "<group>"; };
+		D1DA0A7B2CBEEE3200B79F27 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D1DA0A7C2CBEEE3200B79F27 /* WiiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WiiKit.h; sourceTree = "<group>"; };
+		D1DA0A7E2CBEEE3200B79F27 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
+		D1DA0A7F2CBEEE3200B79F27 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WiiKit.xcodeproj; sourceTree = "<group>"; };
+		D1E3F36A2800845900136808 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D1EF34A228032FF60092648A /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		D1F18E7B29B0A3C400D3DD20 /* Work Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1FBC72C2800964F0062D8A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F28A40E7268B803E00E24A5F /* WiiWorkCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiiWorkCalendarApp.swift; sourceTree = "<group>"; };
+		F28A40EB268B803F00E24A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1FBC7252800964F0062D8A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DA0A862CBEEE9B00B79F27 /* WiiKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D17B27A8280082D7002175FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1E3F36A2800845900136808 /* MainView.swift */,
+				D1EF34A228032FF60092648A /* Header.swift */,
+				D1A9AA8E28083C7600CCD2C0 /* CalendarView.swift */,
+				D1B68BAE2811D99D00D7A235 /* CalendarRow.swift */,
+				D15510B0283863D80015E5D1 /* CalendarHeader.swift */,
+				D1962BB6283FDE61009F85BE /* CalendarDateCell.swift */,
+				D1D87C49291835EC000A519C /* CalendarPoolSectionFooter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1C15FC3280079C7007E905B /* MacCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				D1C15FCD280079C8007E905B /* MacCalendar.entitlements */,
+			);
+			path = MacCalendar;
+			sourceTree = "<group>";
+		};
+		D1DA0A332CBEEE3200B79F27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A2B2CBEEE3200B79F27 /* ArrayExtension.swift */,
+				D1DA0A2C2CBEEE3200B79F27 /* CalendarExtension.swift */,
+				D1DA0A2D2CBEEE3200B79F27 /* ColorExtension.swift */,
+				D1DA0A2E2CBEEE3200B79F27 /* DateExtension.swift */,
+				D1DA0A2F2CBEEE3200B79F27 /* DateFormatterExtension.swift */,
+				D1DA0A302CBEEE3200B79F27 /* DateIntervalExtension.swift */,
+				D1DA0A312CBEEE3200B79F27 /* StringExtension.swift */,
+				D1DA0A322CBEEE3200B79F27 /* ViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D1DA0A3C2CBEEE3200B79F27 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A342CBEEE3200B79F27 /* Activity.swift */,
+				D1DA0A352CBEEE3200B79F27 /* ActivityModel.swift */,
+				D1DA0A362CBEEE3200B79F27 /* EntEvent.swift */,
+				D1DA0A372CBEEE3200B79F27 /* EntEventModel.swift */,
+				D1DA0A382CBEEE3200B79F27 /* Holiday.swift */,
+				D1DA0A392CBEEE3200B79F27 /* HolidayModel.swift */,
+				D1DA0A3A2CBEEE3200B79F27 /* Period.swift */,
+				D1DA0A3B2CBEEE3200B79F27 /* PeriodModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D1DA0A3F2CBEEE3200B79F27 /* IInternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A3D2CBEEE3200B79F27 /* InternshipCadence.swift */,
+				D1DA0A3E2CBEEE3200B79F27 /* InternshipCadenceModel.swift */,
+			);
+			path = IInternshipCadence;
+			sourceTree = "<group>";
+		};
+		D1DA0A422CBEEE3200B79F27 /* IInternshipType */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A402CBEEE3200B79F27 /* InternshipType.swift */,
+				D1DA0A412CBEEE3200B79F27 /* InternshipTypeModel.swift */,
+			);
+			path = IInternshipType;
+			sourceTree = "<group>";
+		};
+		D1DA0A452CBEEE3200B79F27 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A3F2CBEEE3200B79F27 /* IInternshipCadence */,
+				D1DA0A422CBEEE3200B79F27 /* IInternshipType */,
+				D1DA0A432CBEEE3200B79F27 /* Internship.swift */,
+				D1DA0A442CBEEE3200B79F27 /* InternshipModel.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D1DA0A482CBEEE3200B79F27 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A462CBEEE3200B79F27 /* Morder.swift */,
+				D1DA0A472CBEEE3200B79F27 /* MorderModel.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D1DA0A4E2CBEEE3200B79F27 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A492CBEEE3200B79F27 /* Person.swift */,
+				D1DA0A4A2CBEEE3200B79F27 /* PersonFilters.swift */,
+				D1DA0A4B2CBEEE3200B79F27 /* PersonModel.swift */,
+				D1DA0A4C2CBEEE3200B79F27 /* Position.swift */,
+				D1DA0A4D2CBEEE3200B79F27 /* PositionModel.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D1DA0A532CBEEE3200B79F27 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A4F2CBEEE3200B79F27 /* Sector.swift */,
+				D1DA0A502CBEEE3200B79F27 /* SectorModel.swift */,
+				D1DA0A512CBEEE3200B79F27 /* SectorPool.swift */,
+				D1DA0A522CBEEE3200B79F27 /* SectorPoolModel.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D1DA0A542CBEEE3200B79F27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A3C2CBEEE3200B79F27 /* Calendar */,
+				D1DA0A452CBEEE3200B79F27 /* Internship */,
+				D1DA0A482CBEEE3200B79F27 /* Morder */,
+				D1DA0A4E2CBEEE3200B79F27 /* Person */,
+				D1DA0A532CBEEE3200B79F27 /* Sectors */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1DA0A562CBEEE3200B79F27 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A552CBEEE3200B79F27 /* CardModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D1DA0A582CBEEE3200B79F27 /* NetworkDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A572CBEEE3200B79F27 /* PgConnectionSettings.swift */,
+			);
+			path = NetworkDrivers;
+			sourceTree = "<group>";
+		};
+		D1DA0A5D2CBEEE3200B79F27 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A592CBEEE3200B79F27 /* ActivityCard.swift */,
+				D1DA0A5A2CBEEE3200B79F27 /* ActivityPicker.swift */,
+				D1DA0A5B2CBEEE3200B79F27 /* ActivitySearchView.swift */,
+				D1DA0A5C2CBEEE3200B79F27 /* PeriodCard.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D1DA0A602CBEEE3200B79F27 /* InternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A5E2CBEEE3200B79F27 /* InternshipCadenceCard.swift */,
+				D1DA0A5F2CBEEE3200B79F27 /* InternshipCadenceEditView.swift */,
+			);
+			path = InternshipCadence;
+			sourceTree = "<group>";
+		};
+		D1DA0A632CBEEE3200B79F27 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A602CBEEE3200B79F27 /* InternshipCadence */,
+				D1DA0A612CBEEE3200B79F27 /* InternshipCard.swift */,
+				D1DA0A622CBEEE3200B79F27 /* InternshipEditView.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D1DA0A662CBEEE3200B79F27 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A642CBEEE3200B79F27 /* MorderCard.swift */,
+				D1DA0A652CBEEE3200B79F27 /* MorderSearchView.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D1DA0A6B2CBEEE3200B79F27 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A672CBEEE3200B79F27 /* PositionCard.swift */,
+				D1DA0A682CBEEE3200B79F27 /* PositionPicker.swift */,
+				D1DA0A692CBEEE3200B79F27 /* PositionsArrayPicker.swift */,
+				D1DA0A6A2CBEEE3200B79F27 /* PositionsArrayView.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		D1DA0A6D2CBEEE3200B79F27 /* Shift */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A6C2CBEEE3200B79F27 /* ShiftCard.swift */,
+			);
+			path = Shift;
+			sourceTree = "<group>";
+		};
+		D1DA0A722CBEEE3200B79F27 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A6B2CBEEE3200B79F27 /* Position */,
+				D1DA0A6D2CBEEE3200B79F27 /* Shift */,
+				D1DA0A6E2CBEEE3200B79F27 /* PersonCard.swift */,
+				D1DA0A6F2CBEEE3200B79F27 /* PersonEditView.swift */,
+				D1DA0A702CBEEE3200B79F27 /* PersonFiltersView.swift */,
+				D1DA0A712CBEEE3200B79F27 /* PersonSearchView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D1DA0A792CBEEE3200B79F27 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A732CBEEE3200B79F27 /* SectorCard.swift */,
+				D1DA0A742CBEEE3200B79F27 /* SectorPoolPicker.swift */,
+				D1DA0A752CBEEE3200B79F27 /* SectorsArrayPicker.swift */,
+				D1DA0A762CBEEE3200B79F27 /* SectorsArrayView.swift */,
+				D1DA0A772CBEEE3200B79F27 /* SectorsPoolCard.swift */,
+				D1DA0A782CBEEE3200B79F27 /* SectorsPoolSearchView.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D1DA0A7A2CBEEE3200B79F27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A5D2CBEEE3200B79F27 /* Calendar */,
+				D1DA0A632CBEEE3200B79F27 /* Internship */,
+				D1DA0A662CBEEE3200B79F27 /* Morder */,
+				D1DA0A722CBEEE3200B79F27 /* Person */,
+				D1DA0A792CBEEE3200B79F27 /* Sectors */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1DA0A7D2CBEEE3200B79F27 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A332CBEEE3200B79F27 /* Extensions */,
+				D1DA0A542CBEEE3200B79F27 /* Models */,
+				D1DA0A562CBEEE3200B79F27 /* Modifiers */,
+				D1DA0A582CBEEE3200B79F27 /* NetworkDrivers */,
+				D1DA0A7A2CBEEE3200B79F27 /* Views */,
+				D1DA0A7B2CBEEE3200B79F27 /* Global.swift */,
+				D1DA0A7C2CBEEE3200B79F27 /* WiiKit.h */,
+			);
+			path = WiiKit;
+			sourceTree = "<group>";
+		};
+		D1DA0A802CBEEE3200B79F27 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A7D2CBEEE3200B79F27 /* WiiKit */,
+				D1DA0A7F2CBEEE3200B79F27 /* WiiKit.xcodeproj */,
+			);
+			name = WiiKit;
+			path = ../../WiiKit;
+			sourceTree = "<group>";
+		};
+		D1DA0A812CBEEE3200B79F27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A852CBEEE3200B79F27 /* WiiKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1EF349C2801B0B20092648A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA0A802CBEEE3200B79F27 /* WiiKit */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F28A40DB268B803E00E24A5F = {
+			isa = PBXGroup;
+			children = (
+				D1F18E7B29B0A3C400D3DD20 /* Work Calendar.app */,
+				D1DA0A2A2CBEEDE400B79F27 /* WiiWorkCalendarPad-Info.plist */,
+				D1DA0A7E2CBEEE3200B79F27 /* WiiKit.xcassets */,
+				F28A40EB268B803F00E24A5F /* Assets.xcassets */,
+				F28A40E7268B803E00E24A5F /* WiiWorkCalendarApp.swift */,
+				D1FBC72C2800964F0062D8A4 /* ContentView.swift */,
+				D17B27A8280082D7002175FB /* Views */,
+				D1C15FC3280079C7007E905B /* MacCalendar */,
+				D1EF349C2801B0B20092648A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1FBC7272800964F0062D8A4 /* WiiWorkCalendarPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1FBC733280096500062D8A4 /* Build configuration list for PBXNativeTarget "WiiWorkCalendarPad" */;
+			buildPhases = (
+				D1FBC7242800964F0062D8A4 /* Sources */,
+				D1FBC7252800964F0062D8A4 /* Frameworks */,
+				D1FBC7262800964F0062D8A4 /* Resources */,
+				D1DA0A882CBEEE9B00B79F27 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiiWorkCalendarPad;
+			packageProductDependencies = (
+			);
+			productName = PadCalendar;
+			productReference = D1F18E7B29B0A3C400D3DD20 /* Work Calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F28A40DC268B803E00E24A5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					D1FBC7272800964F0062D8A4 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = F28A40DF268B803E00E24A5F /* Build configuration list for PBXProject "WiiWorkCalendar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F28A40DB268B803E00E24A5F;
+			packageReferences = (
+			);
+			productRefGroup = F28A40DB268B803E00E24A5F;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D1DA0A812CBEEE3200B79F27 /* Products */;
+					ProjectRef = D1DA0A7F2CBEEE3200B79F27 /* WiiKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D1FBC7272800964F0062D8A4 /* WiiWorkCalendarPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D1DA0A852CBEEE3200B79F27 /* WiiKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiiKit.framework;
+			remoteRef = D1DA0A842CBEEE3200B79F27 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1FBC7262800964F0062D8A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1FBC7362800965B0062D8A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1FBC7242800964F0062D8A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1FBC738280096800062D8A4 /* MainView.swift in Sources */,
+				D15510B2283863D80015E5D1 /* CalendarHeader.swift in Sources */,
+				D1EF34A428032FF60092648A /* Header.swift in Sources */,
+				D1D87C4A291835EC000A519C /* CalendarPoolSectionFooter.swift in Sources */,
+				D1FBC72D2800964F0062D8A4 /* ContentView.swift in Sources */,
+				D1A9AA9028083C7600CCD2C0 /* CalendarView.swift in Sources */,
+				D1FBC7372800965E0062D8A4 /* WiiWorkCalendarApp.swift in Sources */,
+				D1962BB8283FDE61009F85BE /* CalendarDateCell.swift in Sources */,
+				D1B68BB02811D99D00D7A235 /* CalendarRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D1FBC734280096500062D8A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiiWorkCalendarPad-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.wiipuri.PadWorkCalendar;
+				PRODUCT_NAME = "Work Calendar";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1FBC735280096500062D8A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiiWorkCalendarPad-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.wiipuri.PadWorkCalendar;
+				PRODUCT_NAME = "Work Calendar";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F28A40F1268B803F00E24A5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F28A40F2268B803F00E24A5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1FBC733280096500062D8A4 /* Build configuration list for PBXNativeTarget "WiiWorkCalendarPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1FBC734280096500062D8A4 /* Debug */,
+				D1FBC735280096500062D8A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28A40DF268B803E00E24A5F /* Build configuration list for PBXProject "WiiWorkCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F28A40F1268B803F00E24A5F /* Debug */,
+				F28A40F2268B803F00E24A5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F28A40DC268B803E00E24A5F /* Project object */;
+}

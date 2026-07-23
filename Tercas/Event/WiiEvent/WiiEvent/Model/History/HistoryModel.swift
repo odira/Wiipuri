@@ -1,0 +1,392 @@
+import PostgresClientKit
+import SwiftUI
+import Combine
+
+// MARK: - HistoryModel definition
+
+public class HistoryModel: ObservableObject {
+    @Published public var histories = [History]()
+    @Published public var isFetching: Bool = true
+   
+    public init(histories: [History]) {
+        self.histories = []
+        self.histories = histories
+    }
+   
+    public init() {
+        self.histories = []
+    }
+    
+    public func reload() async {
+        await fetch()
+    }
+    
+    @MainActor
+    public func fetch() async {
+        self.histories.removeAll()
+        
+        isFetching = true
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "217.107.219.91"
+            configuration.database = "tercas"
+            configuration.user = "postgres"
+            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+            defer { connection.close() }
+
+            let sqlText = """
+            SELECT
+                id,                    --  0
+                event_id,              --  1
+                date,                  --  2
+                history,               --  3
+                note,                  --  4
+                letter_num_receiver,   --  5
+                letter_date_receiver   --  6
+            FROM 
+                history.vw_history 
+            ORDER BY 
+                date
+            """
+        
+            let statement = try connection.prepareStatement(text: sqlText)
+            defer { statement.close() }
+            
+            let cursor = try statement.execute()
+            defer { cursor.close() }
+            
+            for row in cursor {
+                let columns = try row.get().columns
+                
+                let id = try columns[0].int()                      //  0
+                let eventID = try columns[1].int()                 //  1
+                let datePg = try columns[2].date()                 //  2
+                let history = try columns[3].string()              //  3
+                let note = try? columns[4].string()                //  4
+                let letterNumReceiver = try? columns[5].string()   //  5
+                let letterDateReceiverPg = try? columns[6].date()  //  6
+
+                // The UTC/GMT time zone.
+                let utcTimeZone = TimeZone(secondsFromGMT: 0)!
+                
+                var date: Date {
+                    return datePg.date(in: utcTimeZone)
+                }
+                var letterDateReceiver: Date? {
+                    if let date = letterDateReceiverPg {
+                        return date.date(in: utcTimeZone)
+                    }
+                    return nil
+                }
+                
+                histories.append(
+                    History(
+                        id: id,                                  // 0
+                        eventID: eventID,                        // 1
+                        date: date,                              // 2
+                        history: history,                        // 3
+                        note: note,                              // 4
+                        letterNumReceiver: letterNumReceiver,    // 5
+                        letterDateReceiver: letterDateReceiver   // 6
+                    )
+                )
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        isFetching = false
+    }
+}
+
+// MARK: - HistoryModel example
+
+#if DEBUG
+public extension HistoryModel {
+   
+    static let historiesExmpls: [History] = [
+        History.example,
+        History.example
+   ]
+   
+   static let example = samples[0]
+   static let samples: [HistoryModel] = [
+        HistoryModel(histories: historiesExmpls)
+   ]
+   
+}
+#endif
+
+// MARK: - Additional Functions
+
+public extension HistoryModel {
+    
+    func findHistoryById(id: Int) -> History? {
+        let result = histories.filter { $0.id == id }
+        if result.isEmpty {
+            return nil
+        }
+        return result.first
+    }
+    
+    func findFirstHistory(byEventId eventID: Int) -> History? {
+        if let result = histories.first(where: { $0.eventID == eventID }) {
+            return result
+        }
+        return nil
+    }
+    
+    func findHistories(byEventId eventID: Int) -> [History]? {
+        let result = histories.filter { $0.eventID == eventID }
+        if result.isEmpty {
+            return nil
+        }
+        return result
+    }
+    
+}
+
+// MARK: - DML SQL functions
+
+extension HistoryModel {
+    
+    // MARK: - SQL INSERT
+    
+    public func sqlINSERT(
+        eventID: Int,               // $1
+        date: Date,                 // $2
+        history: String,            // $3
+        note: String,               // $4
+        letterNumReceiver: String?, // $5
+        letterDateReceiver: Date?   // $6
+    )
+    async {
+        
+        let sqlQueryINSERT = """
+            INSERT INTO
+                event.vw_history(
+                    event_id,             -- $1
+                    date,                 -- $2
+                    history,              -- $3
+                    note,                 -- $4
+                    letter_num_receiver,  -- $5
+                    letter_date_receiver  -- $6
+                )
+            VALUES (
+                    $1,   -- event_id
+                    $2,   -- date
+                    $3,   -- history
+                    $4,   -- note
+                    $5,   -- letter_num_receiver
+                    $6    -- letter_date_receiver
+            )
+        """
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "217.107.219.91"
+            configuration.database = "tercas"
+            configuration.user = "postgres"
+            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+            defer { connection.close() }
+            
+            let statement = try connection.prepareStatement(text: sqlQueryINSERT)
+            defer { statement.close() }
+            
+            var datePg: PostgresDate {
+                return date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            }
+            
+            var letterDateReceiverPg: PostgresDate? = nil
+            if let letterDateReceiver {
+                letterDateReceiverPg = letterDateReceiver.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            }
+            
+            let _ = try statement.execute(
+                parameterValues: [
+                    eventID,              // 1
+                    datePg,               // 2
+                    history,              // 3
+                    note,                 // 4
+                    letterNumReceiver,    // 5
+                    letterDateReceiverPg  // 6
+                ]
+            )
+        }
+        catch {
+            print(error)
+        }
+        
+        await self.reload()
+    }
+    
+    
+    // MARK: - SQL UPDATE
+    
+    // Variant 1
+    public func sqlUPDATE(
+        id: Int,                    // $1
+        date: Date,                 // $2
+        history: String,            // $3
+        note: String,               // $4
+        letterNumReceiver: String,  // $5
+        letterDateReceiver: Date    // $6
+    ) async {
+        
+        let sqlQueryUPDATE = """
+            UPDATE
+                event.history
+            SET
+                date = $2,                  -- date
+                history = $3,               -- history
+                note = $4,                  -- note
+                letter_num_receiver = $5,   -- letterNumReceiver
+                letter_date_receiver = $6   -- letterDateReceiver
+            WHERE
+                id = $1                     -- id
+        """
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "217.107.219.91"
+            configuration.database = "tercas"
+            configuration.user = "postgres"
+            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+            defer { connection.close() }
+            
+            let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
+            defer { statement.close() }
+            
+            var datePg: PostgresDate {
+                return date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            }
+            var letterDateReceiverPg: PostgresDate {
+                return letterDateReceiver.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            }
+            
+            let _ = try statement.execute(
+                parameterValues: [
+                    id,                   // 1
+                    datePg,               // 2
+                    history,              // 3
+                    note,                 // 4
+                    letterNumReceiver,    // 5
+                    letterDateReceiverPg  // 6
+                ]
+            )
+        }
+        catch {
+            print(error)
+        }
+        
+        await self.reload()
+    }
+    
+    // Variant 2
+    public func sqlUPDATE(
+        history: History
+    ) async {
+        
+        await sqlUPDATE(
+            id: history.id,
+            date: history.date,
+            history: history.history,
+            note: history.note ?? "",
+            letterNumReceiver: history.letterNumReceiver ?? "",
+            letterDateReceiver: history.letterDateReceiver ?? Date()
+        )
+        
+//        let sqlQueryUPDATE = """
+//            UPDATE
+//                event.vw_history
+//            SET
+//                date = $2,       -- date
+//                history = $3,    -- history
+//                note = $4,       -- note
+//                letter = $5,     -- letter
+//                letter_date = $6 -- letterDate
+//            WHERE
+//                id = $1          -- id
+//        """
+//        
+//        do {
+//            var configuration = PostgresClientKit.ConnectionConfiguration()
+//            configuration.host = "217.107.219.91"
+//            configuration.database = "tercas"
+//            configuration.user = "postgres"
+//            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+//            
+//            let connection = try PostgresClientKit.Connection(configuration: configuration)
+//            defer { connection.close() }
+//            
+//            let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
+//            defer { statement.close() }
+//            
+//            
+//            var datePg: PostgresDate {
+//                return history.date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+//            }
+//            
+//            let _ = try statement.execute(
+//                parameterValues: [
+//                    history.id,
+//                    datePg,
+//                    history.history,
+//                    history.note
+//                ]
+//            )
+//        }
+//        catch {
+//            print(error)
+//        }
+//        
+//        await self.reload()
+    }
+    
+    // MARK: - SQL DELETE
+    
+    public func sqlDELETE(
+        historyId: Int
+    ) async {
+        
+        let sqlQueryDELETE = """
+            DELETE FROM
+                event.vw_history
+            WHERE
+                id = $1     -- id
+        """
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "217.107.219.91"
+            configuration.database = "tercas"
+            configuration.user = "postgres"
+            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+            defer { connection.close() }
+            
+            let statement = try connection.prepareStatement(text: sqlQueryDELETE)
+            defer { statement.close() }
+            
+            let _ = try statement.execute(
+                parameterValues: [
+                    historyId
+                ]
+            )
+        }
+        catch {
+            print(error)
+        }
+        
+        await self.reload()
+    }
+}
