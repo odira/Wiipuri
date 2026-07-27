@@ -1,5 +1,6 @@
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtSql import QSqlDatabase, QSqlQuery, QSqlTableModel
+from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow,
@@ -18,7 +19,7 @@ import sys
 
 from TableViewDelegates import (
     ButtonDelegate,
-    TextEditDelegate
+    TextEditDelegate,
 )
 
 
@@ -65,20 +66,26 @@ class TableView(QTableView):
         self.verticalHeader().setDefaultSectionSize(100)
         self.horizontalHeader().setStretchLastSection(True)
 
-        self.textEditDelegate = TextEditDelegate()
-        self.setItemDelegateForColumn(2, self.textEditDelegate)
+        # self.textEditDelegate = TextEditDelegate()
+        # self.setItemDelegateForColumn(2, self.textEditDelegate)
 
-        btn = QPushButton("Click Me")
-        btn.clicked.connect(lambda: print("Button clicked!"))
-        target_index = self.model.index(1, 1)
-        self.setIndexWidget(target_index, btn)
+        # btn = QPushButton("Click Me")
+        # btn.clicked.connect(lambda: print("Button clicked!"))
+        # target_index = self.model.index(1, 1)
+        # self.setIndexWidget(target_index, btn)
 
-        self.buttonDelegate = ButtonDelegate()
-        self.setItemDelegateForColumn(6, self.buttonDelegate)
+        # self.buttonDelegate = ButtonDelegate()
+        # self.setItemDelegateForColumn(6, self.buttonDelegate)
 
-        for row in range(self.model.rowCount()):
-            index = self.model.index(row, 6)
-            self.openPersistentEditor(index)
+        # for row in range(self.model.rowCount()):
+        #     index = self.model.index(row, 6)
+        #     self.openPersistentEditor(index)
+
+        self.setSortingEnabled(True)
+
+        # font = QFont("Courier New", 14)
+        font = QFont("Helvetica", 12)
+        self.setFont(font)
 
         self.selectRow(0)
 

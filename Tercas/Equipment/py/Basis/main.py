@@ -19,8 +19,16 @@ from PySide6.QtGui import (
     QPainter,
     QTextDocument,
     QTextOption,
-    QAbstractTextDocumentLayout
+    QAbstractTextDocumentLayout,
+    QColor
 )
+
+
+class BackgroundDelegate(QStyledItemDelegate):
+    def paint(self, painter, option, index):
+        # Set the background color
+        painter.fillRect(option.rect, QColor(500, 500, 500))
+        super().paint(painter, option, index)
 
 
 class MultilineTextDelegate(QStyledItemDelegate):
@@ -95,8 +103,11 @@ class MainWindow(QMainWindow):
 
         self.table_view.setColumnWidth(1, 1000)
 
-        delegate = MultilineTextDelegate(self.table_view)
-        self.table_view.setItemDelegateForColumn(1, delegate)
+        # multilineTextDelegate = MultilineTextDelegate(self.table_view)
+        # self.table_view.setItemDelegateForColumn(1, multilineTextDelegate)
+
+        backgroundDelegate = BackgroundDelegate()
+        self.table_view.setItemDelegateForColumn(1, backgroundDelegate)
 
         # Crucial: Enable row resizing to allow multiline cells to grow
         self.table_view.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
