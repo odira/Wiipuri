@@ -31,22 +31,20 @@ struct InfoDetailsView: View {
                 
                 Text(LocalizedStringKey(info.info))
                     .font(.custom("Courier", size: 16))
-                    .frame(minHeight: 180)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .fixedSize(horizontal: false, vertical: false)
                     .textEditorStyle(.plain)
+                    .padding()
                     .background(.background)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-//
-//                HStack {
-//                    Button("Edit") {
-//                        openWindow(id: "info-edit", value: info)
-//                    }
-//                    Button("Delete") {
-//                        Task { await infoModel.sqlDELETE(id: info.id) }
-//                    }
-//                }
-//                .buttonStyle(.glassProminent)
+
+                Text(LocalizedStringKey(info.note))
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .fixedSize(horizontal: false, vertical: false)
+                    .textEditorStyle(.plain)
+                    .padding()
+                    .background(.background)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
