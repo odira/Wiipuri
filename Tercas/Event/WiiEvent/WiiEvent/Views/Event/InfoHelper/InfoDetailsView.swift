@@ -30,6 +30,7 @@ struct InfoDetailsView: View {
                 .buttonStyle(.glassProminent)
                 
                 Text(LocalizedStringKey(info.info))
+                    .font(.custom("Courier", size: 16))
                     .frame(minHeight: 180)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .fixedSize(horizontal: false, vertical: false)

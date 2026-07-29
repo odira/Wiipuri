@@ -13,26 +13,34 @@ struct InfoFieldsEditor: View {
     @Binding var note: String
     
     var body: some View {
-        ScrollView {
-            DatePicker("Select a Date", selection: $date, displayedComponents: [.date])
-                .datePickerStyle(.compact)
-                .padding()
-            
-            TextEditor(text: $info)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(.black, lineWidth: 1)
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                VStack {
+                    HStack {
+                        DatePicker("Select a Date", selection: $date, displayedComponents: [.date])
+                            .datePickerStyle(.compact)
+                        
+                        Spacer()
+                    }
+                    
+                    TextEditor(text: $info)
+                        .font(.custom("Courier", size: 16))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(.black, lineWidth: 1)
+                        }
+                    
+                    TextEditor(text: $note)
+                        .font(.custom("Courier", size: 16))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(.black, lineWidth: 1)
+                        }
                 }
-                .frame(height: 200)
-            
-            TextEditor(text: $note)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(.black, lineWidth: 1)
-                }
-                .frame(height: 200)
+                .frame(minHeight: geometry.size.height)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
