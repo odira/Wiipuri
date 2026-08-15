@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D135C2782C7E5E4F00FE7A78 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = D135C2772C7E5E4F00FE7A78 /* PostgresClientKit */; };
+		D178A5542E60ACFD003CF98C /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A242C7E1D3600AB75EC /* UnitListView.swift */; };
+		D178A5552E60AD19003CF98C /* UnitDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A272C7E297F00AB75EC /* UnitDetailsView.swift */; };
+		D1C55A042C7DE36000AB75EC /* WiiUnitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A032C7DE36000AB75EC /* WiiUnitApp.swift */; };
+		D1C55A062C7DE36000AB75EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A052C7DE36000AB75EC /* ContentView.swift */; };
+		D1C55A082C7DE36300AB75EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C55A072C7DE36300AB75EC /* Assets.xcassets */; };
+		D1C55A0B2C7DE36300AB75EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C55A0A2C7DE36300AB75EC /* Preview Assets.xcassets */; };
+		D1C55A202C7DECC600AB75EC /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A1F2C7DECBD00AB75EC /* Unit.swift */; };
+		D1C55A222C7E13C500AB75EC /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A212C7E13C500AB75EC /* UnitModel.swift */; };
+		D1C55A252C7E1D3600AB75EC /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A242C7E1D3600AB75EC /* UnitListView.swift */; };
+		D1C55A282C7E297F00AB75EC /* UnitDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A272C7E297F00AB75EC /* UnitDetailsView.swift */; };
+		D1D8906D2CD40DD30052710D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D8906C2CD40DD30052710D /* Assets.xcassets */; };
+		D1D890702CD40DD30052710D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D8906F2CD40DD30052710D /* Preview Assets.xcassets */; };
+		D1D890752CD40DF50052710D /* WiiUnitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A032C7DE36000AB75EC /* WiiUnitApp.swift */; };
+		D1D890762CD40DFD0052710D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A052C7DE36000AB75EC /* ContentView.swift */; };
+		D1D890772CD40E180052710D /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A212C7E13C500AB75EC /* UnitModel.swift */; };
+		D1D890782CD40E180052710D /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C55A1F2C7DECBD00AB75EC /* Unit.swift */; };
+		D1D8907B2CD40E310052710D /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = D1D8907A2CD40E310052710D /* PostgresClientKit */; };
+		D1D8907E2CD40FEE0052710D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D8907D2CD40FEE0052710D /* TableView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D1C55A002C7DE36000AB75EC /* WiiUnit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiiUnit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C55A032C7DE36000AB75EC /* WiiUnitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiiUnitApp.swift; sourceTree = "<group>"; };
+		D1C55A052C7DE36000AB75EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1C55A072C7DE36300AB75EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1C55A0A2C7DE36300AB75EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D1C55A1F2C7DECBD00AB75EC /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		D1C55A212C7E13C500AB75EC /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
+		D1C55A242C7E1D3600AB75EC /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
+		D1C55A272C7E297F00AB75EC /* UnitDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailsView.swift; sourceTree = "<group>"; };
+		D1D890662CD40DD10052710D /* WiiUnitMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiiUnitMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D8906C2CD40DD30052710D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1D8906F2CD40DD30052710D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D1D890712CD40DD30052710D /* WiiUnitMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WiiUnitMac.entitlements; sourceTree = "<group>"; };
+		D1D8907D2CD40FEE0052710D /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C559FD2C7DE36000AB75EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D135C2782C7E5E4F00FE7A78 /* PostgresClientKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D890632CD40DD10052710D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D8907B2CD40E310052710D /* PostgresClientKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1C559F72C7DE36000AB75EC = {
+			isa = PBXGroup;
+			children = (
+				D1C55A022C7DE36000AB75EC /* WiiUnit */,
+				D1D890672CD40DD10052710D /* WiiUnitMac */,
+				D1C55A012C7DE36000AB75EC /* Products */,
+				D1D890792CD40E310052710D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D1C55A012C7DE36000AB75EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A002C7DE36000AB75EC /* WiiUnit.app */,
+				D1D890662CD40DD10052710D /* WiiUnitMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1C55A022C7DE36000AB75EC /* WiiUnit */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A032C7DE36000AB75EC /* WiiUnitApp.swift */,
+				D1C55A1C2C7DE8DF00AB75EC /* Views */,
+				D1C55A1E2C7DE94900AB75EC /* Models */,
+				D1C55A1D2C7DE92700AB75EC /* Resources */,
+				D1C55A092C7DE36300AB75EC /* Preview Content */,
+			);
+			path = WiiUnit;
+			sourceTree = "<group>";
+		};
+		D1C55A092C7DE36300AB75EC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A0A2C7DE36300AB75EC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D1C55A1C2C7DE8DF00AB75EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A052C7DE36000AB75EC /* ContentView.swift */,
+				D1C55A262C7E295D00AB75EC /* Unit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1C55A1D2C7DE92700AB75EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A072C7DE36300AB75EC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1C55A1E2C7DE94900AB75EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A232C7E155600AB75EC /* Unit */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1C55A232C7E155600AB75EC /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A212C7E13C500AB75EC /* UnitModel.swift */,
+				D1C55A1F2C7DECBD00AB75EC /* Unit.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		D1C55A262C7E295D00AB75EC /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				D1C55A242C7E1D3600AB75EC /* UnitListView.swift */,
+				D1C55A272C7E297F00AB75EC /* UnitDetailsView.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		D1D890672CD40DD10052710D /* WiiUnitMac */ = {
+			isa = PBXGroup;
+			children = (
+				D1D890712CD40DD30052710D /* WiiUnitMac.entitlements */,
+				D1D8906C2CD40DD30052710D /* Assets.xcassets */,
+				D1D8907C2CD40FCD0052710D /* Views */,
+				D1D8906E2CD40DD30052710D /* Preview Content */,
+			);
+			path = WiiUnitMac;
+			sourceTree = "<group>";
+		};
+		D1D8906E2CD40DD30052710D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D1D8906F2CD40DD30052710D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D1D890792CD40E310052710D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1D8907C2CD40FCD0052710D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1D8907D2CD40FEE0052710D /* TableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1C559FF2C7DE36000AB75EC /* WiiUnit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1C55A0E2C7DE36300AB75EC /* Build configuration list for PBXNativeTarget "WiiUnit" */;
+			buildPhases = (
+				D1C559FC2C7DE36000AB75EC /* Sources */,
+				D1C559FD2C7DE36000AB75EC /* Frameworks */,
+				D1C559FE2C7DE36000AB75EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiiUnit;
+			packageProductDependencies = (
+				D135C2772C7E5E4F00FE7A78 /* PostgresClientKit */,
+			);
+			productName = WiiUnit;
+			productReference = D1C55A002C7DE36000AB75EC /* WiiUnit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1D890652CD40DD10052710D /* WiiUnitMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1D890722CD40DD30052710D /* Build configuration list for PBXNativeTarget "WiiUnitMac" */;
+			buildPhases = (
+				D1D890622CD40DD10052710D /* Sources */,
+				D1D890632CD40DD10052710D /* Frameworks */,
+				D1D890642CD40DD10052710D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiiUnitMac;
+			packageProductDependencies = (
+				D1D8907A2CD40E310052710D /* PostgresClientKit */,
+			);
+			productName = WiiUnitMac;
+			productReference = D1D890662CD40DD10052710D /* WiiUnitMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1C559F82C7DE36000AB75EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					D1C559FF2C7DE36000AB75EC = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D1D890652CD40DD10052710D = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = D1C559FB2C7DE36000AB75EC /* Build configuration list for PBXProject "WiiUnit" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1C559F72C7DE36000AB75EC;
+			packageReferences = (
+				D135C2762C7E5E4F00FE7A78 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
+			);
+			productRefGroup = D1C55A012C7DE36000AB75EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1C559FF2C7DE36000AB75EC /* WiiUnit */,
+				D1D890652CD40DD10052710D /* WiiUnitMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1C559FE2C7DE36000AB75EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C55A0B2C7DE36300AB75EC /* Preview Assets.xcassets in Resources */,
+				D1C55A082C7DE36300AB75EC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D890642CD40DD10052710D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D890702CD40DD30052710D /* Preview Assets.xcassets in Resources */,
+				D1D8906D2CD40DD30052710D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1C559FC2C7DE36000AB75EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C55A202C7DECC600AB75EC /* Unit.swift in Sources */,
+				D1C55A282C7E297F00AB75EC /* UnitDetailsView.swift in Sources */,
+				D1C55A252C7E1D3600AB75EC /* UnitListView.swift in Sources */,
+				D1C55A062C7DE36000AB75EC /* ContentView.swift in Sources */,
+				D1C55A042C7DE36000AB75EC /* WiiUnitApp.swift in Sources */,
+				D1C55A222C7E13C500AB75EC /* UnitModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D890622CD40DD10052710D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D178A5552E60AD19003CF98C /* UnitDetailsView.swift in Sources */,
+				D1D890762CD40DFD0052710D /* ContentView.swift in Sources */,
+				D1D8907E2CD40FEE0052710D /* TableView.swift in Sources */,
+				D178A5542E60ACFD003CF98C /* UnitListView.swift in Sources */,
+				D1D890752CD40DF50052710D /* WiiUnitApp.swift in Sources */,
+				D1D890772CD40E180052710D /* UnitModel.swift in Sources */,
+				D1D890782CD40E180052710D /* Unit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D1C55A0C2C7DE36300AB75EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1C55A0D2C7DE36300AB75EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1C55A0F2C7DE36300AB75EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WiiUnit/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tercas.WiiUnit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1C55A102C7DE36300AB75EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WiiUnit/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tercas.WiiUnit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1D890732CD40DD30052710D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiiUnitMac/WiiUnitMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"WiiUnitMac/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tercas.WiiUnitMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D1D890742CD40DD30052710D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WiiUnitMac/WiiUnitMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"WiiUnitMac/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.tercas.WiiUnitMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1C559FB2C7DE36000AB75EC /* Build configuration list for PBXProject "WiiUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1C55A0C2C7DE36300AB75EC /* Debug */,
+				D1C55A0D2C7DE36300AB75EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1C55A0E2C7DE36300AB75EC /* Build configuration list for PBXNativeTarget "WiiUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1C55A0F2C7DE36300AB75EC /* Debug */,
+				D1C55A102C7DE36300AB75EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1D890722CD40DD30052710D /* Build configuration list for PBXNativeTarget "WiiUnitMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1D890732CD40DD30052710D /* Debug */,
+				D1D890742CD40DD30052710D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D135C2762C7E5E4F00FE7A78 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codewinsdotcom/PostgresClientKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D135C2772C7E5E4F00FE7A78 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D135C2762C7E5E4F00FE7A78 /* XCRemoteSwiftPackageReference "PostgresClientKit" */;
+			productName = PostgresClientKit;
+		};
+		D1D8907A2CD40E310052710D /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D135C2762C7E5E4F00FE7A78 /* XCRemoteSwiftPackageReference "PostgresClientKit" */;
+			productName = PostgresClientKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D1C559F82C7DE36000AB75EC /* Project object */;
+}
