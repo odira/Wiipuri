@@ -14,7 +14,8 @@ struct UnitListView: View {
         unitModel.units
             .filter { unit in
                 if !searchText.isEmpty {
-                    return unit.unit.contains( searchText )
+//                    return unit.unit.contains( searchText )
+                    return true
                 } else {
                     return true
                 }
@@ -42,7 +43,8 @@ struct UnitListView: View {
 //                                .navigationTitle(unit.unit)
 //                                .navigationBarTitleDisplayMode(.inline)
                         }, label: {
-                            Text(unit.unit)
+//                            Text(unit.unit)
+                            Text("TEST")
                         })
                         
                     }

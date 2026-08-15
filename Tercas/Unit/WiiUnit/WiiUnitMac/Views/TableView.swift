@@ -20,9 +20,10 @@ struct TableView: View {
             if unitModel.isFetching {
                 ProgressView("Loading...")
             } else {
-                Table(filteredUnits) {
-                    TableColumn(Text("ATC Unit"), value: \.unit)
-                }
+//                Table(filteredUnits) {
+////                    TableColumn(Text("ATC Unit"), value: \.unit)
+//                }
+                Text("TEST")
             }
         }
         .task {

@@ -45,35 +45,33 @@ public class UnitModel: Identifiable, ObservableObject {
             for row in cursor {
                 let columns = try row.get().columns
                 
-                let id = try columns[0].int()              //  0
-                let parentId = try columns[1].int()        //  1
-                let typeId = try? columns[2].int()         //  2
-                let typeAbbr = try? columns[3].string()    //  3
-                let type = try columns[4].string()         //  4
-                let typeNote = try? columns[5].string()    //  5
-                let abbr = try? columns[6].string()        //  6
-                let unit = try columns[7].string()         //  7
-                let adId = try? columns[8].int()           //  8
-                let cityId = try? columns[9].int()         //  9
-                let city = try? columns[10].string()       // 10
-                let ops = try columns[11].bool()           // 11
-                let note = try? columns[12].string()       // 12
+                let id = try columns[0].int()         //  0
+                let parentId = try columns[1].int()   //  1
+                let typeId = try? columns[2].int()    //  2
+                let type = try? columns[3].string()   //  3
+                let abbr = try? columns[4].string()   //  4
+                let unit = try? columns[5].string()   //  5
+                let cityId = try? columns[6].int()    //  6
+                let city = try? columns[7].string()   //  7
+                let adId = try? columns[8].int()      //  8
+                let ad = try? columns[9].string()     //  9
+                let icao = try? columns[10].string()  // 10
+                let note = try? columns[11].string()  // 11
                 
                 units.append(
                     Unit(
-                        id: id,                      //  0
-                        parentId: parentId,          //  1
-                        typeId: typeId,              //  2
-                        typeAbbr: typeAbbr,          //  3
-                        type: type,                  //  4
-                        typeNote: typeNote,          //  5
-                        abbr: abbr,                  //  6
-                        unit: unit,                  //  7
-                        adId: adId,                  //  8
-                        cityId: cityId,              //  9
-                        city: city,                  // 10
-                        ops: ops,                    // 11
-                        note: note                   // 12
+                        id: id,                       //  0
+                        parentId: parentId,           //  1
+                        typeId: typeId,               //  2
+                        type: type,                   //  3
+                        abbr: abbr,                   //  4
+                        unit: unit,                   //  5
+                        cityId: cityId,               //  6
+                        city: city,                   //  7
+                        adId: adId,                   //  8
+                        ad: ad,                       //  9
+                        icao: icao,                   // 10
+                        note: note                    // 11
                     )
                 )
             }

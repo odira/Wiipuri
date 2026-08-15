@@ -16,7 +16,7 @@ struct UnitDetailsView: View {
             Section {
                 Text("ФГУП Госкорпорация по ОрВД")
                 Text("Филиал Аэронавигация Юга")
-                Text(unit.unit)
+                Text(unit.unit!)
                     .font(.title3)
                     .foregroundStyle(.primary)
                     .bold()
@@ -24,14 +24,14 @@ struct UnitDetailsView: View {
             .frame(maxWidth: .infinity, alignment: .center)
             
             Section("Объект") {
-                LabeledContent("Тип объекта", value: unit.typeAbbr ?? "Not defined")
-                Text(unit.type)
+//                LabeledContent("Тип объекта", value: unit.typeAbbr ?? "Not defined")
+                Text(unit.type!)
                     .font(.caption)
-                if let typeNote = unit.typeNote {
-                    Text(typeNote)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+//                if let typeNote = unit.typeNote {
+//                    Text(typeNote)
+//                        .font(.caption)
+//                        .foregroundStyle(.secondary)
+//                }
             }
             
             Section("Местоположение") {
