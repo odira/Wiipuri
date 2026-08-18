@@ -14,7 +14,6 @@ struct InfoFieldsEditor: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ScrollView(.vertical) {
                 VStack {
                     HStack {
                         DatePicker("Select a Date", selection: $date, displayedComponents: [.date])
@@ -23,12 +22,14 @@ struct InfoFieldsEditor: View {
                         Spacer()
                     }
                     
-                    TextEditor(text: $info)
-                        .font(.custom("Courier", size: 16))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(.black, lineWidth: 1)
-                        }
+                    ScrollView {
+                        TextEditor(text: $info)
+                            .font(.custom("Courier", size: 16))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(.black, lineWidth: 1)
+                            }
+                    }
                     
                     TextEditor(text: $note)
                         .font(.custom("Courier", size: 16))
@@ -37,8 +38,7 @@ struct InfoFieldsEditor: View {
                                 .stroke(.black, lineWidth: 1)
                         }
                 }
-                .frame(minHeight: geometry.size.height)
-            }
+//                .frame(minHeight: geometry.size.height)
             .padding()
         }
     }

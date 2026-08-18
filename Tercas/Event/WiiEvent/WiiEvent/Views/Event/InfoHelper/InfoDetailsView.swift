@@ -29,14 +29,16 @@ struct InfoDetailsView: View {
                 }
                 .buttonStyle(.glassProminent)
                 
-                Text(LocalizedStringKey(info.info))
-                    .font(.custom("Courier", size: 16))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    .fixedSize(horizontal: false, vertical: false)
-                    .textEditorStyle(.plain)
-                    .padding()
-                    .background(.background)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                ScrollView {
+                    Text(LocalizedStringKey(info.info))
+                        .font(.custom("Courier", size: 16))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .fixedSize(horizontal: false, vertical: false)
+                        .textEditorStyle(.plain)
+                        .padding()
+                        .background(.background)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
 
                 Text(LocalizedStringKey(info.note))
                     .frame(maxWidth: .infinity, alignment: .topLeading)
