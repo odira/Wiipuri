@@ -31,7 +31,7 @@ struct InfoDetailsView: View {
                 
                 ScrollView {
                     Text(LocalizedStringKey(info.info))
-                        .font(.custom("Courier", size: 16))
+//                        .font(.custom("Courier", size: 16))
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                         .fixedSize(horizontal: false, vertical: false)
                         .textEditorStyle(.plain)

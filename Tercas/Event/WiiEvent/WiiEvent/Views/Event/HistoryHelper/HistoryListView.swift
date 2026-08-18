@@ -40,7 +40,7 @@ struct HistoryListView: View {
                     
                         ScrollViewReader { proxy in
                             ScrollView {
-                                LazyVStack {
+                                LazyVStack(spacing: 20) {
                                     ForEach(histories) { history in
                                         HistoryListRowView(history: history)
                                             .swipeActions(allowsFullSwipe: false) {
