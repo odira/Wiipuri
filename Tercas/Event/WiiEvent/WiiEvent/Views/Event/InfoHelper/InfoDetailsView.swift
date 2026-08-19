@@ -20,37 +20,19 @@ struct InfoDetailsView: View {
     
     var body: some View {
         NavigationStack {
+            
             VStack {
-                
-                HStack {
-                    Text(info.date, style: .date)
-                        .font(.title2)
-                        .foregroundStyle(.blue)
-                }
-                .buttonStyle(.glassProminent)
+                Text(info.date, style: .date)
+                    .font(.title2)
+                    .foregroundStyle(.blue)
                 
                 ScrollView {
                     Text(LocalizedStringKey(info.info))
-//                        .font(.custom("Courier", size: 16))
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                        .fixedSize(horizontal: false, vertical: false)
-                        .textEditorStyle(.plain)
                         .padding()
                         .background(.background)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
-
-                Text(LocalizedStringKey(info.note))
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .fixedSize(horizontal: false, vertical: false)
-                    .textEditorStyle(.plain)
-                    .padding()
-                    .background(.background)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.yellow.opacity(0.1))
+            
         }
     }
 }
@@ -58,7 +40,4 @@ struct InfoDetailsView: View {
 #Preview {
     InfoDetailsView(for: Info.example)
         .environmentObject(InfoModel.example)
-        #if os(macOS)
-        .frame(width: 600, height: 800)
-        #endif
 }
