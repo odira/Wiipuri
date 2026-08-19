@@ -12,9 +12,11 @@ struct WiiUnitApp: App {
     @StateObject var unitModel: UnitModel = UnitModel()
     
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
         }
         .environmentObject(unitModel)
+        
     }
 }

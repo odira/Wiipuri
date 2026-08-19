@@ -26,15 +26,15 @@ struct UnitListView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        NavigationStack {
-         
+       
+//        NavigationStack {
+        
             ZStack {
                 if unitModel.isFetching {
                     ProgressView("Loading...")
                 } else {
                     
                     List(filteredUnits) { unit in
-                        
                         NavigationLink(destination: {
                             UnitDetailsView(unit: unit)
                                 #if os(iOS)
@@ -43,10 +43,8 @@ struct UnitListView: View {
 //                                .navigationTitle(unit.unit)
 //                                .navigationBarTitleDisplayMode(.inline)
                         }, label: {
-//                            Text(unit.unit)
-                            Text("TEST")
+                            Text(unit.unit!)
                         })
-                        
                     }
                     .listStyle(.plain)
                     #if os(iOS)
@@ -58,17 +56,16 @@ struct UnitListView: View {
                     
                 }
             }
-            #if os(iOS)
-            .navigationBarTitle("Перечень объектов")
-            #endif
+//            #if os(iOS)
+//            .navigationBarTitle("Перечень объектов")
+//            #endif
             .task {
                 await unitModel.fetch()
             }
             
-        }
+//        }
         
-    } // body
-    
+    }
 }
 
 #Preview {

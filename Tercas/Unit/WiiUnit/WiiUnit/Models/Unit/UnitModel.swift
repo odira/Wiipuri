@@ -77,10 +77,10 @@ public class UnitModel: Identifiable, ObservableObject {
             }
         } catch {
             print(error)
-        } // do
+        }
         
         isFetching = false
-    } // fetch
+    }
 }
 
 
