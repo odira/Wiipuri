@@ -13,13 +13,13 @@ struct InfoFieldsEditor: View {
     @Binding var note: String
     
     var body: some View {
-        GeometryReader { geometry in
+//        GeometryReader { geometry in
                 VStack {
                     HStack {
-                        DatePicker("Select a Date", selection: $date, displayedComponents: [.date])
+                        DatePicker("Select Date", selection: $date, displayedComponents: [.date])
                             .datePickerStyle(.compact)
                         
-                        Spacer()
+//                        Spacer()
                     }
                     
                     ScrollView {
@@ -29,18 +29,21 @@ struct InfoFieldsEditor: View {
                                 RoundedRectangle(cornerRadius: 5)
                                     .stroke(.black, lineWidth: 1)
                             }
+                            .backgroundStyle(.yellow)
                     }
+//                    .frame(height: 500)
                     
-                    TextEditor(text: $note)
-                        .font(.custom("Courier", size: 16))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(.black, lineWidth: 1)
-                        }
+                    
+//                    TextEditor(text: $note)
+//                        .font(.custom("Courier", size: 16))
+//                        .overlay {
+//                            RoundedRectangle(cornerRadius: 5)
+//                                .stroke(.black, lineWidth: 1)
+//                        }
                 }
 //                .frame(minHeight: geometry.size.height)
-            .padding()
-        }
+//            .padding()
+//        }
     }
 }
 
