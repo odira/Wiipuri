@@ -47,29 +47,30 @@ struct InfoListView: View {
                     VStack {
                         if infos != nil {
                             
+//                            GeometryReader {geometry in
                             ScrollViewReader { value in
-                                ZStack {
-                                    HStack {
-                                        Button(action: {
-                                            if currentIndex == -1 {
-                                                currentIndex = infos!.count - 1
-                                            }
-                                            prevInfo()
-                                            value.scrollTo(currentIndex)
-                                        }, label: {
-                                            Label("Назад", systemImage: "arrow.left.square.fill")
-                                        })
-                                        
-                                        Button(action: {
-                                            if currentIndex == -1 {
-                                                currentIndex = infos!.count
-                                            }
-                                            nextInfo()
-                                            value.scrollTo(currentIndex)
-                                        }, label: {
-                                            Label("Вперед", systemImage: "arrow.right.square.fill")
-                                        })
-                                    }
+//                                ZStack {
+//                                    HStack {
+//                                        Button(action: {
+//                                            if currentIndex == -1 {
+//                                                currentIndex = infos!.count - 1
+//                                            }
+//                                            prevInfo()
+//                                            value.scrollTo(currentIndex)
+//                                        }, label: {
+//                                            Label("Назад", systemImage: "arrow.left.square.fill")
+//                                        })
+//                                        
+//                                        Button(action: {
+//                                            if currentIndex == -1 {
+//                                                currentIndex = infos!.count
+//                                            }
+//                                            nextInfo()
+//                                            value.scrollTo(currentIndex)
+//                                        }, label: {
+//                                            Label("Вперед", systemImage: "arrow.right.square.fill")
+//                                        })
+//                                    }
                                     
                                     ScrollView(.horizontal, showsIndicators: true) {
                                         LazyHStack(spacing: 0) {
@@ -103,6 +104,8 @@ struct InfoListView: View {
                                                             .tint(.red)
                                                         }
                                                     }
+//                                                    .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
+//                                                    .containerRelativeFrame([.horizontal])
                                             
                                             }
                                         }
@@ -120,8 +123,9 @@ struct InfoListView: View {
                                             .buttonStyle(.borderedProminent)
                                         }
                                     }
+//                                    .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
                                 }
-                            }
+//                            }
                         } else {
                             Text("**Справочная информация отсутствует**")
                                 .lineSpacing(8)

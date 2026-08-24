@@ -19,20 +19,27 @@ struct InfoDetailsView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            
+        GeometryReader { geometry in
             VStack {
                 Text(info.date, style: .date)
                     .font(.title2)
                     .foregroundStyle(.blue)
+                    .padding()
                 
-                ScrollView {
-                    Text(LocalizedStringKey(info.info))
-                        .padding()
-                        .background(.background)
+                ScrollView(.vertical) {
+                    VStack {
+                        Text(LocalizedStringKey(info.info))
+                            .padding()
+//                            .background(.background)
+                            .background(.yellow)
+//                            .frame(minWidth: .infinity, minHeight: .infinity)
+                    }
                 }
+//                .frame(minWidth: .infinity, minHeight: .infinity)
+//                .ignoresSafeArea(.all)
+                
             }
-            
+            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
         }
     }
 }
