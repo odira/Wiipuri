@@ -13,15 +13,15 @@ struct InfoFieldsEditor: View {
     @Binding var note: String
     
     var body: some View {
-//        GeometryReader { geometry in
+
                 VStack {
-                    HStack {
+//                    HStack {
                         DatePicker("Select Date", selection: $date, displayedComponents: [.date])
                             .datePickerStyle(.compact)
                         
 //                        Spacer()
-                    }
-                    
+//                    }
+                    GeometryReader { geometry in
                     ScrollView {
                         TextEditor(text: $info)
                             .font(.custom("Courier", size: 16))
@@ -30,7 +30,9 @@ struct InfoFieldsEditor: View {
                                     .stroke(.black, lineWidth: 1)
                             }
                             .backgroundStyle(.yellow)
+                            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
                     }
+                        
 //                    .frame(height: 500)
                     
                     
@@ -43,7 +45,7 @@ struct InfoFieldsEditor: View {
                 }
 //                .frame(minHeight: geometry.size.height)
 //            .padding()
-//        }
+        }
     }
 }
 
