@@ -23,20 +23,25 @@ struct InfoDetailsView: View {
             VStack {
                 Text(info.date, style: .date)
                     .font(.title2)
+                    .bold()
                     .foregroundStyle(.blue)
                     .padding()
                 
                 ScrollView(.vertical) {
-                    VStack {
+//                    VStack {
                         Text(LocalizedStringKey(info.info))
-                            .padding()
+//                            .padding()
+                        .multilineTextAlignment(.leading)
 //                            .background(.background)
-                            .background(.yellow)
+                            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
+//                            .background(.yellow)
+                            .multilineTextAlignment(.leading)
+                            
 //                            .frame(minWidth: .infinity, minHeight: .infinity)
-                    }
+//                    }
                 }
-//                .frame(minWidth: .infinity, minHeight: .infinity)
-//                .ignoresSafeArea(.all)
+                .frame(minWidth: geometry.size.width)
+                .ignoresSafeArea(.all)
                 
             }
             .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
