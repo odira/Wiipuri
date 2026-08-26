@@ -5,7 +5,11 @@ struct EventDetailsView: View {
     @Environment(\.dismiss) private var dismiss
     
     @EnvironmentObject var eventModel: EventModel
-    @EnvironmentObject var historyModel: HistoryModel
+//    @EnvironmentObject var historyModel: HistoryModel
+//    @EnvironmentObject var infoModel: InfoModel
+    
+    @StateObject var infoModel = InfoModel()
+    @StateObject var historyModel = HistoryModel()
 
 //    @State private var isPresentedDescriptionSheet: Bool = false
 //    @State private var isPresentedJustificationSheet: Bool = false
@@ -44,10 +48,16 @@ struct EventDetailsView: View {
                             NavigationLink(destination: JustificationView(for: event.justification)) {
                                 Text("Обоснование")
                             }
-                            NavigationLink(destination: InfoListView(for: event)) {
+                            NavigationLink(destination:
+                                InfoListView(for: event)
+                                    .environmentObject(infoModel)
+                            ) {
                                 Text("Справка")
                             }
-                            NavigationLink(destination: HistoryListView(for: event)) {
+                            NavigationLink(destination:
+                                HistoryListView(for: event)
+                                    .environmentObject(historyModel)
+                            ) {
                                 Text("Исполнение")
                             }
                         }
@@ -96,8 +106,8 @@ struct EventDetailsView: View {
 #Preview {
     EventDetailsView(id: Event.example.id)
         .frame(width: 600, height: 800)
-        .environmentObject(EventModel.example )
-        .environmentObject(HistoryModel.example)
+//        .environmentObject(EventModel.example)
+//        .environmentObject(HistoryModel.example)
 }
 
 struct ButtonBlockView: View {
