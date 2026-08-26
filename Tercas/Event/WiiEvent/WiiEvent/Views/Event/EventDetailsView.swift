@@ -5,8 +5,6 @@ struct EventDetailsView: View {
     @Environment(\.dismiss) private var dismiss
     
     @EnvironmentObject var eventModel: EventModel
-//    @EnvironmentObject var historyModel: HistoryModel
-//    @EnvironmentObject var infoModel: InfoModel
     
     @StateObject var infoModel = InfoModel()
     @StateObject var historyModel = HistoryModel()
@@ -93,7 +91,7 @@ struct EventDetailsView: View {
                             LabeledContent("Контрагент", value: event.dealContractor ?? "")
                             LabeledContent("Субподрядчик", value: event.dealSubcontractor ?? "")
                         }
-                    } // Form
+                    }
                     .formStyle(.grouped)
                     
                 }
@@ -106,8 +104,6 @@ struct EventDetailsView: View {
 #Preview {
     EventDetailsView(id: Event.example.id)
         .frame(width: 600, height: 800)
-//        .environmentObject(EventModel.example)
-//        .environmentObject(HistoryModel.example)
 }
 
 struct ButtonBlockView: View {

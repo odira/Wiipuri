@@ -19,7 +19,8 @@ struct ContentView: View {
                 Tab("Группа", systemImage: "rectangle.3.group.fill") {
                     Text("Not developed")
                 }
-                Tab("Search", systemImage: "magnifyingglass", role: .prominent) {
+
+                Tab(role: .search) {
                     EventModelFilterView()
                 }
             }
