@@ -5,7 +5,7 @@ struct EventDetailsView: View {
     @Environment(\.dismiss) private var dismiss
     
     @EnvironmentObject var eventModel: EventModel
-    
+        
     @StateObject var infoModel = InfoModel()
     @StateObject var historyModel = HistoryModel()
 

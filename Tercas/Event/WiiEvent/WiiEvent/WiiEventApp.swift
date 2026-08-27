@@ -10,6 +10,8 @@ struct WiiEventApp: App {
     @StateObject var dealModel = DealModel()
     @StateObject var planModel = PlanModel()
     @StateObject var eventModelFilter = EventModelFilter()
+//    @StateObject var infoModel = InfoModel()
+//    @StateObject var historyModel = HistoryModel()
     
     var body: some Scene {
         WindowGroup {
@@ -22,12 +24,15 @@ struct WiiEventApp: App {
                         .environmentObject(dealModel)
                         .environmentObject(planModel)
                         .environmentObject(eventModelFilter)
+//                        .environmentObject(infoModel)
+//                        .environmentObject(historyModel)
                 }
             }
             .task {
                 await eventModel.fetch()
                 await dealModel.fetch()
                 await planModel.fetch()
+//                await eventModelFilter.fetch()
             }
         }  
     }

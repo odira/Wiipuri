@@ -18,13 +18,13 @@ struct HistoryListRowView: View {
         return formatter
     }()
     
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .foregroundStyle(.gray)
                 .opacity(0.3)
                 .cornerRadius(10)
-//                .padding()
                 
             VStack(alignment: .leading) {
                 HStack {
@@ -32,34 +32,33 @@ struct HistoryListRowView: View {
                         .foregroundStyle(.blue)
                         .bold()
                         .background(.clear)
-                        .padding()
                         .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            RoundedRectangle(cornerRadius: 16, style: .continuous)
                                 .fill(.clear)
                                 .stroke(Color.blue, lineWidth: 1)
                         }
                 }
                 
-                if let letterNumReceiver = history.letterNumReceiver {
-                    HStack {
-                        Text(letterNumReceiver)
-                        Text(dateFormatter.string(from: history.letterDateReceiver!))
+                HStack {
+                    if let letterNumReceiver = history.letterNumReceiver {
+                        HStack {
+                            Text(letterNumReceiver)
+                            Text(" от ")
+                            Text(dateFormatter.string(from: history.letterDateReceiver!))
+                        }
+                        .font(.footnote)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(.clear)
+                                .stroke(Color.blue, lineWidth: 1)
+                        }
                     }
-                    .font(.footnote)
-                    .padding(5)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 5, style: .continuous)
-                            .fill(.clear)
-                            .stroke(Color.blue, lineWidth: 1)
-                    }
-                    .padding(.trailing, 10)
                 }
                 
                 HStack {
                     Text(history.history)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .multilineTextAlignment(.leading)
-                        .padding()
                         .overlay {
                             RoundedRectangle(cornerRadius: 12, style: .continuous)
                                 .fill(.clear)
@@ -67,17 +66,13 @@ struct HistoryListRowView: View {
                         }
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.trailing, 10)
-                .padding(.bottom, 10)
             }
-//            .padding()
-//            .padding()
         }
     }
 }
 
 #Preview(traits: .fixedLayout(width: 900, height: 300)) {
     HistoryListRowView(history: History.example)
-        .environmentObject(EventModel())
-        .environmentObject(HistoryModel())
+        .environmentObject(EventModel.example)
+        .environmentObject(HistoryModel.example)
 }
