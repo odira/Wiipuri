@@ -19,33 +19,20 @@ struct InfoDetailsView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Text(info.date, style: .date)
-                    .font(.title2)
-                    .bold()
-                    .foregroundStyle(.blue)
-                    .padding()
-                
+        VStack {
+            Text(info.date, style: .date)
+                .font(.title2)
+                .bold()
+                .foregroundStyle(.blue)
+            
                 ScrollView(.vertical) {
-//                    VStack {
-                        Text(LocalizedStringKey(info.info))
-//                            .padding()
-                        .multilineTextAlignment(.leading)
-//                            .background(.background)
-                            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
-//                            .background(.yellow)
-                            .multilineTextAlignment(.leading)
-                            
-//                            .frame(minWidth: .infinity, minHeight: .infinity)
-//                    }
+                    Text(LocalizedStringKey(info.info))
+                        .lineLimit(nil)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 }
-                .frame(minWidth: geometry.size.width)
-                .ignoresSafeArea(.all)
-                
-            }
-            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
         }
+        .border(Color.gray)
+        .padding()
     }
 }
 

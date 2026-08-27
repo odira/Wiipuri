@@ -178,8 +178,4 @@ struct InfoListView: View {
 #Preview {
     InfoListView(for: Event.example)
         .environmentObject(InfoModel.example)
-//    
-//        #if os(macOS)
-//        .frame(width: 600, height: 800)
-//        #endif
 }
