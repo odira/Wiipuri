@@ -42,7 +42,7 @@ struct HistoryListView: View {
                             ScrollView {
                                 LazyVStack(spacing: 20) {
                                     ForEach(histories) { history in
-                                        HistoryListRowView(history: history)
+                                        HistoryRow(history: history)
                                             .swipeActions(allowsFullSwipe: false) {
                                                 Button(role: .destructive, action: {
                                                     Task {

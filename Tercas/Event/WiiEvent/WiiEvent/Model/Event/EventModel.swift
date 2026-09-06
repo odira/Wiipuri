@@ -15,8 +15,7 @@ public class EventModel: Identifiable, ObservableObject {
     
     static let shared = EventModel()
     
-    // INITIALIZATION
-    //
+    
     init() {
         self.events = []
     }
@@ -26,14 +25,12 @@ public class EventModel: Identifiable, ObservableObject {
         self.events = events
     }
     
-    // DEINITIALIZATION
-    //
+    
     deinit {
         self.events.removeAll()
     }
     
-    // OTHER
-    //
+
     @MainActor
     func reload() async {
         self.events.removeAll()
@@ -61,7 +58,7 @@ public class EventModel: Identifiable, ObservableObject {
                     id,                 --  0
                     event,              --  1
                     city,               --  2
-                    unit,               --  3
+                    _unit,              --  3
                     equipment,          --  4
                     phase,              --  5
                     years,              --  6
