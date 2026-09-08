@@ -20,13 +20,13 @@ struct HistoryRow: View {
     
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             HStack {
                 Text(dateFormatter.string(from: history.date))
                     .foregroundStyle(.blue)
                     .bold()
                     .background(.clear)
-                    .padding(4)
+                    .padding(5)
                     .overlay {
                         RoundedRectangle(cornerRadius: 5, style: .continuous)
                             .fill(.clear)
@@ -35,42 +35,41 @@ struct HistoryRow: View {
             }
             
             HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Отправитель")
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Отправлено")
                         .bold()
                 }
+                .frame(maxWidth: .infinity)
                 
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Получатель")
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Получено")
                         .bold()
-                    
                     HStack {
                         if let letterNumReceiver = history.letterNumReceiver {
                             Text(letterNumReceiver)
                                 .font(.footnote)
-                                .padding(4)
+                                .padding(5)
                                 .overlay {
                                     RoundedRectangle(cornerRadius: 5, style: .continuous)
                                         .fill(.clear)
                                         .stroke(Color.blue, lineWidth: 1)
                                 }
                         }
-                    }
-                    HStack {
                         if let letterDateReceiver = history.letterDateReceiver {
                             Text(dateFormatter.string(from: letterDateReceiver))
                         }
                     }
                 }
+                .frame(maxWidth: .infinity)
             }
             
             HStack {
                 Text(history.history)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     .multilineTextAlignment(.leading)
-                    .padding(3)
+                    .padding(5)
                     .overlay {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        RoundedRectangle(cornerRadius: 5, style: .continuous)
                             .fill(.clear)
                             .stroke(Color.blue, lineWidth: 1)
                     }

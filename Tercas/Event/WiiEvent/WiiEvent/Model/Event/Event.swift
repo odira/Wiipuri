@@ -179,7 +179,7 @@ public extension Event {
               dealID: 100,                                       /// 30
               dealTypeID: 1,                                     /// 31
               dealStatusID: 1,                                   /// 32
-              deal: "Москва-Резерв",                             /// 33
+              deal: "11611",                             /// 33
               dealPrice: 1000.00,                                /// 34
               dealStartDate: Date(timeIntervalSince1970: 1000),  /// 35
               dealEndDate: Date(timeIntervalSince1970: 2000),    /// 36

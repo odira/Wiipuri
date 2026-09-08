@@ -28,8 +28,6 @@ struct HistoryListView: View {
     init(for event: Event) {
         self.eventId = event.id
     }
-    
-    // MARK: - body
 
     var body: some View {
         NavigationStack {
@@ -52,26 +50,10 @@ struct HistoryListView: View {
                                                 }, label: {
                                                     Label("Delete", systemImage: "trash")
                                                 })
-                                                
-//                                                NavigationLink {
-//                                                    HistoryEditView(history: history)
-//                                                } label: {
-//                                                    Text("Edit")
-//                                                }
-//                                                .tint(.orange)
                                             }
                                             .id(history.id)
                                     }
                                     .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
-                                    //                                .toolbar {
-                                    //                                    ToolbarItem(placement: .confirmationAction) {
-                                    //                                        NavigationLink(destination: HistoryAddView(eventId: eventId)) {
-                                    //                                            Text("Add")
-                                    //                                                .padding()
-                                    //                                        }
-                                    //                                        .buttonStyle(.borderedProminent)
-                                    //                                    }
-                                    //                                }
                                 }
                             }
                             .onAppear {

@@ -5,38 +5,37 @@ struct EventDetailsView: View {
     @Environment(\.dismiss) private var dismiss
     
     @EnvironmentObject var eventModel: EventModel
-        
-    @StateObject var infoModel = InfoModel()
-    @StateObject var historyModel = HistoryModel()
-
-//    @State private var isPresentedDescriptionSheet: Bool = false
-//    @State private var isPresentedJustificationSheet: Bool = false
-//    @State private var isPresentedHistorySheet: Bool = false
-//    @State private var isPresentedInfoSheet: Bool = false
-//    @State private var isPresentedMenu: Bool = false
+    @EnvironmentObject var historyModel: HistoryModel
     
     let id: Int
 
-    // MARK: - body
-    
+
     var body: some View {
         VStack {
             if let event = eventModel.findEventById(id) {
                 VStack {
                     Form {
-                        ZStack {
-                            VStack(alignment: .center) {
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    CircleImage(image: event.image)
-                                    Spacer()
+                        Section {
+                            VStack(alignment: .center, spacing: 0) {
+                                CircleImage(image: event.image)
+                                    .padding([.top, .bottom], 10)
+                                
+                                if let deal = event.deal {
+                                    HStack {
+                                        Text("\(event.dealTypeAbbrText) №")
+                                        Text(deal).bold()
+                                        if let startDate = event.dealStartDate {
+                                            Text("от \(DateFormatter.longDateFormatter.string(from: startDate))")
+                                        }
+                                    }
+                                    .padding(10)
                                 }
                                 
                                 Text(event.event)
                                     .bold()
                                     .multilineTextAlignment(.center)
-                                    .padding()
                             }
+                            .frame(maxWidth: .infinity)
                         }
                         
                         Section("Справочная информация") {
@@ -46,16 +45,10 @@ struct EventDetailsView: View {
                             NavigationLink(destination: JustificationView(for: event.justification)) {
                                 Text("Обоснование")
                             }
-                            NavigationLink(destination:
-                                InfoListView(for: event)
-//                                    .environmentObject(infoModel)
-                            ) {
+                            NavigationLink(destination: InfoListView(for: event)) {
                                 Text("Справка")
                             }
-                            NavigationLink(destination:
-                                HistoryListView(for: event)
-//                                    .environmentObject(historyModel)
-                            ) {
+                            NavigationLink(destination: HistoryListView(for: event)) {
                                 Text("Исполнение")
                             }
                         }
@@ -104,6 +97,8 @@ struct EventDetailsView: View {
 #Preview {
     EventDetailsView(id: Event.example.id)
         .frame(width: 600, height: 800)
+        .environmentObject(EventModel.example)
+        .environmentObject(HistoryModel.example)
 }
 
 struct ButtonBlockView: View {
