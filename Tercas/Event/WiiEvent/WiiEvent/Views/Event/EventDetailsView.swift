@@ -48,13 +48,13 @@ struct EventDetailsView: View {
                             }
                             NavigationLink(destination:
                                 InfoListView(for: event)
-                                    .environmentObject(infoModel)
+//                                    .environmentObject(infoModel)
                             ) {
                                 Text("Справка")
                             }
                             NavigationLink(destination:
                                 HistoryListView(for: event)
-                                    .environmentObject(historyModel)
+//                                    .environmentObject(historyModel)
                             ) {
                                 Text("Исполнение")
                             }

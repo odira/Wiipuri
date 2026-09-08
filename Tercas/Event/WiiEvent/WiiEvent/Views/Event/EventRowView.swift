@@ -16,6 +16,7 @@ struct EventRowView: View {
                 cityView()
                 eventView()
                 dealView()
+                
 //                dealContractorView()
 //                dealSeniorView()
             }

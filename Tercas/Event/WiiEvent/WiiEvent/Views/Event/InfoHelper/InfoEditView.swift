@@ -38,4 +38,5 @@ struct InfoEditView: View {
 
 #Preview {
     InfoEditView(info: Info.example)
+        .environmentObject(InfoModel.example)
 }

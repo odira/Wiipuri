@@ -17,8 +17,8 @@ struct InfoListView: View {
     
     @State private var isPresentingAddSheet: Bool = false
     @State private var isPresentingEditSheet: Bool = false
-
-    @State private var isFetching = true
+    @State private var isFetching: Bool = true
+    @State private var currentIndex: Int = -1
     
     private var infos: [Info]? {
         if let infos = infoModel.findInfos(byEventID: eventID) {
@@ -26,8 +26,6 @@ struct InfoListView: View {
         }
         return nil
     }
-    
-    @State private var currentIndex = -1
     
     private let eventID: Int
     
