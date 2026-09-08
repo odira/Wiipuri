@@ -15,12 +15,12 @@ struct EventDetailsView: View {
             if let event = eventModel.findEventById(id) {
                 VStack {
                     Form {
+                        
                         Section {
-                            VStack(alignment: .center, spacing: 0) {
+                            VStack(alignment: .center, spacing: 10) {
                                 CircleImage(image: event.image)
-                                    .padding([.top, .bottom], 10)
                                 
-                                if let deal = event.deal {
+                                if let deal = event.deal { 
                                     HStack {
                                         Text("\(event.dealTypeAbbrText) №")
                                         Text(deal).bold()
@@ -28,7 +28,6 @@ struct EventDetailsView: View {
                                             Text("от \(DateFormatter.longDateFormatter.string(from: startDate))")
                                         }
                                     }
-                                    .padding(10)
                                 }
                                 
                                 Text(event.event)
@@ -46,10 +45,10 @@ struct EventDetailsView: View {
                                 Text("Обоснование")
                             }
                             NavigationLink(destination: InfoListView(for: event)) {
-                                Text("Справка")
+                                Text("Справочная информация")
                             }
                             NavigationLink(destination: HistoryListView(for: event)) {
-                                Text("Исполнение")
+                                Text("Исполнение по мероприятию")
                             }
                         }
                         
@@ -84,11 +83,10 @@ struct EventDetailsView: View {
                             LabeledContent("Контрагент", value: event.dealContractor ?? "")
                             LabeledContent("Субподрядчик", value: event.dealSubcontractor ?? "")
                         }
+                        
                     }
                     .formStyle(.grouped)
-                    
                 }
-                .font(.callout)
             }
         }
     }
