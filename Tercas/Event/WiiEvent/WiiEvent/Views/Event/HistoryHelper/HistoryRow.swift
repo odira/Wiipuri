@@ -38,6 +38,27 @@ struct HistoryRow: View {
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Отправлено")
                         .bold()
+                    HStack {
+                        Text("письмо")
+                            .font(.footnote)
+                            .padding(5)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(.clear)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            }
+                        Text(dateFormatter.string(from: Date.now))
+                    }
+                    HStack {
+                        Text("отправитель")
+                            .font(.footnote)
+                            .padding(5)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(.clear)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            }
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -58,6 +79,16 @@ struct HistoryRow: View {
                         if let letterDateReceiver = history.letterDateReceiver {
                             Text(dateFormatter.string(from: letterDateReceiver))
                         }
+                    }
+                    HStack {
+                        Text("получатель")
+                            .font(.footnote)
+                            .padding(5)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(.clear)
+                                    .stroke(Color.blue, lineWidth: 1)
+                            }
                     }
                 }
                 .frame(maxWidth: .infinity)
