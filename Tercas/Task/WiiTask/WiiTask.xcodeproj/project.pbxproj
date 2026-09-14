@@ -7,6 +7,70 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		D12168853058750700650EE0 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		D12168863058750700650EE0 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		D12168873058750700650EE0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D12168883058750700650EE0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D12168893058750700650EE0 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		D121688A3058750700650EE0 /* DateIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalExtension.swift; sourceTree = "<group>"; };
+		D121688B3058750700650EE0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D121688C3058750700650EE0 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		D121688E3058750700650EE0 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		D121688F3058750700650EE0 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		D12168903058750700650EE0 /* EntEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEvent.swift; sourceTree = "<group>"; };
+		D12168913058750700650EE0 /* EntEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEventModel.swift; sourceTree = "<group>"; };
+		D12168923058750700650EE0 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		D12168933058750700650EE0 /* HolidayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayModel.swift; sourceTree = "<group>"; };
+		D12168943058750700650EE0 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		D12168953058750700650EE0 /* PeriodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodModel.swift; sourceTree = "<group>"; };
+		D12168973058750700650EE0 /* InternshipCadence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadence.swift; sourceTree = "<group>"; };
+		D12168983058750700650EE0 /* InternshipCadenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceModel.swift; sourceTree = "<group>"; };
+		D121689A3058750700650EE0 /* InternshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipType.swift; sourceTree = "<group>"; };
+		D121689B3058750700650EE0 /* InternshipTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipTypeModel.swift; sourceTree = "<group>"; };
+		D121689D3058750700650EE0 /* Internship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internship.swift; sourceTree = "<group>"; };
+		D121689E3058750700650EE0 /* InternshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipModel.swift; sourceTree = "<group>"; };
+		D12168A03058750700650EE0 /* Morder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morder.swift; sourceTree = "<group>"; };
+		D12168A13058750700650EE0 /* MorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderModel.swift; sourceTree = "<group>"; };
+		D12168A33058750700650EE0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D12168A43058750700650EE0 /* PersonFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFilters.swift; sourceTree = "<group>"; };
+		D12168A53058750700650EE0 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		D12168A63058750700650EE0 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		D12168A73058750700650EE0 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		D12168A93058750700650EE0 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		D12168AA3058750700650EE0 /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
+		D12168AB3058750700650EE0 /* SectorPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPool.swift; sourceTree = "<group>"; };
+		D12168AC3058750700650EE0 /* SectorPoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolModel.swift; sourceTree = "<group>"; };
+		D12168AF3058750700650EE0 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		D12168B13058750700650EE0 /* PgConnectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgConnectionSettings.swift; sourceTree = "<group>"; };
+		D12168B33058750700650EE0 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		D12168B43058750700650EE0 /* ActivityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPicker.swift; sourceTree = "<group>"; };
+		D12168B53058750700650EE0 /* ActivitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySearchView.swift; sourceTree = "<group>"; };
+		D12168B63058750700650EE0 /* PeriodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCard.swift; sourceTree = "<group>"; };
+		D12168B83058750700650EE0 /* InternshipCadenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceCard.swift; sourceTree = "<group>"; };
+		D12168B93058750700650EE0 /* InternshipCadenceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceEditView.swift; sourceTree = "<group>"; };
+		D12168BB3058750700650EE0 /* InternshipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCard.swift; sourceTree = "<group>"; };
+		D12168BC3058750700650EE0 /* InternshipEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipEditView.swift; sourceTree = "<group>"; };
+		D12168BE3058750700650EE0 /* MorderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderCard.swift; sourceTree = "<group>"; };
+		D12168BF3058750700650EE0 /* MorderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderSearchView.swift; sourceTree = "<group>"; };
+		D12168C13058750700650EE0 /* PositionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCard.swift; sourceTree = "<group>"; };
+		D12168C23058750700650EE0 /* PositionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPicker.swift; sourceTree = "<group>"; };
+		D12168C33058750700650EE0 /* PositionsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayPicker.swift; sourceTree = "<group>"; };
+		D12168C43058750700650EE0 /* PositionsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayView.swift; sourceTree = "<group>"; };
+		D12168C63058750700650EE0 /* ShiftCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCard.swift; sourceTree = "<group>"; };
+		D12168C83058750700650EE0 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		D12168C93058750700650EE0 /* PersonEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
+		D12168CA3058750700650EE0 /* PersonFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFiltersView.swift; sourceTree = "<group>"; };
+		D12168CB3058750700650EE0 /* PersonSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchView.swift; sourceTree = "<group>"; };
+		D12168CD3058750700650EE0 /* SectorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorCard.swift; sourceTree = "<group>"; };
+		D12168CE3058750700650EE0 /* SectorPoolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolPicker.swift; sourceTree = "<group>"; };
+		D12168CF3058750700650EE0 /* SectorsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayPicker.swift; sourceTree = "<group>"; };
+		D12168D03058750700650EE0 /* SectorsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayView.swift; sourceTree = "<group>"; };
+		D12168D13058750700650EE0 /* SectorsPoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolCard.swift; sourceTree = "<group>"; };
+		D12168D23058750700650EE0 /* SectorsPoolSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolSearchView.swift; sourceTree = "<group>"; };
+		D12168D53058750700650EE0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D12168D63058750700650EE0 /* WiiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WiiKit.h; sourceTree = "<group>"; };
+		D12168D83058750700650EE0 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
+		D12168D93058750700650EE0 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WiiKit.xcodeproj; sourceTree = "<group>"; };
 		D1880C532ED4E12F00572BA6 /* WiiTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiiTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -29,10 +93,266 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D12168293058736400650EE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D12168DA3058750700650EE0 /* WiiKit */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D121688D3058750700650EE0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D12168853058750700650EE0 /* ArrayExtension.swift */,
+				D12168863058750700650EE0 /* CalendarExtension.swift */,
+				D12168873058750700650EE0 /* ColorExtension.swift */,
+				D12168883058750700650EE0 /* DateExtension.swift */,
+				D12168893058750700650EE0 /* DateFormatterExtension.swift */,
+				D121688A3058750700650EE0 /* DateIntervalExtension.swift */,
+				D121688B3058750700650EE0 /* StringExtension.swift */,
+				D121688C3058750700650EE0 /* ViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D12168963058750700650EE0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D121688E3058750700650EE0 /* Activity.swift */,
+				D121688F3058750700650EE0 /* ActivityModel.swift */,
+				D12168903058750700650EE0 /* EntEvent.swift */,
+				D12168913058750700650EE0 /* EntEventModel.swift */,
+				D12168923058750700650EE0 /* Holiday.swift */,
+				D12168933058750700650EE0 /* HolidayModel.swift */,
+				D12168943058750700650EE0 /* Period.swift */,
+				D12168953058750700650EE0 /* PeriodModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D12168993058750700650EE0 /* IInternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D12168973058750700650EE0 /* InternshipCadence.swift */,
+				D12168983058750700650EE0 /* InternshipCadenceModel.swift */,
+			);
+			path = IInternshipCadence;
+			sourceTree = "<group>";
+		};
+		D121689C3058750700650EE0 /* IInternshipType */ = {
+			isa = PBXGroup;
+			children = (
+				D121689A3058750700650EE0 /* InternshipType.swift */,
+				D121689B3058750700650EE0 /* InternshipTypeModel.swift */,
+			);
+			path = IInternshipType;
+			sourceTree = "<group>";
+		};
+		D121689F3058750700650EE0 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D12168993058750700650EE0 /* IInternshipCadence */,
+				D121689C3058750700650EE0 /* IInternshipType */,
+				D121689D3058750700650EE0 /* Internship.swift */,
+				D121689E3058750700650EE0 /* InternshipModel.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D12168A23058750700650EE0 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D12168A03058750700650EE0 /* Morder.swift */,
+				D12168A13058750700650EE0 /* MorderModel.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D12168A83058750700650EE0 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D12168A33058750700650EE0 /* Person.swift */,
+				D12168A43058750700650EE0 /* PersonFilters.swift */,
+				D12168A53058750700650EE0 /* PersonModel.swift */,
+				D12168A63058750700650EE0 /* Position.swift */,
+				D12168A73058750700650EE0 /* PositionModel.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D12168AD3058750700650EE0 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D12168A93058750700650EE0 /* Sector.swift */,
+				D12168AA3058750700650EE0 /* SectorModel.swift */,
+				D12168AB3058750700650EE0 /* SectorPool.swift */,
+				D12168AC3058750700650EE0 /* SectorPoolModel.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D12168AE3058750700650EE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D12168963058750700650EE0 /* Calendar */,
+				D121689F3058750700650EE0 /* Internship */,
+				D12168A23058750700650EE0 /* Morder */,
+				D12168A83058750700650EE0 /* Person */,
+				D12168AD3058750700650EE0 /* Sectors */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D12168B03058750700650EE0 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D12168AF3058750700650EE0 /* CardModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D12168B23058750700650EE0 /* NetworkDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				D12168B13058750700650EE0 /* PgConnectionSettings.swift */,
+			);
+			path = NetworkDrivers;
+			sourceTree = "<group>";
+		};
+		D12168B73058750700650EE0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D12168B33058750700650EE0 /* ActivityCard.swift */,
+				D12168B43058750700650EE0 /* ActivityPicker.swift */,
+				D12168B53058750700650EE0 /* ActivitySearchView.swift */,
+				D12168B63058750700650EE0 /* PeriodCard.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D12168BA3058750700650EE0 /* InternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D12168B83058750700650EE0 /* InternshipCadenceCard.swift */,
+				D12168B93058750700650EE0 /* InternshipCadenceEditView.swift */,
+			);
+			path = InternshipCadence;
+			sourceTree = "<group>";
+		};
+		D12168BD3058750700650EE0 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D12168BA3058750700650EE0 /* InternshipCadence */,
+				D12168BB3058750700650EE0 /* InternshipCard.swift */,
+				D12168BC3058750700650EE0 /* InternshipEditView.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D12168C03058750700650EE0 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D12168BE3058750700650EE0 /* MorderCard.swift */,
+				D12168BF3058750700650EE0 /* MorderSearchView.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D12168C53058750700650EE0 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				D12168C13058750700650EE0 /* PositionCard.swift */,
+				D12168C23058750700650EE0 /* PositionPicker.swift */,
+				D12168C33058750700650EE0 /* PositionsArrayPicker.swift */,
+				D12168C43058750700650EE0 /* PositionsArrayView.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		D12168C73058750700650EE0 /* Shift */ = {
+			isa = PBXGroup;
+			children = (
+				D12168C63058750700650EE0 /* ShiftCard.swift */,
+			);
+			path = Shift;
+			sourceTree = "<group>";
+		};
+		D12168CC3058750700650EE0 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D12168C53058750700650EE0 /* Position */,
+				D12168C73058750700650EE0 /* Shift */,
+				D12168C83058750700650EE0 /* PersonCard.swift */,
+				D12168C93058750700650EE0 /* PersonEditView.swift */,
+				D12168CA3058750700650EE0 /* PersonFiltersView.swift */,
+				D12168CB3058750700650EE0 /* PersonSearchView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D12168D33058750700650EE0 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D12168CD3058750700650EE0 /* SectorCard.swift */,
+				D12168CE3058750700650EE0 /* SectorPoolPicker.swift */,
+				D12168CF3058750700650EE0 /* SectorsArrayPicker.swift */,
+				D12168D03058750700650EE0 /* SectorsArrayView.swift */,
+				D12168D13058750700650EE0 /* SectorsPoolCard.swift */,
+				D12168D23058750700650EE0 /* SectorsPoolSearchView.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D12168D43058750700650EE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D12168B73058750700650EE0 /* Calendar */,
+				D12168BD3058750700650EE0 /* Internship */,
+				D12168C03058750700650EE0 /* Morder */,
+				D12168CC3058750700650EE0 /* Person */,
+				D12168D33058750700650EE0 /* Sectors */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D12168D73058750700650EE0 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D121688D3058750700650EE0 /* Extensions */,
+				D12168AE3058750700650EE0 /* Models */,
+				D12168B03058750700650EE0 /* Modifiers */,
+				D12168B23058750700650EE0 /* NetworkDrivers */,
+				D12168D43058750700650EE0 /* Views */,
+				D12168D53058750700650EE0 /* Global.swift */,
+				D12168D63058750700650EE0 /* WiiKit.h */,
+			);
+			path = WiiKit;
+			sourceTree = "<group>";
+		};
+		D12168DA3058750700650EE0 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D12168D73058750700650EE0 /* WiiKit */,
+				D12168D83058750700650EE0 /* WiiKit.xcassets */,
+				D12168D93058750700650EE0 /* WiiKit.xcodeproj */,
+			);
+			name = WiiKit;
+			path = ../../../WiiKit;
+			sourceTree = "<group>";
+		};
+		D12168DB3058750700650EE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D1880C4A2ED4E12F00572BA6 = {
 			isa = PBXGroup;
 			children = (
 				D1880C552ED4E12F00572BA6 /* WiiTask */,
+				D12168293058736400650EE0 /* Frameworks */,
 				D1880C542ED4E12F00572BA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +420,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D1880C542ED4E12F00572BA6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D12168DB3058750700650EE0 /* Products */;
+					ProjectRef = D12168D93058750700650EE0 /* WiiKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D1880C522ED4E12F00572BA6 /* WiiTask */,
