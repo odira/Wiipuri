@@ -21,34 +21,15 @@ struct HistoryRow: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            dateSection
-            lettersSection
-            historyText
+            headerSection
+            textBodyText
         }
         .padding()
     }
     
     
     @ViewBuilder
-    private var dateSection: some View {
-        HStack {
-            Text(dateFormatter.string(from: history.date))
-                .foregroundStyle(.blue)
-                .font(.title2)
-                .bold()
-                .background(.clear)
-                .padding(5)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                        .fill(.clear)
-                        .stroke(Color.blue, lineWidth: 1)
-                }
-        }
-    }
-    
-    
-    @ViewBuilder
-    private var lettersSection: some View {
+    private var headerSection: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 5) {
                 Text("Отправлено")
@@ -84,16 +65,29 @@ struct HistoryRow: View {
                     .stroke(Color.blue, lineWidth: 1)
             }
             
-            VStack {
-                Image(systemName: "figure.stand.line.dotted.figure.stand")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-                
-                Image(systemName: "arrow.forward")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
+            VStack(spacing: 10) {
+                Text(dateFormatter.string(from: history.date))
+                    .foregroundStyle(.blue)
+                    .font(.title2)
+                    .bold()
+                    .background(.clear)
+                    .padding(5)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 5, style: .continuous)
+                            .fill(.clear)
+                            .stroke(Color.blue, lineWidth: 1)
+                    }
+                VStack(spacing: 2) {
+                    Image(systemName: "figure.stand.line.dotted.figure.stand")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                    
+                    Image(systemName: "arrow.forward")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                }
             }
 
             
@@ -151,7 +145,7 @@ struct HistoryRow: View {
     
     
     @ViewBuilder
-    private var historyText: some View {
+    private var textBodyText: some View {
         HStack {
             Text(history.history)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
