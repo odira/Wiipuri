@@ -38,7 +38,7 @@ struct HistoryListView: View {
                     
                         ScrollViewReader { proxy in
                             ScrollView {
-                                LazyVStack(spacing: 20) {
+                                LazyVStack(spacing: 30) {
                                     ForEach(histories) { history in
                                         HistoryRow(history: history)
                                             .swipeActions(allowsFullSwipe: false) {
@@ -62,14 +62,14 @@ struct HistoryListView: View {
                                 }
                             }
                             
-                            Button("Scroll to Top") {
-                                if let firstId = histories.first?.id {
-                                    withAnimation {
-                                        proxy.scrollTo(firstId, anchor: .top)
-                                    }
-                                }
-                            }
-                            .buttonStyle(.glassProminent)
+//                            Button("Scroll to Top") {
+//                                if let firstId = histories.first?.id {
+//                                    withAnimation {
+//                                        proxy.scrollTo(firstId, anchor: .top)
+//                                    }
+//                                }
+//                            }
+//                            .buttonStyle(.glassProminent)
                         }
                         .padding()
                     

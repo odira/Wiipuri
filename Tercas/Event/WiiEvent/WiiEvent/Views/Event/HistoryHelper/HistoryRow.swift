@@ -20,7 +20,7 @@ struct HistoryRow: View {
     
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             headerSection
             textBodyText
         }
@@ -68,7 +68,7 @@ struct HistoryRow: View {
             VStack(spacing: 10) {
                 Text(dateFormatter.string(from: history.date))
                     .foregroundStyle(.blue)
-                    .font(.title2)
+                    .font(.title3)
                     .bold()
                     .background(.clear)
                     .padding(5)
