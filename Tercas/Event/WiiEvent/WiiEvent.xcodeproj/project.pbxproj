@@ -21,6 +21,8 @@
 		D1387D6F2AFFB31600570446 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1387D6E2AFFB31600570446 /* ContentView.swift */; };
 		D1387D712AFFB31800570446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1387D702AFFB31800570446 /* Assets.xcassets */; };
 		D15D81522B69826A005E6D2B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15D81512B69826A005E6D2B /* Extentions.swift */; };
+		D163374C305B2073002E21A7 /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D163374B305B206A002E21A7 /* WiiKit.framework */; };
+		D163374D305B2073002E21A7 /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D163374B305B206A002E21A7 /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D165505C2F71D21900CA4B3E /* HistoryFieldsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA16822E032F860016C99B /* HistoryFieldsEditor.swift */; };
 		D16B20B92B50621E00B96160 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B20B82B50621E00B96160 /* CategoryItem.swift */; };
 		D16B461E2ECF7DE500F18E4A /* InfoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16B461D2ECF7DE500F18E4A /* InfoDetailsView.swift */; };
@@ -52,17 +54,15 @@
 		D1E436522FABCF7100C5FAF7 /* InfoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E436512FABCF6A00C5FAF7 /* InfoEditView.swift */; };
 		D1E9B36A2B4C5AB40073768D /* DealTransparant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B3692B4C5AB40073768D /* DealTransparant.swift */; };
 		D1E9B36E2B4DC9960073768D /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B36D2B4DC9960073768D /* CategoryHome.swift */; };
-		D1F07DC630129C2F00EFBCCD /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F07DC530129C2700EFBCCD /* WiiKit.framework */; };
-		D1F07DC730129C2F00EFBCCD /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1F07DC530129C2700EFBCCD /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1FCA2772B1CE54700E2DB42 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA2762B1CE54700E2DB42 /* CircleImage.swift */; };
 		D1FCA27F2B1CF43B00E2DB42 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA27E2B1CF43B00E2DB42 /* ModelData.swift */; };
 		D1FCA2842B1CF62900E2DB42 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA2832B1CF62900E2DB42 /* EventRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D1F07DC430129C2700EFBCCD /* PBXContainerItemProxy */ = {
+		D163374A305B206A002E21A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D1F07DBF30129C2600EFBCCD /* WiiKit.xcodeproj */;
+			containerPortal = D1633745305B2069002E21A7 /* WiiKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D1962D02284255ED009F85BE;
 			remoteInfo = WiiKit;
@@ -70,13 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D1F07DC830129C2F00EFBCCD /* Embed Frameworks */ = {
+		D163374E305B2073002E21A7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D1F07DC730129C2F00EFBCCD /* WiiKit.framework in Embed Frameworks */,
+				D163374D305B2073002E21A7 /* WiiKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +99,70 @@
 		D1387D6E2AFFB31600570446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D1387D702AFFB31800570446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D15D81512B69826A005E6D2B /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		D16336F1305B2069002E21A7 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		D16336F2305B2069002E21A7 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		D16336F3305B2069002E21A7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D16336F4305B2069002E21A7 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D16336F5305B2069002E21A7 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		D16336F6305B2069002E21A7 /* DateIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalExtension.swift; sourceTree = "<group>"; };
+		D16336F7305B2069002E21A7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D16336F8305B2069002E21A7 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		D16336FA305B2069002E21A7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		D16336FB305B2069002E21A7 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		D16336FC305B2069002E21A7 /* EntEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEvent.swift; sourceTree = "<group>"; };
+		D16336FD305B2069002E21A7 /* EntEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEventModel.swift; sourceTree = "<group>"; };
+		D16336FE305B2069002E21A7 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		D16336FF305B2069002E21A7 /* HolidayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayModel.swift; sourceTree = "<group>"; };
+		D1633700305B2069002E21A7 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		D1633701305B2069002E21A7 /* PeriodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodModel.swift; sourceTree = "<group>"; };
+		D1633703305B2069002E21A7 /* InternshipCadence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadence.swift; sourceTree = "<group>"; };
+		D1633704305B2069002E21A7 /* InternshipCadenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceModel.swift; sourceTree = "<group>"; };
+		D1633706305B2069002E21A7 /* InternshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipType.swift; sourceTree = "<group>"; };
+		D1633707305B2069002E21A7 /* InternshipTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipTypeModel.swift; sourceTree = "<group>"; };
+		D1633709305B2069002E21A7 /* Internship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internship.swift; sourceTree = "<group>"; };
+		D163370A305B2069002E21A7 /* InternshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipModel.swift; sourceTree = "<group>"; };
+		D163370C305B2069002E21A7 /* Morder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morder.swift; sourceTree = "<group>"; };
+		D163370D305B2069002E21A7 /* MorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderModel.swift; sourceTree = "<group>"; };
+		D163370F305B2069002E21A7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D1633710305B2069002E21A7 /* PersonFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFilters.swift; sourceTree = "<group>"; };
+		D1633711305B2069002E21A7 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		D1633712305B2069002E21A7 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		D1633713305B2069002E21A7 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		D1633715305B2069002E21A7 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		D1633716305B2069002E21A7 /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
+		D1633717305B2069002E21A7 /* SectorPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPool.swift; sourceTree = "<group>"; };
+		D1633718305B2069002E21A7 /* SectorPoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolModel.swift; sourceTree = "<group>"; };
+		D163371B305B2069002E21A7 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		D163371D305B2069002E21A7 /* PgConnectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgConnectionSettings.swift; sourceTree = "<group>"; };
+		D163371F305B2069002E21A7 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		D1633720305B2069002E21A7 /* ActivityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPicker.swift; sourceTree = "<group>"; };
+		D1633721305B2069002E21A7 /* ActivitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySearchView.swift; sourceTree = "<group>"; };
+		D1633722305B2069002E21A7 /* PeriodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCard.swift; sourceTree = "<group>"; };
+		D1633724305B2069002E21A7 /* InternshipCadenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceCard.swift; sourceTree = "<group>"; };
+		D1633725305B2069002E21A7 /* InternshipCadenceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceEditView.swift; sourceTree = "<group>"; };
+		D1633727305B2069002E21A7 /* InternshipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCard.swift; sourceTree = "<group>"; };
+		D1633728305B2069002E21A7 /* InternshipEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipEditView.swift; sourceTree = "<group>"; };
+		D163372A305B2069002E21A7 /* MorderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderCard.swift; sourceTree = "<group>"; };
+		D163372B305B2069002E21A7 /* MorderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderSearchView.swift; sourceTree = "<group>"; };
+		D163372D305B2069002E21A7 /* PositionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCard.swift; sourceTree = "<group>"; };
+		D163372E305B2069002E21A7 /* PositionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPicker.swift; sourceTree = "<group>"; };
+		D163372F305B2069002E21A7 /* PositionsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayPicker.swift; sourceTree = "<group>"; };
+		D1633730305B2069002E21A7 /* PositionsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayView.swift; sourceTree = "<group>"; };
+		D1633732305B2069002E21A7 /* ShiftCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCard.swift; sourceTree = "<group>"; };
+		D1633734305B2069002E21A7 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		D1633735305B2069002E21A7 /* PersonEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
+		D1633736305B2069002E21A7 /* PersonFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFiltersView.swift; sourceTree = "<group>"; };
+		D1633737305B2069002E21A7 /* PersonSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchView.swift; sourceTree = "<group>"; };
+		D1633739305B2069002E21A7 /* SectorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorCard.swift; sourceTree = "<group>"; };
+		D163373A305B2069002E21A7 /* SectorPoolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolPicker.swift; sourceTree = "<group>"; };
+		D163373B305B2069002E21A7 /* SectorsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayPicker.swift; sourceTree = "<group>"; };
+		D163373C305B2069002E21A7 /* SectorsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayView.swift; sourceTree = "<group>"; };
+		D163373D305B2069002E21A7 /* SectorsPoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolCard.swift; sourceTree = "<group>"; };
+		D163373E305B2069002E21A7 /* SectorsPoolSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolSearchView.swift; sourceTree = "<group>"; };
+		D1633741305B2069002E21A7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D1633742305B2069002E21A7 /* WiiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WiiKit.h; sourceTree = "<group>"; };
+		D1633744305B2069002E21A7 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
+		D1633745305B2069002E21A7 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WiiKit.xcodeproj; sourceTree = "<group>"; };
 		D16B20B82B50621E00B96160 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		D16B461D2ECF7DE500F18E4A /* InfoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailsView.swift; sourceTree = "<group>"; };
 		D178A53F2E609AF4003CF98C /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
@@ -128,70 +192,6 @@
 		D1E436512FABCF6A00C5FAF7 /* InfoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEditView.swift; sourceTree = "<group>"; };
 		D1E9B3692B4C5AB40073768D /* DealTransparant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTransparant.swift; sourceTree = "<group>"; };
 		D1E9B36D2B4DC9960073768D /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
-		D1F07D6B30129C2600EFBCCD /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		D1F07D6C30129C2600EFBCCD /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
-		D1F07D6D30129C2600EFBCCD /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		D1F07D6E30129C2600EFBCCD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		D1F07D6F30129C2600EFBCCD /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
-		D1F07D7030129C2600EFBCCD /* DateIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalExtension.swift; sourceTree = "<group>"; };
-		D1F07D7130129C2600EFBCCD /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		D1F07D7230129C2600EFBCCD /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		D1F07D7430129C2600EFBCCD /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		D1F07D7530129C2600EFBCCD /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
-		D1F07D7630129C2600EFBCCD /* EntEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEvent.swift; sourceTree = "<group>"; };
-		D1F07D7730129C2600EFBCCD /* EntEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntEventModel.swift; sourceTree = "<group>"; };
-		D1F07D7830129C2600EFBCCD /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
-		D1F07D7930129C2600EFBCCD /* HolidayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayModel.swift; sourceTree = "<group>"; };
-		D1F07D7A30129C2600EFBCCD /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
-		D1F07D7B30129C2600EFBCCD /* PeriodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodModel.swift; sourceTree = "<group>"; };
-		D1F07D7D30129C2600EFBCCD /* InternshipCadence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadence.swift; sourceTree = "<group>"; };
-		D1F07D7E30129C2600EFBCCD /* InternshipCadenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceModel.swift; sourceTree = "<group>"; };
-		D1F07D8030129C2600EFBCCD /* InternshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipType.swift; sourceTree = "<group>"; };
-		D1F07D8130129C2600EFBCCD /* InternshipTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipTypeModel.swift; sourceTree = "<group>"; };
-		D1F07D8330129C2600EFBCCD /* Internship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internship.swift; sourceTree = "<group>"; };
-		D1F07D8430129C2600EFBCCD /* InternshipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipModel.swift; sourceTree = "<group>"; };
-		D1F07D8630129C2600EFBCCD /* Morder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morder.swift; sourceTree = "<group>"; };
-		D1F07D8730129C2600EFBCCD /* MorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderModel.swift; sourceTree = "<group>"; };
-		D1F07D8930129C2600EFBCCD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		D1F07D8A30129C2600EFBCCD /* PersonFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFilters.swift; sourceTree = "<group>"; };
-		D1F07D8B30129C2600EFBCCD /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
-		D1F07D8C30129C2600EFBCCD /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
-		D1F07D8D30129C2600EFBCCD /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
-		D1F07D8F30129C2600EFBCCD /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
-		D1F07D9030129C2600EFBCCD /* SectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorModel.swift; sourceTree = "<group>"; };
-		D1F07D9130129C2600EFBCCD /* SectorPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPool.swift; sourceTree = "<group>"; };
-		D1F07D9230129C2600EFBCCD /* SectorPoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolModel.swift; sourceTree = "<group>"; };
-		D1F07D9530129C2600EFBCCD /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
-		D1F07D9730129C2600EFBCCD /* PgConnectionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PgConnectionSettings.swift; sourceTree = "<group>"; };
-		D1F07D9930129C2600EFBCCD /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
-		D1F07D9A30129C2600EFBCCD /* ActivityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPicker.swift; sourceTree = "<group>"; };
-		D1F07D9B30129C2600EFBCCD /* ActivitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySearchView.swift; sourceTree = "<group>"; };
-		D1F07D9C30129C2600EFBCCD /* PeriodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCard.swift; sourceTree = "<group>"; };
-		D1F07D9E30129C2600EFBCCD /* InternshipCadenceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceCard.swift; sourceTree = "<group>"; };
-		D1F07D9F30129C2600EFBCCD /* InternshipCadenceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCadenceEditView.swift; sourceTree = "<group>"; };
-		D1F07DA130129C2600EFBCCD /* InternshipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipCard.swift; sourceTree = "<group>"; };
-		D1F07DA230129C2600EFBCCD /* InternshipEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternshipEditView.swift; sourceTree = "<group>"; };
-		D1F07DA430129C2600EFBCCD /* MorderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderCard.swift; sourceTree = "<group>"; };
-		D1F07DA530129C2600EFBCCD /* MorderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorderSearchView.swift; sourceTree = "<group>"; };
-		D1F07DA730129C2600EFBCCD /* PositionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCard.swift; sourceTree = "<group>"; };
-		D1F07DA830129C2600EFBCCD /* PositionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPicker.swift; sourceTree = "<group>"; };
-		D1F07DA930129C2600EFBCCD /* PositionsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayPicker.swift; sourceTree = "<group>"; };
-		D1F07DAA30129C2600EFBCCD /* PositionsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsArrayView.swift; sourceTree = "<group>"; };
-		D1F07DAC30129C2600EFBCCD /* ShiftCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCard.swift; sourceTree = "<group>"; };
-		D1F07DAE30129C2600EFBCCD /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
-		D1F07DAF30129C2600EFBCCD /* PersonEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
-		D1F07DB030129C2600EFBCCD /* PersonFiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFiltersView.swift; sourceTree = "<group>"; };
-		D1F07DB130129C2600EFBCCD /* PersonSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchView.swift; sourceTree = "<group>"; };
-		D1F07DB330129C2600EFBCCD /* SectorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorCard.swift; sourceTree = "<group>"; };
-		D1F07DB430129C2600EFBCCD /* SectorPoolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolPicker.swift; sourceTree = "<group>"; };
-		D1F07DB530129C2600EFBCCD /* SectorsArrayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayPicker.swift; sourceTree = "<group>"; };
-		D1F07DB630129C2600EFBCCD /* SectorsArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsArrayView.swift; sourceTree = "<group>"; };
-		D1F07DB730129C2600EFBCCD /* SectorsPoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolCard.swift; sourceTree = "<group>"; };
-		D1F07DB830129C2600EFBCCD /* SectorsPoolSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorsPoolSearchView.swift; sourceTree = "<group>"; };
-		D1F07DBB30129C2600EFBCCD /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		D1F07DBC30129C2600EFBCCD /* WiiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WiiKit.h; sourceTree = "<group>"; };
-		D1F07DBE30129C2600EFBCCD /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
-		D1F07DBF30129C2600EFBCCD /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WiiKit.xcodeproj; sourceTree = "<group>"; };
 		D1FCA2762B1CE54700E2DB42 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D1FCA27E2B1CF43B00E2DB42 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D1FCA2832B1CF62900E2DB42 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C55A2B2C7E2F0800AB75EC /* PostgresClientKit in Frameworks */,
-				D1F07DC630129C2F00EFBCCD /* WiiKit.framework in Frameworks */,
+				D163374C305B2073002E21A7 /* WiiKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +272,254 @@
 				D1FCA2822B1CF5B500E2DB42 /* Resources */,
 			);
 			path = WiiEvent;
+			sourceTree = "<group>";
+		};
+		D16336F9305B2069002E21A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D16336F1305B2069002E21A7 /* ArrayExtension.swift */,
+				D16336F2305B2069002E21A7 /* CalendarExtension.swift */,
+				D16336F3305B2069002E21A7 /* ColorExtension.swift */,
+				D16336F4305B2069002E21A7 /* DateExtension.swift */,
+				D16336F5305B2069002E21A7 /* DateFormatterExtension.swift */,
+				D16336F6305B2069002E21A7 /* DateIntervalExtension.swift */,
+				D16336F7305B2069002E21A7 /* StringExtension.swift */,
+				D16336F8305B2069002E21A7 /* ViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D1633702305B2069002E21A7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D16336FA305B2069002E21A7 /* Activity.swift */,
+				D16336FB305B2069002E21A7 /* ActivityModel.swift */,
+				D16336FC305B2069002E21A7 /* EntEvent.swift */,
+				D16336FD305B2069002E21A7 /* EntEventModel.swift */,
+				D16336FE305B2069002E21A7 /* Holiday.swift */,
+				D16336FF305B2069002E21A7 /* HolidayModel.swift */,
+				D1633700305B2069002E21A7 /* Period.swift */,
+				D1633701305B2069002E21A7 /* PeriodModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D1633705305B2069002E21A7 /* IInternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D1633703305B2069002E21A7 /* InternshipCadence.swift */,
+				D1633704305B2069002E21A7 /* InternshipCadenceModel.swift */,
+			);
+			path = IInternshipCadence;
+			sourceTree = "<group>";
+		};
+		D1633708305B2069002E21A7 /* IInternshipType */ = {
+			isa = PBXGroup;
+			children = (
+				D1633706305B2069002E21A7 /* InternshipType.swift */,
+				D1633707305B2069002E21A7 /* InternshipTypeModel.swift */,
+			);
+			path = IInternshipType;
+			sourceTree = "<group>";
+		};
+		D163370B305B2069002E21A7 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D1633705305B2069002E21A7 /* IInternshipCadence */,
+				D1633708305B2069002E21A7 /* IInternshipType */,
+				D1633709305B2069002E21A7 /* Internship.swift */,
+				D163370A305B2069002E21A7 /* InternshipModel.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D163370E305B2069002E21A7 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D163370C305B2069002E21A7 /* Morder.swift */,
+				D163370D305B2069002E21A7 /* MorderModel.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D1633714305B2069002E21A7 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D163370F305B2069002E21A7 /* Person.swift */,
+				D1633710305B2069002E21A7 /* PersonFilters.swift */,
+				D1633711305B2069002E21A7 /* PersonModel.swift */,
+				D1633712305B2069002E21A7 /* Position.swift */,
+				D1633713305B2069002E21A7 /* PositionModel.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D1633719305B2069002E21A7 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D1633715305B2069002E21A7 /* Sector.swift */,
+				D1633716305B2069002E21A7 /* SectorModel.swift */,
+				D1633717305B2069002E21A7 /* SectorPool.swift */,
+				D1633718305B2069002E21A7 /* SectorPoolModel.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D163371A305B2069002E21A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1633702305B2069002E21A7 /* Calendar */,
+				D163370B305B2069002E21A7 /* Internship */,
+				D163370E305B2069002E21A7 /* Morder */,
+				D1633714305B2069002E21A7 /* Person */,
+				D1633719305B2069002E21A7 /* Sectors */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D163371C305B2069002E21A7 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D163371B305B2069002E21A7 /* CardModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D163371E305B2069002E21A7 /* NetworkDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				D163371D305B2069002E21A7 /* PgConnectionSettings.swift */,
+			);
+			path = NetworkDrivers;
+			sourceTree = "<group>";
+		};
+		D1633723305B2069002E21A7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D163371F305B2069002E21A7 /* ActivityCard.swift */,
+				D1633720305B2069002E21A7 /* ActivityPicker.swift */,
+				D1633721305B2069002E21A7 /* ActivitySearchView.swift */,
+				D1633722305B2069002E21A7 /* PeriodCard.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D1633726305B2069002E21A7 /* InternshipCadence */ = {
+			isa = PBXGroup;
+			children = (
+				D1633724305B2069002E21A7 /* InternshipCadenceCard.swift */,
+				D1633725305B2069002E21A7 /* InternshipCadenceEditView.swift */,
+			);
+			path = InternshipCadence;
+			sourceTree = "<group>";
+		};
+		D1633729305B2069002E21A7 /* Internship */ = {
+			isa = PBXGroup;
+			children = (
+				D1633726305B2069002E21A7 /* InternshipCadence */,
+				D1633727305B2069002E21A7 /* InternshipCard.swift */,
+				D1633728305B2069002E21A7 /* InternshipEditView.swift */,
+			);
+			path = Internship;
+			sourceTree = "<group>";
+		};
+		D163372C305B2069002E21A7 /* Morder */ = {
+			isa = PBXGroup;
+			children = (
+				D163372A305B2069002E21A7 /* MorderCard.swift */,
+				D163372B305B2069002E21A7 /* MorderSearchView.swift */,
+			);
+			path = Morder;
+			sourceTree = "<group>";
+		};
+		D1633731305B2069002E21A7 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				D163372D305B2069002E21A7 /* PositionCard.swift */,
+				D163372E305B2069002E21A7 /* PositionPicker.swift */,
+				D163372F305B2069002E21A7 /* PositionsArrayPicker.swift */,
+				D1633730305B2069002E21A7 /* PositionsArrayView.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		D1633733305B2069002E21A7 /* Shift */ = {
+			isa = PBXGroup;
+			children = (
+				D1633732305B2069002E21A7 /* ShiftCard.swift */,
+			);
+			path = Shift;
+			sourceTree = "<group>";
+		};
+		D1633738305B2069002E21A7 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D1633731305B2069002E21A7 /* Position */,
+				D1633733305B2069002E21A7 /* Shift */,
+				D1633734305B2069002E21A7 /* PersonCard.swift */,
+				D1633735305B2069002E21A7 /* PersonEditView.swift */,
+				D1633736305B2069002E21A7 /* PersonFiltersView.swift */,
+				D1633737305B2069002E21A7 /* PersonSearchView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D163373F305B2069002E21A7 /* Sectors */ = {
+			isa = PBXGroup;
+			children = (
+				D1633739305B2069002E21A7 /* SectorCard.swift */,
+				D163373A305B2069002E21A7 /* SectorPoolPicker.swift */,
+				D163373B305B2069002E21A7 /* SectorsArrayPicker.swift */,
+				D163373C305B2069002E21A7 /* SectorsArrayView.swift */,
+				D163373D305B2069002E21A7 /* SectorsPoolCard.swift */,
+				D163373E305B2069002E21A7 /* SectorsPoolSearchView.swift */,
+			);
+			path = Sectors;
+			sourceTree = "<group>";
+		};
+		D1633740305B2069002E21A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1633723305B2069002E21A7 /* Calendar */,
+				D1633729305B2069002E21A7 /* Internship */,
+				D163372C305B2069002E21A7 /* Morder */,
+				D1633738305B2069002E21A7 /* Person */,
+				D163373F305B2069002E21A7 /* Sectors */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1633743305B2069002E21A7 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D16336F9305B2069002E21A7 /* Extensions */,
+				D163371A305B2069002E21A7 /* Models */,
+				D163371C305B2069002E21A7 /* Modifiers */,
+				D163371E305B2069002E21A7 /* NetworkDrivers */,
+				D1633740305B2069002E21A7 /* Views */,
+				D1633741305B2069002E21A7 /* Global.swift */,
+				D1633742305B2069002E21A7 /* WiiKit.h */,
+			);
+			path = WiiKit;
+			sourceTree = "<group>";
+		};
+		D1633746305B2069002E21A7 /* WiiKit */ = {
+			isa = PBXGroup;
+			children = (
+				D1633743305B2069002E21A7 /* WiiKit */,
+				D1633744305B2069002E21A7 /* WiiKit.xcassets */,
+				D1633745305B2069002E21A7 /* WiiKit.xcodeproj */,
+			);
+			name = WiiKit;
+			path = ../../../WiiKit;
+			sourceTree = "<group>";
+		};
+		D1633747305B2069002E21A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D163374B305B206A002E21A7 /* WiiKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D16B20B72B5061ED00B96160 /* Category */ = {
@@ -350,7 +598,7 @@
 		D1D890512CD2C7340052710D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1F07DC030129C2600EFBCCD /* WiiKit */,
+				D1633746305B2069002E21A7 /* WiiKit */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -400,254 +648,6 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
-		D1F07D7330129C2600EFBCCD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D6B30129C2600EFBCCD /* ArrayExtension.swift */,
-				D1F07D6C30129C2600EFBCCD /* CalendarExtension.swift */,
-				D1F07D6D30129C2600EFBCCD /* ColorExtension.swift */,
-				D1F07D6E30129C2600EFBCCD /* DateExtension.swift */,
-				D1F07D6F30129C2600EFBCCD /* DateFormatterExtension.swift */,
-				D1F07D7030129C2600EFBCCD /* DateIntervalExtension.swift */,
-				D1F07D7130129C2600EFBCCD /* StringExtension.swift */,
-				D1F07D7230129C2600EFBCCD /* ViewExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D1F07D7C30129C2600EFBCCD /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D7430129C2600EFBCCD /* Activity.swift */,
-				D1F07D7530129C2600EFBCCD /* ActivityModel.swift */,
-				D1F07D7630129C2600EFBCCD /* EntEvent.swift */,
-				D1F07D7730129C2600EFBCCD /* EntEventModel.swift */,
-				D1F07D7830129C2600EFBCCD /* Holiday.swift */,
-				D1F07D7930129C2600EFBCCD /* HolidayModel.swift */,
-				D1F07D7A30129C2600EFBCCD /* Period.swift */,
-				D1F07D7B30129C2600EFBCCD /* PeriodModel.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		D1F07D7F30129C2600EFBCCD /* IInternshipCadence */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D7D30129C2600EFBCCD /* InternshipCadence.swift */,
-				D1F07D7E30129C2600EFBCCD /* InternshipCadenceModel.swift */,
-			);
-			path = IInternshipCadence;
-			sourceTree = "<group>";
-		};
-		D1F07D8230129C2600EFBCCD /* IInternshipType */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D8030129C2600EFBCCD /* InternshipType.swift */,
-				D1F07D8130129C2600EFBCCD /* InternshipTypeModel.swift */,
-			);
-			path = IInternshipType;
-			sourceTree = "<group>";
-		};
-		D1F07D8530129C2600EFBCCD /* Internship */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D7F30129C2600EFBCCD /* IInternshipCadence */,
-				D1F07D8230129C2600EFBCCD /* IInternshipType */,
-				D1F07D8330129C2600EFBCCD /* Internship.swift */,
-				D1F07D8430129C2600EFBCCD /* InternshipModel.swift */,
-			);
-			path = Internship;
-			sourceTree = "<group>";
-		};
-		D1F07D8830129C2600EFBCCD /* Morder */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D8630129C2600EFBCCD /* Morder.swift */,
-				D1F07D8730129C2600EFBCCD /* MorderModel.swift */,
-			);
-			path = Morder;
-			sourceTree = "<group>";
-		};
-		D1F07D8E30129C2600EFBCCD /* Person */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D8930129C2600EFBCCD /* Person.swift */,
-				D1F07D8A30129C2600EFBCCD /* PersonFilters.swift */,
-				D1F07D8B30129C2600EFBCCD /* PersonModel.swift */,
-				D1F07D8C30129C2600EFBCCD /* Position.swift */,
-				D1F07D8D30129C2600EFBCCD /* PositionModel.swift */,
-			);
-			path = Person;
-			sourceTree = "<group>";
-		};
-		D1F07D9330129C2600EFBCCD /* Sectors */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D8F30129C2600EFBCCD /* Sector.swift */,
-				D1F07D9030129C2600EFBCCD /* SectorModel.swift */,
-				D1F07D9130129C2600EFBCCD /* SectorPool.swift */,
-				D1F07D9230129C2600EFBCCD /* SectorPoolModel.swift */,
-			);
-			path = Sectors;
-			sourceTree = "<group>";
-		};
-		D1F07D9430129C2600EFBCCD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D7C30129C2600EFBCCD /* Calendar */,
-				D1F07D8530129C2600EFBCCD /* Internship */,
-				D1F07D8830129C2600EFBCCD /* Morder */,
-				D1F07D8E30129C2600EFBCCD /* Person */,
-				D1F07D9330129C2600EFBCCD /* Sectors */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D1F07D9630129C2600EFBCCD /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D9530129C2600EFBCCD /* CardModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		D1F07D9830129C2600EFBCCD /* NetworkDrivers */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D9730129C2600EFBCCD /* PgConnectionSettings.swift */,
-			);
-			path = NetworkDrivers;
-			sourceTree = "<group>";
-		};
-		D1F07D9D30129C2600EFBCCD /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D9930129C2600EFBCCD /* ActivityCard.swift */,
-				D1F07D9A30129C2600EFBCCD /* ActivityPicker.swift */,
-				D1F07D9B30129C2600EFBCCD /* ActivitySearchView.swift */,
-				D1F07D9C30129C2600EFBCCD /* PeriodCard.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		D1F07DA030129C2600EFBCCD /* InternshipCadence */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D9E30129C2600EFBCCD /* InternshipCadenceCard.swift */,
-				D1F07D9F30129C2600EFBCCD /* InternshipCadenceEditView.swift */,
-			);
-			path = InternshipCadence;
-			sourceTree = "<group>";
-		};
-		D1F07DA330129C2600EFBCCD /* Internship */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DA030129C2600EFBCCD /* InternshipCadence */,
-				D1F07DA130129C2600EFBCCD /* InternshipCard.swift */,
-				D1F07DA230129C2600EFBCCD /* InternshipEditView.swift */,
-			);
-			path = Internship;
-			sourceTree = "<group>";
-		};
-		D1F07DA630129C2600EFBCCD /* Morder */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DA430129C2600EFBCCD /* MorderCard.swift */,
-				D1F07DA530129C2600EFBCCD /* MorderSearchView.swift */,
-			);
-			path = Morder;
-			sourceTree = "<group>";
-		};
-		D1F07DAB30129C2600EFBCCD /* Position */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DA730129C2600EFBCCD /* PositionCard.swift */,
-				D1F07DA830129C2600EFBCCD /* PositionPicker.swift */,
-				D1F07DA930129C2600EFBCCD /* PositionsArrayPicker.swift */,
-				D1F07DAA30129C2600EFBCCD /* PositionsArrayView.swift */,
-			);
-			path = Position;
-			sourceTree = "<group>";
-		};
-		D1F07DAD30129C2600EFBCCD /* Shift */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DAC30129C2600EFBCCD /* ShiftCard.swift */,
-			);
-			path = Shift;
-			sourceTree = "<group>";
-		};
-		D1F07DB230129C2600EFBCCD /* Person */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DAB30129C2600EFBCCD /* Position */,
-				D1F07DAD30129C2600EFBCCD /* Shift */,
-				D1F07DAE30129C2600EFBCCD /* PersonCard.swift */,
-				D1F07DAF30129C2600EFBCCD /* PersonEditView.swift */,
-				D1F07DB030129C2600EFBCCD /* PersonFiltersView.swift */,
-				D1F07DB130129C2600EFBCCD /* PersonSearchView.swift */,
-			);
-			path = Person;
-			sourceTree = "<group>";
-		};
-		D1F07DB930129C2600EFBCCD /* Sectors */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DB330129C2600EFBCCD /* SectorCard.swift */,
-				D1F07DB430129C2600EFBCCD /* SectorPoolPicker.swift */,
-				D1F07DB530129C2600EFBCCD /* SectorsArrayPicker.swift */,
-				D1F07DB630129C2600EFBCCD /* SectorsArrayView.swift */,
-				D1F07DB730129C2600EFBCCD /* SectorsPoolCard.swift */,
-				D1F07DB830129C2600EFBCCD /* SectorsPoolSearchView.swift */,
-			);
-			path = Sectors;
-			sourceTree = "<group>";
-		};
-		D1F07DBA30129C2600EFBCCD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D9D30129C2600EFBCCD /* Calendar */,
-				D1F07DA330129C2600EFBCCD /* Internship */,
-				D1F07DA630129C2600EFBCCD /* Morder */,
-				D1F07DB230129C2600EFBCCD /* Person */,
-				D1F07DB930129C2600EFBCCD /* Sectors */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D1F07DBD30129C2600EFBCCD /* WiiKit */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07D7330129C2600EFBCCD /* Extensions */,
-				D1F07D9430129C2600EFBCCD /* Models */,
-				D1F07D9630129C2600EFBCCD /* Modifiers */,
-				D1F07D9830129C2600EFBCCD /* NetworkDrivers */,
-				D1F07DBA30129C2600EFBCCD /* Views */,
-				D1F07DBB30129C2600EFBCCD /* Global.swift */,
-				D1F07DBC30129C2600EFBCCD /* WiiKit.h */,
-			);
-			path = WiiKit;
-			sourceTree = "<group>";
-		};
-		D1F07DC030129C2600EFBCCD /* WiiKit */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DBD30129C2600EFBCCD /* WiiKit */,
-				D1F07DBE30129C2600EFBCCD /* WiiKit.xcassets */,
-				D1F07DBF30129C2600EFBCCD /* WiiKit.xcodeproj */,
-			);
-			name = WiiKit;
-			path = ../../../WiiKit;
-			sourceTree = "<group>";
-		};
-		D1F07DC130129C2600EFBCCD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D1F07DC530129C2700EFBCCD /* WiiKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D1FCA2802B1CF59400E2DB42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,7 +695,7 @@
 				D1387D652AFFB31600570446 /* Sources */,
 				D1387D662AFFB31600570446 /* Frameworks */,
 				D1387D672AFFB31600570446 /* Resources */,
-				D1F07DC830129C2F00EFBCCD /* Embed Frameworks */,
+				D163374E305B2073002E21A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -740,8 +740,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D1F07DC130129C2600EFBCCD /* Products */;
-					ProjectRef = D1F07DBF30129C2600EFBCCD /* WiiKit.xcodeproj */;
+					ProductGroup = D1633747305B2069002E21A7 /* Products */;
+					ProjectRef = D1633745305B2069002E21A7 /* WiiKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -752,11 +752,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D1F07DC530129C2700EFBCCD /* WiiKit.framework */ = {
+		D163374B305B206A002E21A7 /* WiiKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = WiiKit.framework;
-			remoteRef = D1F07DC430129C2700EFBCCD /* PBXContainerItemProxy */;
+			remoteRef = D163374A305B206A002E21A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
