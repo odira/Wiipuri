@@ -75,8 +75,8 @@ extension EventModelFilterView {
                 Button("Clear") {
                     eventModelFilter.city = ""
                 }
-                .keyboardShortcut("c", modifiers: [.command])
                 .buttonStyle(.borderedProminent)
+                .keyboardShortcut("c", modifiers: [.command])
             }
         }
     }
