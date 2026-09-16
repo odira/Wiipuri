@@ -22,23 +22,18 @@ struct EventModelFilterView: View {
                     Section(header: Text("Город")) {
                         cityBlock
                     }
-                    
                     Section(header: Text("Выберите план")) {
                         planIdBlock
                     }
-                    
                     Section(header: Text("Статус договора")) {
                         dealStatusBlock
                     }
-                    
                     Section(header: Label("Номер Договора/Контракта", systemImage: "magnifyingglass")) {
                         dealBlock
                     }
-                    
                     Section {
                         eventIsValidBlock
                     }
-                    
                     Section {
                         showIsOptionBlock
                     }
