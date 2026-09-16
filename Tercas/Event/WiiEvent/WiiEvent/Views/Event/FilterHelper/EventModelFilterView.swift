@@ -15,34 +15,32 @@ struct EventModelFilterView: View {
     @EnvironmentObject private var dealModel: DealModel
     @EnvironmentObject private var eventModelFilter: EventModelFilter
     
-//    @FocusState private var searchFieldFocusState: Bool
-    
     var body: some View {
         NavigationStack {
             VStack {
                 Form {
                     Section(header: Text("Город")) {
-                        cityBlock()
+                        cityBlock
                     }
                     
                     Section(header: Text("Выберите план")) {
-                        planIdBlock()
+                        planIdBlock
                     }
                     
                     Section(header: Text("Статус договора")) {
-                        dealStatusBlock()
+                        dealStatusBlock
                     }
                     
                     Section(header: Label("Номер Договора/Контракта", systemImage: "magnifyingglass")) {
-                        dealBlock()
+                        dealBlock
                     }
                     
                     Section {
-                        eventIsValidBlock()
+                        eventIsValidBlock
                     }
                     
                     Section {
-                        showIsOptionBlock()
+                        showIsOptionBlock
                     }
                 }
             }
@@ -54,9 +52,6 @@ struct EventModelFilterView: View {
                     .buttonStyle(.borderedProminent)
                 }
             }
-//            .onAppear {
-//                searchFieldFocusState = true
-//            }
         }
     }
     
@@ -65,30 +60,20 @@ struct EventModelFilterView: View {
     }
 }
 
-// MARK: - EventModelFilter View Preview
-
-#Preview {
-    EventModelFilterView()
-        .environmentObject(EventModel.example)
-        .environmentObject(EventModelFilter.shared)
-        .environmentObject(PlanModel.example)
-        .environmentObject(DealModel.example)
-}
 
 // MARK: - EventModelFilter Visual Blocks
 
 extension EventModelFilterView {
     
     // city
-    private func cityBlock() -> some View {
+    @ViewBuilder
+    private var cityBlock: some View {
         VStack(alignment: .leading) {
             HStack {
                 TextField("Search", text: $eventModelFilter.city)
-//                    .focused($searchFieldFocusState)
-                    .textFieldStyle(.roundedBorder)
+//                    .textFieldStyle(.roundedBorder)
                 Button("Clear") {
                     eventModelFilter.city = ""
-//                    searchFieldFocusState = true
                 }
                 .keyboardShortcut("c", modifiers: [.command])
                 .buttonStyle(.borderedProminent)
@@ -97,7 +82,8 @@ extension EventModelFilterView {
     }
     
     // planId
-    private func planIdBlock() -> some View {
+    @ViewBuilder
+    private var planIdBlock: some View {
         VStack(alignment: .leading) {
             HStack {
                 Picker("Централизованный план", selection: $eventModelFilter.planId) {
@@ -110,7 +96,8 @@ extension EventModelFilterView {
     }
     
     // dealStatus
-    private func dealStatusBlock() -> some View {
+    @ViewBuilder
+    private var dealStatusBlock: some View {
         VStack(alignment: .leading ) {
             HStack {
                 Picker("Статус договора", selection: $eventModelFilter.dealStatus) {
@@ -124,11 +111,12 @@ extension EventModelFilterView {
     }
     
     // deal
-    private func dealBlock() -> some View {
+    @ViewBuilder
+    private var dealBlock: some View {
         VStack(alignment: .leading) {
             HStack {
                 TextField("Введите номер договора/контракта", text: $eventModelFilter.deal)
-                    .textFieldStyle(.roundedBorder)
+//                    .textFieldStyle(.roundedBorder)
                 Button("Clear") {
                     eventModelFilter.deal = ""
                 }
@@ -137,7 +125,9 @@ extension EventModelFilterView {
         }
     }
     
-    private func eventIsValidBlock() -> some View {
+    // eventIsValidBlock
+    @ViewBuilder
+    private var eventIsValidBlock: some View {
         HStack {
             Toggle(isOn: $eventModelFilter.isValid) {
                 Text("Показывать только валидные")
@@ -145,11 +135,23 @@ extension EventModelFilterView {
         }
     }
     
-    private func showIsOptionBlock() -> some View {
+    // showIsOptionBlock
+    private var showIsOptionBlock: some View {
         HStack {
             Toggle(isOn: $eventModelFilter.isOption) {
                 Text("Показывать опцион")
             }
         }
     }
+}
+
+
+// MARK: - EventModelFilter View Preview
+
+#Preview {
+    EventModelFilterView()
+        .environmentObject(EventModel.example)
+        .environmentObject(EventModelFilter.shared)
+        .environmentObject(PlanModel.example)
+        .environmentObject(DealModel.example)
 }

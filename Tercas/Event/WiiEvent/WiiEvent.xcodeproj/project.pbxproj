@@ -522,6 +522,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D163374F305B21D2002E21A7 /* FilterHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D1D047C02E203E5A002025C2 /* EventModelFilterView.swift */,
+			);
+			path = FilterHelper;
+			sourceTree = "<group>";
+		};
 		D16B20B72B5061ED00B96160 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,11 +645,11 @@
 				D1945A1B2E5E2BA700843956 /* InfoHelper */,
 				D17EEF6B2C90BD2C00E6E51B /* HistoryHelper */,
 				D1E9B36B2B4C5F5D0073768D /* EventHelper */,
-				D1FCA2852B1CFA0900E2DB42 /* EventListView.swift */,
+				D163374F305B21D2002E21A7 /* FilterHelper */,
 				D11CAA642CA5E32700403E82 /* EventLimitView.swift */,
+				D1FCA2852B1CFA0900E2DB42 /* EventListView.swift */,
 				D10215E32CF90C140075631B /* DescriptionView.swift */,
 				D11CAA612CA5D49D00403E82 /* JustificationView.swift */,
-				D1D047C02E203E5A002025C2 /* EventModelFilterView.swift */,
 				D1FCA2832B1CF62900E2DB42 /* EventRowView.swift */,
 				D1A7306F2B383B49003A3A49 /* EventDetailsView.swift */,
 			);
