@@ -42,26 +42,25 @@ struct HistoryListView: View {
                             LazyVStack(spacing: 30) {
                                 ForEach(histories) { history in
                                     HistoryRow(history: history)
-                                        .swipeActions(allowsFullSwipe: false) {
-                                            Button(role: .destructive, action: {
-                                                Task {
-                                                    await historyModel.sqlDELETE(historyId: history.id)
-                                                    await historyModel.fetch()
-                                                }
-                                            }, label: {
-                                                Label("Delete", systemImage: "trash")
-                                            })
-                                        }
                                         .id(history.id)
+//                                        .swipeActions(allowsFullSwipe: false) {
+//                                            Button(role: .destructive, action: {
+//                                                Task {
+//                                                    await historyModel.sqlDELETE(historyId: history.id)
+//                                                    await historyModel.fetch()
+//                                                }
+//                                            }, label: {
+//                                                Label("Delete", systemImage: "trash")
+//                                            })
+//                                        }
                                 }
-                                
                             }
                         }
                         .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
                         .toolbar {
                             ToolbarItemGroup(placement: .primaryAction) {
                                 Button("Add") {
-                                    
+                                    print("OK")
                                 }
                             }
                         }
@@ -70,10 +69,6 @@ struct HistoryListView: View {
                                 proxy.scrollTo(lastId, anchor: .bottom)
                             }
                         }
-                        .padding()
-                        
-                        
-                        
                         //                            Button("Scroll to Top") {
                         //                                if let firstId = histories.first?.id {
                         //                                    withAnimation {
