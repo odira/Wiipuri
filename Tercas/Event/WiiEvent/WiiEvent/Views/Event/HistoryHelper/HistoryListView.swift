@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 struct HistoryListView: View {
     @Environment(\.openWindow) var openWindow
     @Environment(\.dismiss) var dismiss
@@ -35,43 +36,54 @@ struct HistoryListView: View {
                 if historyModel.isFetching {
                     ProgressView("Fetching...")
                 } else {
-                    
-                        ScrollViewReader { proxy in
-                            ScrollView {
-                                LazyVStack(spacing: 30) {
-                                    ForEach(histories) { history in
-                                        HistoryRow(history: history)
-                                            .swipeActions(allowsFullSwipe: false) {
-                                                Button(role: .destructive, action: {
-                                                    Task {
-                                                        await historyModel.sqlDELETE(historyId: history.id)
-                                                        await historyModel.fetch()
-                                                    }
-                                                }, label: {
-                                                    Label("Delete", systemImage: "trash")
-                                                })
-                                            }
-                                            .id(history.id)
-                                    }
-                                    .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
+                    ScrollViewReader { proxy in
+                        
+                        ScrollView {
+                            LazyVStack(spacing: 30) {
+                                ForEach(histories) { history in
+                                    HistoryRow(history: history)
+                                        .swipeActions(allowsFullSwipe: false) {
+                                            Button(role: .destructive, action: {
+                                                Task {
+                                                    await historyModel.sqlDELETE(historyId: history.id)
+                                                    await historyModel.fetch()
+                                                }
+                                            }, label: {
+                                                Label("Delete", systemImage: "trash")
+                                            })
+                                        }
+                                        .id(history.id)
+                                }
+                                
+                            }
+                        }
+                        .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
+                        .toolbar {
+                            ToolbarItemGroup(placement: .primaryAction) {
+                                Button("Add") {
+                                    
                                 }
                             }
-                            .onAppear {
-                                if let lastId = histories.last?.id {
-                                    proxy.scrollTo(lastId, anchor: .bottom)
-                                }
+                        }
+                        .onAppear {
+                            if let lastId = histories.last?.id {
+                                proxy.scrollTo(lastId, anchor: .bottom)
                             }
-                            
-//                            Button("Scroll to Top") {
-//                                if let firstId = histories.first?.id {
-//                                    withAnimation {
-//                                        proxy.scrollTo(firstId, anchor: .top)
-//                                    }
-//                                }
-//                            }
-//                            .buttonStyle(.glassProminent)
                         }
                         .padding()
+                        
+                        
+                        
+                        //                            Button("Scroll to Top") {
+                        //                                if let firstId = histories.first?.id {
+                        //                                    withAnimation {
+                        //                                        proxy.scrollTo(firstId, anchor: .top)
+                        //                                    }
+                        //                                }
+                        //                            }
+                        //                            .buttonStyle(.glassProminent)
+                    }
+                    
                     
                 }
             }
