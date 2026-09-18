@@ -58,9 +58,14 @@ struct HistoryListView: View {
                         }
                         .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
                         .toolbar {
-                            ToolbarItemGroup(placement: .primaryAction) {
-                                Button("Add") {
-                                    print("OK")
+                            //                            ToolbarItemGroup(placement: .primaryAction) {
+                            //                                Button("Add") {
+                            //                                    print("OK")
+                            //                                }
+                            //                            }
+                            ToolbarItem {
+                                NavigationLink(destination: HistoryAddView(eventId: eventId)) {
+                                    Text("TEST")
                                 }
                             }
                         }
