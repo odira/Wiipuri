@@ -95,8 +95,8 @@ struct HistoryRow: View {
                 Text("Получено")
                     .bold()
                 HStack {
-                    if let letterNumReceiver = history.letterNumReceiver {
-                        Text(letterNumReceiver)
+                    if let recvLetterNum = history.recvLetterNum {
+                        Text(recvLetterNum)
                             .font(.footnote)
                             .padding(5)
                             .overlay {
@@ -114,8 +114,8 @@ struct HistoryRow: View {
                                     .stroke(Color.blue, lineWidth: 1)
                             }
                     }
-                    if let letterDateReceiver = history.letterDateReceiver {
-                        Text(dateFormatter.string(from: letterDateReceiver))
+                    if let recvLetterDate = history.recvLetterDate {
+                        Text(dateFormatter.string(from: recvLetterDate))
                     } else {
                         Text("Дата")
                     }

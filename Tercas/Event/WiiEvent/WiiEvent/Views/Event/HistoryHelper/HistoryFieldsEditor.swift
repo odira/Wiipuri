@@ -11,8 +11,8 @@ struct HistoryFieldsEditor: View {
     @Binding var date: Date
     @Binding var history: String
     @Binding var note: String?
-    @Binding var letterNumReceiver: String?
-    @Binding var letterDateReceiver: Date?
+    @Binding var recvLetterNum: String?
+    @Binding var recvLetterDate: Date?
     
 //    init(date: Date, history: String, note: String, letter: String, letterDate: Date) {
 //        self.date = date
@@ -28,8 +28,8 @@ struct HistoryFieldsEditor: View {
                 DatePicker(
                     "Select a Date",
                     selection: Binding(
-                        get: { self.letterDateReceiver ?? Date() },
-                        set: { self.letterDateReceiver = $0 }
+                        get: { self.recvLetterDate ?? Date() },
+                        set: { self.recvLetterDate = $0 }
                     ),
                     displayedComponents: [.date]
                 )
@@ -39,8 +39,8 @@ struct HistoryFieldsEditor: View {
                 
                 TextEditor(
                     text: Binding(
-                        get: { self.letterNumReceiver ?? "" },
-                        set: { self.letterNumReceiver = $0 }
+                        get: { self.recvLetterNum ?? "" },
+                        set: { self.recvLetterNum = $0 }
                     )
                 )
                     .lineLimit(1)
@@ -89,7 +89,7 @@ struct HistoryFieldsEditor: View {
         date: .constant(History.example.date),
         history: .constant(History.example.history),
         note: .constant(History.example.note!),
-        letterNumReceiver: .constant(History.example.letterNumReceiver!),
-        letterDateReceiver: .constant(History.example.letterDateReceiver!)
+        recvLetterNum: .constant(History.example.recvLetterNum!),
+        recvLetterDate: .constant(History.example.recvLetterDate!)
     )
 }

@@ -21,18 +21,18 @@ struct HistoryEditView: View {
                     date: $history.date,
                     history: $history.history,
                     note: $history.note,
-                    letterNumReceiver: $history.letterNumReceiver,
-                    letterDateReceiver: $history.letterDateReceiver
+                    recvLetterNum: $history.recvLetterNum,
+                    recvLetterDate: $history.recvLetterDate
                 )
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
-                        Task {
-                            await historyModel.sqlUPDATE(history: history)
-                            dismiss()
-                        }
-                    }
+//                    Button("Save") {
+//                        Task {
+//                            await historyModel.sqlUPDATE(history: history)
+//                            dismiss()
+//                        }
+//                    }
                 }
             }
         }
