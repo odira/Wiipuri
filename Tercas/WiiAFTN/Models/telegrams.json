@@ -1,0 +1,16 @@
+{
+    telegrams: [
+        {
+            index: APZ,
+            samples: [
+                "SS UUUWZDZX UUUWYWYX\n 212127 USPPZTZXЮЮЮЮЮ\n (APZ-UWWW2130/0030-DOF/211221 RMK/О4ИСТКОЙ ВПП КСЦ 029)\n HHHH"
+            ]
+        },
+        {
+            index: AFIL,
+            samples: [
+                ""
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+//
+//  InfoFieldsEditor.swift
+//  WiiEvent
+//
+//  Created by Wiipuri Developer on 21.10.2025.
+//
+
+import SwiftUI
+
+struct InfoFieldsEditor: View {
+    @Binding var date: Date
+    @Binding var info: String
+    @Binding var note: String
+    
+    var body: some View {
+
+                VStack {
+//                    HStack {
+                        DatePicker("Select Date", selection: $date, displayedComponents: [.date])
+                            .datePickerStyle(.compact)
+                        
+//                        Spacer()
+//                    }
+                    GeometryReader { geometry in
+                    ScrollView {
+                        TextEditor(text: $info)
+//                            .font(.custom("Courier", size: 16))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(.black, lineWidth: 1)
+                            }
+                            .backgroundStyle(.yellow)
+                            .frame(minWidth: geometry.size.width, minHeight: geometry.size.height)
+                    }
+                        
+//                    .frame(height: 500)
+                    
+                    
+//                    TextEditor(text: $note)
+//                        .font(.custom("Courier", size: 16))
+//                        .overlay {
+//                            RoundedRectangle(cornerRadius: 5)
+//                                .stroke(.black, lineWidth: 1)
+//                        }
+                }
+//                .frame(minHeight: geometry.size.height)
+//            .padding()
+        }
+    }
+}
+
+#Preview {
+    InfoFieldsEditor(
+        date: .constant(Info.example.date),
+        info: .constant(Info.example.info),
+        note: .constant(Info.example.note)
+    )
+}

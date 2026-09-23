@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D13D7E7429E431EE00E07587 /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13D7E7329E431E500E07587 /* WiiKit.framework */; };
+		D13D7E7529E431EE00E07587 /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D13D7E7329E431E500E07587 /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D16595B029D47A4B00B53A81 /* WiiShiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16595AF29D47A4B00B53A81 /* WiiShiftApp.swift */; };
+		D16595B229D47A4B00B53A81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16595B129D47A4B00B53A81 /* ContentView.swift */; };
+		D16595B429D47A4B00B53A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16595B329D47A4B00B53A81 /* Assets.xcassets */; };
+		D16595CB29D47E7400B53A81 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16595CA29D47E7400B53A81 /* PersonListView.swift */; };
+		D1DA938329EEA17B005B2174 /* SectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA938229EEA17B005B2174 /* SectorView.swift */; };
+		D1E2C53329EC17E200DF21D7 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2C53229EC17E200DF21D7 /* TeamView.swift */; };
+		D1E2C53629EC1A5400DF21D7 /* SectorPoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2C53529EC1A5400DF21D7 /* SectorPoolView.swift */; };
+		D1E8F38129DD82F000CF3A4B /* WiiKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E8F37F29DD82F000CF3A4B /* WiiKit.xcassets */; };
+		D1EA687B29DD9DA300E86478 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA687A29DD9DA300E86478 /* TeamModel.swift */; };
+		D1FAA8A829E01EA400D3C089 /* DragDropPersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FAA8A729E01EA400D3C089 /* DragDropPersonCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D13D7E7229E431E500E07587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D13D7E6E29E431E500E07587 /* WiiKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1962D02284255ED009F85BE;
+			remoteInfo = WiiKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D16595C629D47D3C00B53A81 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D13D7E7529E431EE00E07587 /* WiiKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D13D7E6E29E431E500E07587 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiKit.xcodeproj; path = ../WiiKit/WiiKit.xcodeproj; sourceTree = "<group>"; };
+		D16595AC29D47A4B00B53A81 /* WiiShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiiShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16595AF29D47A4B00B53A81 /* WiiShiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiiShiftApp.swift; sourceTree = "<group>"; };
+		D16595B129D47A4B00B53A81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D16595B329D47A4B00B53A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D16595CA29D47E7400B53A81 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		D1DA938229EEA17B005B2174 /* SectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorView.swift; sourceTree = "<group>"; };
+		D1E2C53229EC17E200DF21D7 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		D1E2C53529EC1A5400DF21D7 /* SectorPoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPoolView.swift; sourceTree = "<group>"; };
+		D1E8F37F29DD82F000CF3A4B /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
+		D1EA685129D7190600E86478 /* WiiShift-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WiiShift-Info.plist"; sourceTree = "<group>"; };
+		D1EA687A29DD9DA300E86478 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		D1FAA8A729E01EA400D3C089 /* DragDropPersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropPersonCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D16595A929D47A4B00B53A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13D7E7429E431EE00E07587 /* WiiKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D13D7E6F29E431E500E07587 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D13D7E7329E431E500E07587 /* WiiKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D16595A329D47A4B00B53A81 = {
+			isa = PBXGroup;
+			children = (
+				D1E8F37F29DD82F000CF3A4B /* WiiKit.xcassets */,
+				D1EA685129D7190600E86478 /* WiiShift-Info.plist */,
+				D16595B329D47A4B00B53A81 /* Assets.xcassets */,
+				D16595AF29D47A4B00B53A81 /* WiiShiftApp.swift */,
+				D1A1C05C29E32A410046A623 /* Models */,
+				D16595AE29D47A4B00B53A81 /* Views */,
+				D16595AD29D47A4B00B53A81 /* Products */,
+				D16595BD29D47D2F00B53A81 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D16595AD29D47A4B00B53A81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D16595AC29D47A4B00B53A81 /* WiiShift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D16595AE29D47A4B00B53A81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D16595B129D47A4B00B53A81 /* ContentView.swift */,
+				D16595CA29D47E7400B53A81 /* PersonListView.swift */,
+				D1E2C53229EC17E200DF21D7 /* TeamView.swift */,
+				D1FAA8A729E01EA400D3C089 /* DragDropPersonCard.swift */,
+				D1E2C53729EC208D00DF21D7 /* SectorPool */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D16595BD29D47D2F00B53A81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D13D7E6E29E431E500E07587 /* WiiKit.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1A1C05C29E32A410046A623 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1EA687A29DD9DA300E86478 /* TeamModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1E2C53729EC208D00DF21D7 /* SectorPool */ = {
+			isa = PBXGroup;
+			children = (
+				D1DA938229EEA17B005B2174 /* SectorView.swift */,
+				D1E2C53529EC1A5400DF21D7 /* SectorPoolView.swift */,
+			);
+			path = SectorPool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D16595AB29D47A4B00B53A81 /* WiiShift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D16595BA29D47A4B00B53A81 /* Build configuration list for PBXNativeTarget "WiiShift" */;
+			buildPhases = (
+				D16595A829D47A4B00B53A81 /* Sources */,
+				D16595A929D47A4B00B53A81 /* Frameworks */,
+				D16595AA29D47A4B00B53A81 /* Resources */,
+				D16595C629D47D3C00B53A81 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiiShift;
+			productName = WiiShift;
+			productReference = D16595AC29D47A4B00B53A81 /* WiiShift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D16595A429D47A4B00B53A81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D16595AB29D47A4B00B53A81 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = D16595A729D47A4B00B53A81 /* Build configuration list for PBXProject "WiiShift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D16595A329D47A4B00B53A81;
+			productRefGroup = D16595AD29D47A4B00B53A81 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D13D7E6F29E431E500E07587 /* Products */;
+					ProjectRef = D13D7E6E29E431E500E07587 /* WiiKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D16595AB29D47A4B00B53A81 /* WiiShift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D13D7E7329E431E500E07587 /* WiiKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiiKit.framework;
+			remoteRef = D13D7E7229E431E500E07587 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D16595AA29D47A4B00B53A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E8F38129DD82F000CF3A4B /* WiiKit.xcassets in Resources */,
+				D16595B429D47A4B00B53A81 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D16595A829D47A4B00B53A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EA687B29DD9DA300E86478 /* TeamModel.swift in Sources */,
+				D1FAA8A829E01EA400D3C089 /* DragDropPersonCard.swift in Sources */,
+				D1E2C53329EC17E200DF21D7 /* TeamView.swift in Sources */,
+				D16595B229D47A4B00B53A81 /* ContentView.swift in Sources */,
+				D16595B029D47A4B00B53A81 /* WiiShiftApp.swift in Sources */,
+				D1E2C53629EC1A5400DF21D7 /* SectorPoolView.swift in Sources */,
+				D1DA938329EEA17B005B2174 /* SectorView.swift in Sources */,
+				D16595CB29D47E7400B53A81 /* PersonListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D16595B829D47A4B00B53A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D16595B929D47A4B00B53A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D16595BB29D47A4B00B53A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiiShift-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Распределение";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.wiipuri.WiiShift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D16595BC29D47A4B00B53A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WiiShift-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Распределение";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.wiipuri.WiiShift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D16595A729D47A4B00B53A81 /* Build configuration list for PBXProject "WiiShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D16595B829D47A4B00B53A81 /* Debug */,
+				D16595B929D47A4B00B53A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D16595BA29D47A4B00B53A81 /* Build configuration list for PBXNativeTarget "WiiShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D16595BB29D47A4B00B53A81 /* Debug */,
+				D16595BC29D47A4B00B53A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D16595A429D47A4B00B53A81 /* Project object */;
+}
