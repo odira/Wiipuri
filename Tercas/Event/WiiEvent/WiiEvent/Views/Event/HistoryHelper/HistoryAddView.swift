@@ -52,7 +52,6 @@ struct HistoryAddView: View {
                     Button(
                         role: .confirm,
                         action: {
-                            
                             Task {
                                 await historyModel.sqlINSERT(
                                     eventID: self.eventId,
@@ -72,9 +71,18 @@ struct HistoryAddView: View {
                                 )
                             }
                             dismiss()
-                            
                         }, label: {
                             Text("Save")
+                        })
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(
+                        role: .cancel,
+                        action: {
+                            dismiss()
+                        }, label: {
+                            Text("Close")
                         })
                 }
             }

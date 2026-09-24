@@ -346,6 +346,7 @@ extension HistoryModel {
             let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
             defer { statement.close() }
             
+            
             var datePg: PostgresDate {
                 return date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
             }
@@ -386,74 +387,89 @@ extension HistoryModel {
         await self.reload()
     }
     
-//    // Variant 2
-//    public func sqlUPDATE(
-//        history: History
-//    ) async {
-//        
-//        await sqlUPDATE(
-//            id: history.id,
-//            date: history.date,
-//            history: history.history,
-//            answerTo: history.answerTo,
-//            ref: history.ref,
-//            note: history.note ?? "",
-//            recvLetterNum: history.recvLetterNum, // ?? "",
-//            recvLetterDate: history.recvLetterDate, // ?? Date(),
-//            recvManufacturerId: history.recvManufacturerId,
-//            recvUnitId: history.recvUnitId,
-//            sendLetterNum: history.sendLetterNum,
-//            sendLetterDate: history.sendLetterDate,
-//            sendManufacturerId: history.sendManufacturerId,
-//            sendUnitId: history.sendUnitId
-//        )
-//        
-////        let sqlQueryUPDATE = """
-////            UPDATE
-////                event.vw_history
-////            SET
-////                date = $2,       -- date
-////                history = $3,    -- history
-////                note = $4,       -- note
-////                letter = $5,     -- letter
-////                letter_date = $6 -- letterDate
-////            WHERE
-////                id = $1          -- id
-////        """
-////        
-////        do {
-////            var configuration = PostgresClientKit.ConnectionConfiguration()
-////            configuration.host = "217.107.219.91"
-////            configuration.database = "tercas"
-////            configuration.user = "postgres"
-////            configuration.credential = .trust // .scramSHA256(password: "monrepo")
-////            
-////            let connection = try PostgresClientKit.Connection(configuration: configuration)
-////            defer { connection.close() }
-////            
-////            let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
-////            defer { statement.close() }
-////            
-////            
-////            var datePg: PostgresDate {
-////                return history.date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
-////            }
-////            
-////            let _ = try statement.execute(
-////                parameterValues: [
-////                    history.id,
-////                    datePg,
-////                    history.history,
-////                    history.note
-////                ]
-////            )
-////        }
-////        catch {
-////            print(error)
-////        }
-////        
-////        await self.reload()
-//    }
+    // Variant 2
+    public func sqlUPDATE(
+        history: History
+    ) async {
+        
+        let sqlQueryUPDATE = """
+            UPDATE
+                event.history
+            SET
+                date = $2,                  -- date
+                history = $3,               -- history
+                answer_to = $4,             -- answerTo
+                ref = $5,                   -- ref
+                note = $6,                  -- note
+                recv_letter_num = $7,       -- recvLetterNum
+                recv_letter_date = $8,      -- recvLetterDate
+                recv_manufacturer_id = $9,  -- recvManufacturerId
+                recv_unit_id = $10,         -- recvUnitId
+                send_letter_num = $11,      -- sendLetterNum
+                send_letter_date = $12,     -- sendLetterDate
+                send_manufacturer_id= $13,  -- sendManufacturerId
+                send_unit_id = $14          -- sendUnitId
+            WHERE
+                id = $1                     -- id
+        """
+        
+        do {
+            var configuration = PostgresClientKit.ConnectionConfiguration()
+            configuration.host = "217.107.219.91"
+            configuration.database = "tercas"
+            configuration.user = "postgres"
+            configuration.credential = .trust // .scramSHA256(password: "monrepo")
+            
+            let connection = try PostgresClientKit.Connection(configuration: configuration)
+            defer { connection.close() }
+            
+            let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
+            defer { statement.close() }
+            
+            
+            var datePg: PostgresDate {
+                return history.date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            }
+            
+            var recvLetterDatePg: PostgresDate? = nil
+            if let date = history.recvLetterDate {
+                recvLetterDatePg = date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            } else {
+                recvLetterDatePg = nil
+            }
+            
+            var sendLetterDatePg: PostgresDate? = nil
+            if let date = history.sendLetterDate {
+                sendLetterDatePg = date.postgresDate(in: TimeZone(secondsFromGMT: 0)!)
+            } else {
+                sendLetterDatePg = nil
+            }
+            
+            let _ = try statement.execute(
+                parameterValues: [
+                    history.eventID,              //  1
+                    datePg,                       //  2
+                    history.history,              //  3
+                    history.answerTo,             //  4
+                    history.ref,                  //  5
+                    history.note,                 //  6
+                    history.recvLetterNum,        //  7
+                    recvLetterDatePg,             //  8
+                    history.recvManufacturerId,   //  9
+                    history.recvUnitId,           // 10
+                    history.sendLetterNum,        // 11
+                    sendLetterDatePg,             // 12
+                    history.sendManufacturerId,   // 13
+                    history.sendUnitId            // 14
+                ]
+            )
+        }
+        catch {
+            print(error)
+        }
+        
+        await self.reload()
+    }
     
     // MARK: - SQL DELETE
     
