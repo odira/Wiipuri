@@ -301,7 +301,7 @@ extension HistoryModel {
         history: String,            //  $3
         answerTo: String?,          //  $4
         ref: String?,               //  $5
-        note: String,               //  $6
+        note: String?,              //  $6
         recvLetterNum: String?,     //  $7
         recvLetterDate: Date?,      //  $8
         recvManufacturerId: Int?,   //  $9

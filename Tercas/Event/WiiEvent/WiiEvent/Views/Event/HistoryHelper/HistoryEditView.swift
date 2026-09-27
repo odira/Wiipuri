@@ -12,55 +12,69 @@ struct HistoryEditView: View {
     
     @EnvironmentObject var historyModel: HistoryModel
 
-    @State var history: History
+    @State private var date: Date = Date.now
+    @State private var history: String = ""
+    @State private var answerTo: String? = nil
+    @State private var ref: String? = nil
+    @State private var note: String? = nil
+    @State private var recvLetterNum: String? = nil
+    @State private var recvLetterDate: Date? = Date.now
+    @State private var recvManufacturerId: Int? = nil
+    @State private var recvUnitId: Int? = nil
+    @State private var sendLetterNum: String? = nil
+    @State private var sendLetterDate: Date? = Date.now
+    @State private var sendManufacturerId: Int? = nil
+    @State private var sendUnitId: Int? = nil
+    
+    @State var hist: History
+
     
     var body: some View {
         NavigationStack {
             VStack {
-//                HistoryFieldsEditor(
-//                    history.eventID: $history.eventID,
-//                    history.date: $history.date,
-//                    history.history: $history.history,
-//                    history.answerTo: $history.answerTo,
-//                    history.ref: $history.ref,
-//                    history.note: $history.note,
-//                    history.recvLetterNum: $history.recvLetterNum,
-//                    history.recvLetterDate: $history.recvLetterDate,
-//                    history.recvManufacturerId: $history.recvManufacturerId,
-//                    history.recvUnitId: $history.recvUnitId,
-//                    history.sendLetterNum: $history.sendLetterNum,
-//                    history.sendLetterDate: $history.sendLetterDate,
-//                    history.sendManufacturerId: $history.sendManufacturerId,
-//                    history.sendUnitId: $history.sendUnitId
-//                )
+                HistoryFieldsEditor(
+                    date: $hist.date,
+                    history: $hist.history,
+                    answerTo: $hist.answerTo,
+                    ref: $hist.ref,
+                    note: $hist.note,
+                    recvLetterNum: $hist.recvLetterNum,
+                    recvLetterDate: $hist.recvLetterDate,
+                    recvManufacturerId: $hist.recvManufacturerId,
+                    recvUnitId: $hist.recvUnitId,
+                    sendLetterNum: $hist.sendLetterNum,
+                    sendLetterDate: $hist.sendLetterDate,
+                    sendManufacturerId: $hist.sendManufacturerId,
+                    sendUnitId: $hist.sendUnitId
+                )
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button(
-//                        role: .confirm,
-//                        action: {
-//                            Task {
-//                                await historyModel.sqlUPDATE(
-//                                    history.eventID: self.eventID,
-//                                    history.date: self.date,
-//                                    history.history: self.history,
-//                                    history.answerTo: self.answerTo,
-//                                    history.ref: self.ref,
-//                                    history.note: self.note,
-//                                    history.recvLetterNum: self.recvLetterNum,
-//                                    history.recvLetterDate: self.recvLetterDate,
-//                                    history.recvManufacturerId: self.recvManufacturerId,
-//                                    history.recvUnitId: self.recvUnitId,
-//                                    history.sendLetterNum: self.sendLetterNum,
-//                                    history.sendLetterDate: self.sendLetterDate,
-//                                    history.sendManufacturerId: self.sendManufacturerId,
-//                                    history.sendUnitId: self.sendUnitId
-//                                )
-//                            }
-//                            dismiss()
-//                        }, label: {
-//                            Text("Save")
-//                        })
+                    Button(
+                        role: .confirm,
+                        action: {
+                            Task {
+                                await historyModel.sqlUPDATE(
+                                    eventID: hist.eventID,
+                                    date: self.date,
+                                    history: self.history,
+                                    answerTo: self.answerTo,
+                                    ref: self.ref,
+                                    note: self.note,
+                                    recvLetterNum: self.recvLetterNum,
+                                    recvLetterDate: self.recvLetterDate,
+                                    recvManufacturerId: self.recvManufacturerId,
+                                    recvUnitId: self.recvUnitId,
+                                    sendLetterNum: self.sendLetterNum,
+                                    sendLetterDate: self.sendLetterDate,
+                                    sendManufacturerId: self.sendManufacturerId,
+                                    sendUnitId: self.sendUnitId
+                                )
+                            }
+                            dismiss()
+                        }, label: {
+                            Text("Save")
+                        })
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -78,6 +92,6 @@ struct HistoryEditView: View {
 }
 
 #Preview {
-    HistoryEditView(history: History.example)
+    HistoryEditView(hist: History.example)
         .environmentObject(HistoryModel.example)
 }
