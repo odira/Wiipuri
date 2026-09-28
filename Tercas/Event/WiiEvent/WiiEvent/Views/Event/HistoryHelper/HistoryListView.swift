@@ -43,21 +43,38 @@ struct HistoryListView: View {
                                 ForEach(histories) { history in
                                     HistoryRow(history: history)
                                         .id(history.id)
-//                                        .swipeActions(allowsFullSwipe: false) {
-//                                            Button(role: .destructive, action: {
-//                                                Task {
-//                                                    await historyModel.sqlDELETE(historyId: history.id)
-//                                                    await historyModel.fetch()
+//                                        .toolbar {
+//                                            ToolbarItem {
+//                                                NavigationLink(destination: HistoryEditView(hist: history)) {
+//                                                    Text("Edit")
 //                                                }
-//                                            }, label: {
-//                                                Label("Delete", systemImage: "trash")
-//                                            })
+//                                            }
 //                                        }
+                                    
+                                                                            .swipeActions(allowsFullSwipe: false) {
+//                                                                                Button(role: .confirm, action: {
+//
+//                                                                                })
+                                                                                NavigationLink(destination: HistoryEditView(hist: history)) {
+                                                                                    Text("Edit")
+                                                                                }
+                                                                                Button(role: .destructive, action: {
+                                                                                    Task {
+                                                                                        await historyModel.sqlDELETE(historyId: history.id)
+                                                                                        await historyModel.fetch()
+                                                                                    }
+                                                                                }, label: {
+                                                                                    Label("Delete", systemImage: "trash")
+                                                                                })
+                                                                            }
                                 }
+                                .navigationBarTitle("TEST")
+                                
                             }
                         }
-                        .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
+                        //                        .navigationBarTitle("Исполнение по мероприятию", displayMode: .inline)
                         .toolbar {
+                            
                             ToolbarItem {
                                 NavigationLink(destination: HistoryAddView(eventId: eventId)) {
                                     Text("Add")
