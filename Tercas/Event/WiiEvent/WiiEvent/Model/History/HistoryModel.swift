@@ -210,7 +210,7 @@ extension HistoryModel {
                     event_id,              --  $1
                     date,                  --  $2
                     history,               --  $3
-                    answer_to,              --  $4
+                    answer_to,             --  $4
                     ref,                   --  $5
                     note,                  --  $6
                     recv_letter_num,       --  $7
@@ -296,28 +296,28 @@ extension HistoryModel {
     
     // Variant 1
     public func sqlUPDATE(
-        eventID: Int,               //  $1
-        date: Date,                 //  $2
-        history: String,            //  $3
-        answerTo: String?,          //  $4
-        ref: String?,               //  $5
-        note: String?,              //  $6
-        recvLetterNum: String?,     //  $7
-        recvLetterDate: Date?,      //  $8
-        recvManufacturerId: Int?,   //  $9
-        recvUnitId: Int?,           // $10
-        sendLetterNum: String?,     // $11
-        sendLetterDate: Date?,      // $12
-        sendManufacturerId: Int?,   // $13
-        sendUnitId: Int?            // $14
+        id: Int,                          //  $1
+        date: Date,                       //  $2
+        history: String,                  //  $3
+        answerTo: String? = nil,          //  $4
+        ref: String? = nil,               //  $5
+        note: String? = nil,              //  $6
+        recvLetterNum: String? = nil,     //  $7
+        recvLetterDate: Date? = nil,      //  $8
+        recvManufacturerId: Int? = nil,   //  $9
+        recvUnitId: Int? = nil,           // $10
+        sendLetterNum: String? = nil,     // $11
+        sendLetterDate: Date? = nil,      // $12
+        sendManufacturerId: Int? = nil,   // $13
+        sendUnitId: Int? = nil            // $14
     ) async {
         
         let sqlQueryUPDATE = """
             UPDATE
-                event.history
+                history.history
             SET
                 date = $2,                  -- date
-                history = $3,               -- history
+                history = $3,               -- history            
                 answer_to = $4,             -- answerTo
                 ref = $5,                   -- ref
                 note = $6,                  -- note
@@ -327,7 +327,7 @@ extension HistoryModel {
                 recv_unit_id = $10,         -- recvUnitId
                 send_letter_num = $11,      -- sendLetterNum
                 send_letter_date = $12,     -- sendLetterDate
-                send_manufacturer_id= $13,  -- sendManufacturerId
+                send_manufacturer_id = $13, -- sendManufacturerId
                 send_unit_id = $14          -- sendUnitId
             WHERE
                 id = $1                     -- id
@@ -363,7 +363,7 @@ extension HistoryModel {
             
             let _ = try statement.execute(
                 parameterValues: [
-                    eventID,              //  1
+                    id,                   //  1
                     datePg,               //  2
                     history,              //  3
                     answerTo,             //  4
@@ -379,6 +379,8 @@ extension HistoryModel {
                     sendUnitId            // 14
                 ]
             )
+            
+            connection.close()
         }
         catch {
             print(error)
@@ -394,7 +396,7 @@ extension HistoryModel {
         
         let sqlQueryUPDATE = """
             UPDATE
-                event.history
+                history.history
             SET
                 date = $2,                  -- date
                 history = $3,               -- history
@@ -474,12 +476,12 @@ extension HistoryModel {
     // MARK: - SQL DELETE
     
     public func sqlDELETE(
-        historyId: Int
+        id: Int
     ) async {
         
         let sqlQueryDELETE = """
             DELETE FROM
-                event.vw_history
+                history.history
             WHERE
                 id = $1     -- id
         """
@@ -499,7 +501,7 @@ extension HistoryModel {
             
             let _ = try statement.execute(
                 parameterValues: [
-                    historyId
+                    id
                 ]
             )
         }

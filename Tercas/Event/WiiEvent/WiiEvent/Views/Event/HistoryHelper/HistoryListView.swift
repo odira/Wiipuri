@@ -51,22 +51,22 @@ struct HistoryListView: View {
 //                                            }
 //                                        }
                                     
-                                                                            .swipeActions(allowsFullSwipe: false) {
-//                                                                                Button(role: .confirm, action: {
-//
-//                                                                                })
-                                                                                NavigationLink(destination: HistoryEditView(hist: history)) {
-                                                                                    Text("Edit")
-                                                                                }
-                                                                                Button(role: .destructive, action: {
-                                                                                    Task {
-                                                                                        await historyModel.sqlDELETE(historyId: history.id)
-                                                                                        await historyModel.fetch()
-                                                                                    }
-                                                                                }, label: {
-                                                                                    Label("Delete", systemImage: "trash")
-                                                                                })
-                                                                            }
+                                        .swipeActions(allowsFullSwipe: false) {
+                                            //                                                                                Button(role: .confirm, action: {
+                                            //
+                                            //                                                                                })
+                                            NavigationLink(destination: HistoryEditView(hist: history)) {
+                                                Text("Edit")
+                                            }
+                                            Button(role: .destructive, action: {
+                                                Task {
+                                                    await historyModel.sqlDELETE(id: history.id)
+                                                    await historyModel.fetch()
+                                                }
+                                            }, label: {
+                                                Label("Delete", systemImage: "trash")
+                                            })
+                                        }
                                 }
                                 .navigationBarTitle("TEST")
                                 
