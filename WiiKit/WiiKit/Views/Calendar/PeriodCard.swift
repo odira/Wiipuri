@@ -18,7 +18,7 @@ public struct PeriodCard: View {
         return Calendar.current.numberOfDaysBetween(startDate, and: endDate) + 1
     }
 
-    let formatter = DateFormatter.longDateFormatter
+    let formatter = DateFormatter.longDate
     
     // MARK: - Init
     

@@ -93,7 +93,7 @@ struct EventRowView: View {
                     }
                     
                     if let startDate = event.dealStartDate {
-                        Text("от \(DateFormatter.longDateFormatter.string(from: startDate))")
+                        Text("от \(DateFormatter.longDate.string(from: startDate))")
                     }
                     if let price = event.dealPrice {
                         Text("\((price), format: .number) руб.")

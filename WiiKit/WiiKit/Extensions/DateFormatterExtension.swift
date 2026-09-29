@@ -9,20 +9,6 @@ public extension DateFormatter {
         return formatter
     }
 
-    static var year: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy"
-        return formatter
-    }
-    
-//    static var date: DateFormatter {
-//        let formatter = DateFormatter()
-//        formatter.locale = Locale(identifier: "ru")
-//        formatter.dateStyle = .long
-//        formatter.timeStyle = .none
-//        return formatter
-//    }
-    
     static var planningMonth: DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ru")
@@ -30,11 +16,24 @@ public extension DateFormatter {
         return formatter
     }
     
-    static var longDateFormatter: DateFormatter {
+    static var year: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }
+    
+    static var normalDate: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter
+    }
+    
+    static var longDate: DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ru")
         formatter.dateStyle = .long
         formatter.timeStyle = .none
         return formatter
     }
+    
 }

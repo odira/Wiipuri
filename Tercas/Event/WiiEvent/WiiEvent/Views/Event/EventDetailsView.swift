@@ -25,7 +25,7 @@ struct EventDetailsView: View {
                                         Text("\(event.dealTypeAbbrText) №")
                                         Text(deal).bold()
                                         if let startDate = event.dealStartDate {
-                                            Text("от \(DateFormatter.longDateFormatter.string(from: startDate))")
+                                            Text("от \(DateFormatter.longDate.string(from: startDate))")
                                         }
                                     }
                                 }

@@ -68,7 +68,7 @@ struct HistoryListView: View {
                                             })
                                         }
                                 }
-                                .navigationBarTitle("TEST")
+//                                .navigationBarTitle("TEST")
                                 
                             }
                         }
