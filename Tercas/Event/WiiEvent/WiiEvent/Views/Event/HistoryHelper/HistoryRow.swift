@@ -25,103 +25,11 @@ struct HistoryRow: View {
     
     @ViewBuilder
     private var headerSection: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("ОТПРАВЛЕНО")
-                        .bold()
-                    
-                    HStack {
-                        if let recvLetterDate = history.recvLetterDate {
-                            Text(DateFormatter.normalDate.string(from: recvLetterDate))
-                        } else {
-                            Text("Дата")
-                        }
-                        if let sendLetterNum = history.sendLetterNum {
-                            Text(sendLetterNum)
-                                .font(.footnote)
-                                .padding(5)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                        .fill(.clear)
-                                        .stroke(Color.blue, lineWidth: 1)
-                                }
-                        } else {
-                            Text("UNDEFINED")
-                                .font(.footnote)
-                                .padding(5)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                        .fill(.clear)
-                                        .stroke(Color.blue, lineWidth: 1)
-                                }
-                        }
-                    }
-                    HStack {
-                        if let sendManufacturerId = history.sendManufacturerId {
-                            Text("send Manufacturer Id: \(sendManufacturerId)")
-                        }
-                        if let sendUnitId = history.sendUnitId {
-                            Text("send Unit Id: \(sendUnitId)")
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .overlay {
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(.clear)
-                        .stroke(Color.blue, lineWidth: 1)
-                }
-                
+                sendLetterSection
                 iconBody
-                
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("ПОЛУЧЕНО")
-                        .bold()
-                    
-                    HStack {
-                        if let recvLetterDate = history.recvLetterDate {
-                            Text(DateFormatter.normalDate.string(from: recvLetterDate))
-                        } else {
-                            Text("Дата")
-                        }
-                        if let recvLetterNum = history.recvLetterNum {
-                            Text(recvLetterNum)
-                                .font(.footnote)
-                                .padding(5)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                        .fill(.clear)
-                                        .stroke(Color.blue, lineWidth: 1)
-                                }
-                        } else {
-                            Text("Письмо")
-                                .font(.footnote)
-                                .padding(5)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                        .fill(.clear)
-                                        .stroke(Color.blue, lineWidth: 1)
-                                }
-                        }
-                    }
-                    HStack {
-                        if let recvManufacturerId = history.recvManufacturerId {
-                            Text("send Manufacturer Id: \(recvManufacturerId)")
-                        }
-                        if let recvUnitId = history.recvUnitId {
-                            Text("send Unit Id: \(recvUnitId)")
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .overlay {
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(.clear)
-                        .stroke(Color.blue, lineWidth: 1)
-                }
+                recvLetterSection
             }
             
             VStack(alignment: .leading) {
@@ -137,11 +45,108 @@ struct HistoryRow: View {
             .overlay {
                 RoundedRectangle(cornerRadius: 3, style: .continuous)
                     .fill(.clear)
-                    .stroke(Color.blue, lineWidth: 1)
+                    .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
             }
         }
     }
     
+    @ViewBuilder
+    private var sendLetterSection: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("ОТПРАВЛЕНО")
+                .bold()
+            
+            HStack {
+                if let sendLetterNum = history.sendLetterNum {
+                    Text(sendLetterNum)
+                        .font(.footnote)
+                        .padding(5)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(.clear)
+                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                        }
+                } else {
+                    Text("UNDEFINED")
+                        .font(.footnote)
+                        .padding(5)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(.clear)
+                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                        }
+                }
+                if let recvLetterDate = history.recvLetterDate {
+                    Text(DateFormatter.normalDate.string(from: recvLetterDate))
+                } else {
+                    Text("Дата")
+                }
+            }
+            HStack {
+                if let sendManufacturerId = history.sendManufacturerId {
+                    Text("send Manufacturer Id: \(sendManufacturerId)")
+                }  else if let sendUnitId = history.sendUnitId {
+                    Text("send Unit Id: \(sendUnitId)")
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .overlay {
+            RoundedRectangle(cornerRadius: 3, style: .continuous)
+                .fill(.clear)
+                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+        }
+    }
+    
+    @ViewBuilder
+    private var recvLetterSection: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("ПОЛУЧЕНО")
+                .bold()
+            
+            HStack {
+                if let recvLetterDate = history.recvLetterDate {
+                    Text(DateFormatter.normalDate.string(from: recvLetterDate))
+                } else {
+                    Text("Дата")
+                }
+                if let recvLetterNum = history.recvLetterNum {
+                    Text(recvLetterNum)
+                        .font(.footnote)
+                        .padding(5)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(.clear)
+                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                        }
+                } else {
+                    Text("Письмо")
+                        .font(.footnote)
+                        .padding(5)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(.clear)
+                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                        }
+                }
+            }
+            HStack {
+                if let recvManufacturerId = history.recvManufacturerId {
+                    Text("send Manufacturer Id: \(recvManufacturerId)")
+                } else if let recvUnitId = history.recvUnitId {
+                    Text("send Unit Id: \(recvUnitId)")
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .overlay {
+            RoundedRectangle(cornerRadius: 3, style: .continuous)
+                .fill(.clear)
+                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+        }
+    }
     
     @ViewBuilder
     private var historySection: some View {
@@ -153,7 +158,7 @@ struct HistoryRow: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 5, style: .continuous)
                         .fill(.clear)
-                        .stroke(Color.blue, lineWidth: 1)
+                        .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
                 }
             
             Text(history.note ?? "")
@@ -163,7 +168,7 @@ struct HistoryRow: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 5, style: .continuous)
                         .fill(.clear)
-                        .stroke(Color.blue, lineWidth: 1)
+                        .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
                 }
         }
         .frame(maxWidth: .infinity)
@@ -186,13 +191,11 @@ struct HistoryRow: View {
     
     @ViewBuilder
     private var iconBody: some View {
-        VStack(spacing: 2) {
             Image(systemName: "shift")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 70, height: 70)
                 .rotationEffect(.degrees(90))
-        }
     }
 }
 
