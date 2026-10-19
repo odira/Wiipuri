@@ -25,6 +25,7 @@ public extension String {
         return dateInterval
     }
     
+    
     func toColor() -> Color {
         #if os(iOS)
             return Color(UIColor.init(hexString: self))
@@ -32,6 +33,7 @@ public extension String {
             return Color(NSColor.init(hexString: self))
         #endif
     }
+    
     
     func toIntArray() -> [Int] {
         var tmpStr = self
@@ -48,4 +50,19 @@ public extension String {
         return intArray
     }
     
+    
+    func toStrArray() -> [String] {
+        var tmpStr = self
+        if tmpStr.isEmpty {
+            return []
+        }
+        
+        tmpStr.removeFirst()
+        tmpStr.removeLast()
+        
+        let array = tmpStr.components(separatedBy: ",")
+        let strArray = array.compactMap { String($0) }
+        
+        return strArray
+    }
 }
