@@ -71,32 +71,21 @@ public class EventModel: Identifiable, ObservableObject {
                     note,               -- 13
                     plan_id,            -- 14
                     is_valid,           -- 15
-                    limit_2020,         -- 16
-                    limit_2021,         -- 17
-                    limit_2022,         -- 18
-                    limit_2023,         -- 19
-                    limit_2024,         -- 20
-                    limit_2025,         -- 21
-                    limit_2026,         -- 22
-                    limit_2027,         -- 23
-                    limit_2028,         -- 24
-                    limit_2029,         -- 25
-                    limit_2030,         -- 26
-                    subgroup,           -- 27
-                    subgroup_id,        -- 28
-                    status_id,          -- 29
-                    deal_id,            -- 30
-                    deal_type_id,       -- 31
-                    deal_status_id,     -- 32
-                    deal,               -- 33
-                    deal_price,         -- 34
-                    deal_start_date,    -- 35
-                    deal_end_date,      -- 36
-                    deal_contractor_id, -- 37
-                    deal_contractor,    -- 38
-                    deal_subcontractor, -- 39
-                    deal_senior_id,     -- 40
-                    deal_senior         -- 41
+                    subgroup,           -- 16
+                    subgroup_id,        -- 17
+                    status_id,          -- 18
+                    deal_id,            -- 19
+                    deal_type_id,       -- 20
+                    deal_status_id,     -- 21
+                    deal,               -- 22
+                    deal_price,         -- 23
+                    deal_start_date,    -- 24
+                    deal_end_date,      -- 25
+                    deal_contractor_id, -- 26
+                    deal_contractor,    -- 27
+                    deal_subcontractor, -- 28
+                    deal_senior_id,     -- 29
+                    deal_senior         -- 30
                 FROM
                     event.vw_event
             """
@@ -130,32 +119,21 @@ public class EventModel: Identifiable, ObservableObject {
                 let note = try? columns[13].string()              /// 13
                 let planId = try columns[14].int()                /// 14
                 let isValid = try columns[15].bool()              /// 15
-                let limit2020 = try? columns[16].decimal()        /// 16
-                let limit2021 = try? columns[17].decimal()        /// 17
-                let limit2022 = try? columns[18].decimal()        /// 18
-                let limit2023 = try? columns[19].decimal()        /// 19
-                let limit2024 = try? columns[20].decimal()        /// 20
-                let limit2025 = try? columns[21].decimal()        /// 21
-                let limit2026 = try? columns[22].decimal()        /// 22
-                let limit2027 = try? columns[23].decimal()        /// 23
-                let limit2028 = try? columns[24].decimal()        /// 24
-                let limit2029 = try? columns[25].decimal()        /// 25
-                let limit2030 = try? columns[26].decimal()        /// 26
-                let subgroup = try? columns[27].string()          /// 27
-                let subgroupId = try? columns[28].int()           /// 28
-                let statusID = try? columns[29].int()             /// 29
-                let dealID = try? columns[30].int()               /// 30
-                let dealTypeID = try? columns[31].int()           /// 31
-                let dealStatusID = try columns[32].int()          /// 32
-                let deal = try? columns[33].string()              /// 33
-                let dealPrice = try? columns[34].decimal()        /// 34
-                let dealStartDatePg = try? columns[35].date()     /// 35
-                let dealEndDatePg = try? columns[36].date()       /// 36
-                let dealContractorID = try? columns[37].int()     /// 37
-                let dealContractor = try? columns[38].string()    /// 38
-                let dealSubcontractor = try? columns[39].string() /// 39
-                let dealSeniorID = try? columns[40].int()         /// 40
-                let dealSenior = try? columns[41].string()        /// 41
+                let subgroup = try? columns[16].string()          /// 16
+                let subgroupId = try? columns[17].int()           /// 17
+                let statusID = try? columns[18].int()             /// 18
+                let dealID = try? columns[19].int()               /// 19
+                let dealTypeID = try? columns[20].int()           /// 20
+                let dealStatusID = try columns[21].int()          /// 21
+                let deal = try? columns[22].string()              /// 22
+                let dealPrice = try? columns[23].decimal()        /// 23
+                let dealStartDatePg = try? columns[24].date()     /// 24
+                let dealEndDatePg = try? columns[25].date()       /// 25
+                let dealContractorID = try? columns[26].int()     /// 26
+                let dealContractor = try? columns[27].string()    /// 27
+                let dealSubcontractor = try? columns[28].string() /// 28
+                let dealSeniorID = try? columns[29].int()         /// 29
+                let dealSenior = try? columns[30].string()        /// 30
                 
                 // The UTC/GMT time zone.
                 let utcTimeZone = TimeZone(secondsFromGMT: 0)!
@@ -191,32 +169,21 @@ public class EventModel: Identifiable, ObservableObject {
                         note: note,                             /// 13
                         planId: planId,                         /// 14
                         isValid: isValid,                       /// 15
-                        limit2020: limit2020,                   /// 16
-                        limit2021: limit2021,                   /// 17
-                        limit2022: limit2022,                   /// 18
-                        limit2023: limit2023,                   /// 19
-                        limit2024: limit2024,                   /// 20
-                        limit2025: limit2025,                   /// 21
-                        limit2026: limit2026,                   /// 22
-                        limit2027: limit2027,                   /// 23
-                        limit2028: limit2028,                   /// 24
-                        limit2029: limit2029,                   /// 25
-                        limit2030: limit2030,                   /// 26
-                        subgroup: subgroup,                     /// 27
-                        subgroupId: subgroupId,                 /// 28
-                        statusID: statusID,                     /// 29
-                        dealID: dealID,                         /// 30
-                        dealTypeID: dealTypeID,                 /// 31
-                        dealStatusID: dealStatusID,             /// 32
-                        deal: deal,                             /// 33
-                        dealPrice: dealPrice,                   /// 34
-                        dealStartDate: dealStartDate,           /// 35
-                        dealEndDate: dealEndDate,               /// 36
-                        dealContractorID: dealContractorID,     /// 37
-                        dealContractor: dealContractor,         /// 38
-                        dealSubcontractor: dealSubcontractor,   /// 39
-                        dealSeniorID: dealSeniorID,             /// 40
-                        dealSenior: dealSenior                  /// 41
+                        subgroup: subgroup,                     /// 16
+                        subgroupId: subgroupId,                 /// 17
+                        statusID: statusID,                     /// 18
+                        dealID: dealID,                         /// 19
+                        dealTypeID: dealTypeID,                 /// 20
+                        dealStatusID: dealStatusID,             /// 21
+                        deal: deal,                             /// 22
+                        dealPrice: dealPrice,                   /// 23
+                        dealStartDate: dealStartDate,           /// 24
+                        dealEndDate: dealEndDate,               /// 25
+                        dealContractorID: dealContractorID,     /// 26
+                        dealContractor: dealContractor,         /// 27
+                        dealSubcontractor: dealSubcontractor,   /// 28
+                        dealSeniorID: dealSeniorID,             /// 29
+                        dealSenior: dealSenior                  /// 30
                     )
                 )
             }
