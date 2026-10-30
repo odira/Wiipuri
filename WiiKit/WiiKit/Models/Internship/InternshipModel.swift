@@ -52,12 +52,12 @@ public class InternshipModel: ObservableObject {
                 let planning = try columns[1].bool()
                 let personId = try columns[2].int()
                 let internshipTypeId = try columns[3].int()
-                let sectorsArrTmp = try? columns[4].string().toIntArray()
+                let sectorsArrTmp = try? columns[4].string().strToIntArray()
                 let duration = try? columns[5].int()
                 let simulatorCheckDatePg = try? columns[6].date()
                 let checkDatePg = try? columns[7].date()
                 let boardCheckDatePg = try? columns[8].date()
-                let mordersArrTmp = try? columns[9].string().toIntArray()
+                let mordersArrTmp = try? columns[9].string().strToIntArray()
                 let note = try? columns[10].string()
                 
                 var sectorsArr: [Int] {
@@ -230,12 +230,12 @@ public extension InternshipModel {
                     internship.planning,                // 1
                     internship.personId,                // 2
                     internship.internshipTypeId,        // 3
-                    internship.sectorsArr.toString(),   // 4
+                    internship.sectorsArr.intArrToStr(),   // 4
                     internship.duration,                // 5
                     simulatorCheckDatePg,               // 6
                     checkDatePg,                        // 7
                     boardCheckDatePg,                   // 8
-                    internship.mordersArr.toString(),   // 9
+                    internship.mordersArr.intArrToStr(),   // 9
                     internship.note                     // 10
                 ]
             )
@@ -302,12 +302,12 @@ public extension InternshipModel {
                     internship.planning,                // 2
                     internship.personId,                // 3
                     internship.internshipTypeId,        // 4
-                    internship.sectorsArr.toString(),   // 5
+                    internship.sectorsArr.intArrToStr(),   // 5
                     internship.duration,                // 6
                     simulatorCheckDatePg,               // 7
                     checkDatePg,                        // 8
                     boardCheckDatePg,                   // 9
-                    internship.mordersArr.toString(),   // 10
+                    internship.mordersArr.intArrToStr(),   // 10
                     internship.note                     // 11
                 ]
             )

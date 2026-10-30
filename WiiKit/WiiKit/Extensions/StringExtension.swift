@@ -33,36 +33,5 @@ public extension String {
             return Color(NSColor.init(hexString: self))
         #endif
     }
-    
-    
-    func toIntArray() -> [Int] {
-        var tmpStr = self
-        if tmpStr.isEmpty {
-            return []
-        }
-        
-        tmpStr.removeFirst()
-        tmpStr.removeLast()
-        
-        let array = tmpStr.components(separatedBy: ",")
-        let intArray = array.compactMap { Int($0) }
-        
-        return intArray
-    }
-    
-    
-    func toStrArray() -> [String] {
-        var tmpStr = self
-        if tmpStr.isEmpty {
-            return []
-        }
-        
-        tmpStr.removeFirst()
-        tmpStr.removeLast()
-        
-        let array = tmpStr.components(separatedBy: ",")
-        let strArray = array.compactMap { String($0) }
-        
-        return strArray
-    }
+
 }

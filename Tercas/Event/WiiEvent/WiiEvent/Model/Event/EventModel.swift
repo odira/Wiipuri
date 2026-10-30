@@ -2,15 +2,13 @@ import PostgresClientKit
 import SwiftUI
 import Combine
 import WiiKit
-import SwiftData
 
-// MARK: - DEFINITION
 
 public class EventModel: Identifiable, ObservableObject {
     @Published public var isFetching: Bool = true
     @Published public var events = [Event]()
-    @Published public var filteredEvents: [Event] = []
     
+    @Published public var filteredEvents: [Event] = []
     @Published public var filter = EventModelFilter()
     
     static let shared = EventModel()
@@ -24,7 +22,6 @@ public class EventModel: Identifiable, ObservableObject {
         self.events.removeAll()
         self.events = events
     }
-    
     
     deinit {
         self.events.removeAll()
@@ -85,7 +82,8 @@ public class EventModel: Identifiable, ObservableObject {
                     deal_contractor,    -- 27
                     deal_subcontractor, -- 28
                     deal_senior_id,     -- 29
-                    deal_senior         -- 30
+                    deal_senior,        -- 30
+                    unit_id_arr         -- 31
                 FROM
                     event.vw_event
             """
@@ -99,6 +97,8 @@ public class EventModel: Identifiable, ObservableObject {
             defer {
                 cursor.close()
             }
+            
+            var tmpEvents: [Event] = []
             
             for row in cursor {
                 let columns = try row.get().columns
@@ -134,6 +134,9 @@ public class EventModel: Identifiable, ObservableObject {
                 let dealSubcontractor = try? columns[28].string() /// 28
                 let dealSeniorID = try? columns[29].int()         /// 29
                 let dealSenior = try? columns[30].string()        /// 30
+                let unitIdArr = try? columns[31].string()         /// 31
+                ///
+                print(unitIdArr)
                 
                 // The UTC/GMT time zone.
                 let utcTimeZone = TimeZone(secondsFromGMT: 0)!
@@ -151,7 +154,7 @@ public class EventModel: Identifiable, ObservableObject {
                     return nil
                 }
                 
-                events.append(
+                tmpEvents.append(
                     Event(
                         id: id,                                 ///  0
                         event: event,                           ///  1
@@ -183,12 +186,19 @@ public class EventModel: Identifiable, ObservableObject {
                         dealContractor: dealContractor,         /// 27
                         dealSubcontractor: dealSubcontractor,   /// 28
                         dealSeniorID: dealSeniorID,             /// 29
-                        dealSenior: dealSenior                  /// 30
+                        dealSenior: dealSenior,                 /// 30
+                        unitIdArr: [1, 2, 3]
                     )
                 )
+                
+//                DispatchQueue.main.async {
+//                    self.events = tmpEvents
+//                }
+                
+                self.events = tmpEvents
             }
         } catch {
-            print(error)
+            print("Database error: \(error)")
         }
         
         isFetching = false

@@ -38,9 +38,14 @@ public struct Event: Hashable, Codable, Identifiable {
     public var dealSubcontractor: String? /// 28
     public var dealSeniorID: Int?         /// 29
     public var dealSenior: String?        /// 30
-
+    
+    public var unitIdArr: [Int]           /// 31
+    
     private var imageName: String?
-    public var image: Image {
+}
+
+public extension Event {
+    var image: Image {
         if let imageName {
             Image(imageName)
         } else {
@@ -165,6 +170,7 @@ public extension Event {
               dealSubcontractor: "Алмаз-Антей",                  /// 28
               dealSeniorID: 5,                                   /// 29
               dealSenior: "Пугачев",                             /// 30
+              unitIdArr: [1, 2, 3]
         )
     ]
     

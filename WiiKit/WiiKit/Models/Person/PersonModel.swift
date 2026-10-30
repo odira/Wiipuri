@@ -61,9 +61,9 @@ public class PersonModel: ObservableObject {
                 let klass = try? columns[10].int()
                 let shiftNum = try? columns[11].int()
                 let sectorPoolId = try? columns[12].int()
-                let sectorsArrTmp = try? columns[13].string().toIntArray()
+                let sectorsArrTmp = try? columns[13].string().strToIntArray()
                 let servicePeriod = try? columns[14].string().toDateInterval()
-                let positionsArrTmp = try? columns[15].string().toIntArray()
+                let positionsArrTmp = try? columns[15].string().strToIntArray()
                 let note = try? columns[16].string()
                 
                 var sectorsArr: [Int] {
@@ -208,8 +208,8 @@ extension PersonModel {
             let statement = try connection.prepareStatement(text: sqlQueryUPDATE)
             defer { statement.close() }
             
-            let positionsArrString = person.positionsArr.toString()
-            let sectorsArrString = person.sectorsArr.toString()
+            let positionsArrString = person.positionsArr.intArrToStr()
+            let sectorsArrString = person.sectorsArr.intArrToStr()
             
             var postgresBirthday: PostgresDate? {
                 if let birthday = person.birthday {
