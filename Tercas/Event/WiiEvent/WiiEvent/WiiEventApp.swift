@@ -13,6 +13,8 @@ struct WiiEventApp: App {
     @StateObject var infoModel = InfoModel()
     @StateObject var historyModel = HistoryModel()
     
+    @StateObject var unitModel = UnitModel()
+    
     var body: some Scene {
         WindowGroup {
             ZStack {
@@ -26,11 +28,14 @@ struct WiiEventApp: App {
                         .environmentObject(eventModelFilter)
                         .environmentObject(infoModel)
                         .environmentObject(historyModel)
+                    
+                        .environmentObject(unitModel)
                 }
             }
             .task {
                 await eventModel.fetch()
                 await dealModel.fetch()
+                await unitModel.fetch()
 //                await planModel.fetch()
 //                await eventModelFilter.fetch()
             }

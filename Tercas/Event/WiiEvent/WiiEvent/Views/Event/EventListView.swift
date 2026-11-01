@@ -6,6 +6,8 @@ struct EventListView: View {
     @EnvironmentObject var planModel: PlanModel
     @EnvironmentObject var eventModelFilter: EventModelFilter
     
+    @EnvironmentObject var unitModel: UnitModel
+    
     @State private var searchableText = ""
     @State private var showSearchSheet = false
     @State private var showCompletedOnly = false
@@ -40,4 +42,6 @@ struct EventListView: View {
         .environmentObject(DealModel.example)
         .environmentObject(PlanModel.example)
         .environmentObject(EventModelFilter.shared)
+    
+        .environmentObject(UnitModel.example)
 }

@@ -1,5 +1,5 @@
 //
-//  InformationModel.swift
+//  InfoModel.swift
 //  WiiEvent
 //
 //  Created by Vladimir Ilin on 24.08.2025.

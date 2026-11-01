@@ -54,6 +54,8 @@
 		D1E436522FABCF7100C5FAF7 /* InfoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E436512FABCF6A00C5FAF7 /* InfoEditView.swift */; };
 		D1E9B36A2B4C5AB40073768D /* DealTransparant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B3692B4C5AB40073768D /* DealTransparant.swift */; };
 		D1E9B36E2B4DC9960073768D /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B36D2B4DC9960073768D /* CategoryHome.swift */; };
+		D1F6CFFF30978125005B94B8 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6CFFE30978121005B94B8 /* Unit.swift */; };
+		D1F6D0013097B7F8005B94B8 /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6D0003097B7F4005B94B8 /* UnitModel.swift */; };
 		D1FCA2772B1CE54700E2DB42 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA2762B1CE54700E2DB42 /* CircleImage.swift */; };
 		D1FCA27F2B1CF43B00E2DB42 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA27E2B1CF43B00E2DB42 /* ModelData.swift */; };
 		D1FCA2842B1CF62900E2DB42 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCA2832B1CF62900E2DB42 /* EventRowView.swift */; };
@@ -192,6 +194,8 @@
 		D1E436512FABCF6A00C5FAF7 /* InfoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEditView.swift; sourceTree = "<group>"; };
 		D1E9B3692B4C5AB40073768D /* DealTransparant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealTransparant.swift; sourceTree = "<group>"; };
 		D1E9B36D2B4DC9960073768D /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
+		D1F6CFFE30978121005B94B8 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		D1F6D0003097B7F4005B94B8 /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
 		D1FCA2762B1CE54700E2DB42 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D1FCA27E2B1CF43B00E2DB42 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D1FCA2832B1CF62900E2DB42 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
@@ -656,6 +660,15 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
+		D1F6CFFC309780F7005B94B8 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				D1F6D0003097B7F4005B94B8 /* UnitModel.swift */,
+				D1F6CFFE30978121005B94B8 /* Unit.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
 		D1FCA2802B1CF59400E2DB42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +685,7 @@
 		D1FCA2812B1CF5A200E2DB42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1F6CFFC309780F7005B94B8 /* Unit */,
 				D1945A102E590C4D00843956 /* Info */,
 				D1D047C42E252AA4002025C2 /* Plan */,
 				D1DF9F5E2D070BFC004E2E96 /* Deal */,
@@ -798,6 +812,7 @@
 				D10274882B4F0BD500DEBBAB /* CategoryRow.swift in Sources */,
 				D1D575B52B55B7B90035478E /* EventBadge.swift in Sources */,
 				D1E9B36A2B4C5AB40073768D /* DealTransparant.swift in Sources */,
+				D1F6CFFF30978125005B94B8 /* Unit.swift in Sources */,
 				D1D6F1672B59A4FD007758E1 /* PlanCard.swift in Sources */,
 				D11CAA622CA5D49D00403E82 /* JustificationView.swift in Sources */,
 				D1E436522FABCF7100C5FAF7 /* InfoEditView.swift in Sources */,
@@ -825,6 +840,7 @@
 				D1945A122E590FE200843956 /* Info.swift in Sources */,
 				D1CA167E2DFE1C730016C99B /* EventListView.swift in Sources */,
 				D1AE4A702F956BA900F3EC48 /* HistoryEditView.swift in Sources */,
+				D1F6D0013097B7F8005B94B8 /* UnitModel.swift in Sources */,
 				D16B20B92B50621E00B96160 /* CategoryItem.swift in Sources */,
 				D15D81522B69826A005E6D2B /* Extentions.swift in Sources */,
 				D1386FE72F7321EA00C01B56 /* InfoFieldsEditor.swift in Sources */,

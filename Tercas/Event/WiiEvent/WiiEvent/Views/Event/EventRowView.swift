@@ -3,6 +3,7 @@ import SwiftUI
 struct EventRowView: View {
     @EnvironmentObject private var dealModel: DealModel
     @EnvironmentObject var planModel: PlanModel
+    @EnvironmentObject private var unitModel: UnitModel
     
     let event: Event
     
@@ -32,11 +33,9 @@ struct EventRowView: View {
                 .frame(width: 50, height: 50)
             
             VStack(alignment: .leading) {
-                Text("Аэронавигация Северо-Восточной Сибири")
-                    .lineLimit(2)
-                    .foregroundStyle(.secondary)
-                Text(event.city ?? "")
-                    .lineLimit(3)
+                if let unit = unitModel.findUnitByID(id: event.unitIdArr.first!) {
+                    Text(unit.unit)
+                }
             }
             .font(.footnote)
             
@@ -174,6 +173,7 @@ struct EventRowView: View {
     .preferredColorScheme(.light)
     .environmentObject(DealModel.example)
     .environmentObject(PlanModel.example)
+    .environmentObject(UnitModel.example)
 }
 
 #Preview("Dark Theme", traits: .sizeThatFitsLayout) {
@@ -185,4 +185,5 @@ struct EventRowView: View {
     .preferredColorScheme(.dark)
     .environmentObject(DealModel.example)
     .environmentObject(PlanModel.example)
+    .environmentObject(UnitModel.example)
 }
