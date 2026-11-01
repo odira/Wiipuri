@@ -1,5 +1,6 @@
 import Foundation
 
+// FROM ARRAY functions
 
 public extension Array where Element == Int {
     func intArrToStr() -> String {
@@ -10,6 +11,7 @@ public extension Array where Element == Int {
     }
 }
 
+// STRING TO ARRAY functions
 
 public extension String {
     func strToIntArray() -> [Int] {

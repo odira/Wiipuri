@@ -134,13 +134,10 @@ public class EventModel: Identifiable, ObservableObject {
                 let dealSubcontractor = try? columns[28].string() /// 28
                 let dealSeniorID = try? columns[29].int()         /// 29
                 let dealSenior = try? columns[30].string()        /// 30
-                let unitIdArr = try? columns[31].string()         /// 31
-                ///
-                print(unitIdArr)
-                
-                // The UTC/GMT time zone.
-                let utcTimeZone = TimeZone(secondsFromGMT: 0)!
-                
+                let unitIdArrStr = try columns[31].string()      /// 31
+
+                // Date Transformation
+                let utcTimeZone = TimeZone(secondsFromGMT: 0)!    /// The UTC/GMT time zone.
                 var dealStartDate: Date? {
                     if let date = dealStartDatePg {
                         return date.date(in: utcTimeZone)
@@ -153,6 +150,10 @@ public class EventModel: Identifiable, ObservableObject {
                     }
                     return nil
                 }
+                
+                // Array Transformation
+                let unitIdArr = unitIdArrStr.strToIntArray()
+                
                 
                 tmpEvents.append(
                     Event(
@@ -187,7 +188,7 @@ public class EventModel: Identifiable, ObservableObject {
                         dealSubcontractor: dealSubcontractor,   /// 28
                         dealSeniorID: dealSeniorID,             /// 29
                         dealSenior: dealSenior,                 /// 30
-                        unitIdArr: [1, 2, 3]
+                        unitIdArr: unitIdArr                    /// 31
                     )
                 )
                 
