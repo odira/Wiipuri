@@ -19,7 +19,7 @@ struct HistoryRow: View {
             headerSection
             historySection
         }
-        .padding(10)
+//        .padding(10)
     }
     
     
@@ -52,52 +52,55 @@ struct HistoryRow: View {
     
     @ViewBuilder
     private var sendLetterSection: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("ОТПРАВЛЕНО")
-                .bold()
-            
-            HStack {
-                if let sendLetterNum = history.sendLetterNum {
-                    Text(sendLetterNum)
-                        .font(.footnote)
-                        .padding(5)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                .fill(.clear)
-                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
-                        }
-                } else {
-                    Text("UNDEFINED")
-                        .font(.footnote)
-                        .padding(5)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                .fill(.clear)
-                                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
-                        }
+            VStack(alignment: .leading/*, spacing: 5*/) {
+                HStack {
+                    Image(systemName: "person.crop.square.filled.and.at.rectangle.fill").font(.headline)
+                    Text("ОТПРАВЛЕНО").bold()
                 }
-                if let recvLetterDate = history.recvLetterDate {
-                    Text(DateFormatter.normalDate.string(from: recvLetterDate))
-                } else {
-                    Text("Дата")
+                
+                HStack {
+                    if let sendLetterNum = history.sendLetterNum {
+                        Text(sendLetterNum)
+                            .font(.footnote)
+                            .padding(5)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(.clear)
+                                    .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                            }
+                    } else {
+                        Text("UNDEFINED")
+                            .font(.footnote)
+                            .padding(5)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(.clear)
+                                    .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
+                            }
+                    }
+                    if let recvLetterDate = history.recvLetterDate {
+                        Text(DateFormatter.normalDate.string(from: recvLetterDate))
+                    } else {
+                        Text("Дата")
+                    }
+                }
+                HStack {
+                    if let sendManufacturerId = history.sendManufacturerId {
+                        Text("send Manufacturer Id: \(sendManufacturerId)")
+                    }  else if let sendUnitId = history.sendUnitId {
+                        Text("send Unit Id: \(sendUnitId)")
+                    }
                 }
             }
-            HStack {
-                if let sendManufacturerId = history.sendManufacturerId {
-                    Text("send Manufacturer Id: \(sendManufacturerId)")
-                }  else if let sendUnitId = history.sendUnitId {
-                    Text("send Unit Id: \(sendUnitId)")
-                }
+            .frame(maxWidth: .infinity)
+            //        .padding()
+            .overlay {
+                RoundedRectangle(cornerRadius: 3, style: .continuous)
+                    .fill(.clear)
+                    .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
             }
         }
-        .frame(maxWidth: .infinity)
-        .padding()
-        .overlay {
-            RoundedRectangle(cornerRadius: 3, style: .continuous)
-                .fill(.clear)
-                .stroke(Color.secondary.opacity(0.5), lineWidth: 1)
-        }
-    }
+    
     
     @ViewBuilder
     private var recvLetterSection: some View {
